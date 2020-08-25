@@ -16,6 +16,11 @@
 		CB050E9C24F2F78B001B992B /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB050E9B24F2F78B001B992B /* SearchBar.swift */; };
 		CB050E9F24F43176001B992B /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB050E9E24F43176001B992B /* Condition.swift */; };
 		CB050EA224F4393C001B992B /* CAPFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB050EA124F4393C001B992B /* CAPFirst.swift */; };
+		CB050EA424F56CF6001B992B /* ShowPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB050EA324F56CF6001B992B /* ShowPicker.swift */; };
+		CB050EA624F56D32001B992B /* SegmentedPickerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB050EA524F56D32001B992B /* SegmentedPickerModifier.swift */; };
+		CB050EA824F56D6D001B992B /* CAPToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB050EA724F56D6D001B992B /* CAPToggle.swift */; };
+		CB050EAC24F56E8D001B992B /* NextButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB050EAB24F56E8D001B992B /* NextButtonStyle.swift */; };
+		CB2B470924F57726006394DE /* OutCAPManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2B470824F57726006394DE /* OutCAPManagement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		CB050E9B24F2F78B001B992B /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CB050E9E24F43176001B992B /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
 		CB050EA124F4393C001B992B /* CAPFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAPFirst.swift; sourceTree = "<group>"; };
+		CB050EA324F56CF6001B992B /* ShowPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowPicker.swift; path = "../../../../medlearn/medlearn/Views/General Views/ShowPicker.swift"; sourceTree = "<group>"; };
+		CB050EA524F56D32001B992B /* SegmentedPickerModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegmentedPickerModifier.swift; path = ../../../../medlearn/medlearn/Views/ViewModifiers/SegmentedPickerModifier.swift; sourceTree = "<group>"; };
+		CB050EA724F56D6D001B992B /* CAPToggle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CAPToggle.swift; path = "../../../../medlearn/medlearn/Views/Community Acquired Pneumonia/CAPToggle.swift"; sourceTree = "<group>"; };
+		CB050EAB24F56E8D001B992B /* NextButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButtonStyle.swift; sourceTree = "<group>"; };
+		CB2B470824F57726006394DE /* OutCAPManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutCAPManagement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +98,9 @@
 				CB050EA024F437ED001B992B /* CAP */,
 				CB050E8A24F2EFB3001B992B /* ListView.swift */,
 				CB050E9B24F2F78B001B992B /* SearchBar.swift */,
+				CB050EA324F56CF6001B992B /* ShowPicker.swift */,
+				CB050EA524F56D32001B992B /* SegmentedPickerModifier.swift */,
+				CB050EAB24F56E8D001B992B /* NextButtonStyle.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -96,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				CB050E9E24F43176001B992B /* Condition.swift */,
+				CB050EA724F56D6D001B992B /* CAPToggle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -104,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				CB050EA124F4393C001B992B /* CAPFirst.swift */,
+				CB2B470824F57726006394DE /* OutCAPManagement.swift */,
 			);
 			path = CAP;
 			sourceTree = "<group>";
@@ -179,11 +194,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB050EAC24F56E8D001B992B /* NextButtonStyle.swift in Sources */,
 				CB050E8724F2EFB3001B992B /* AppDelegate.swift in Sources */,
+				CB050EA624F56D32001B992B /* SegmentedPickerModifier.swift in Sources */,
+				CB050EA424F56CF6001B992B /* ShowPicker.swift in Sources */,
 				CB050EA224F4393C001B992B /* CAPFirst.swift in Sources */,
 				CB050E9C24F2F78B001B992B /* SearchBar.swift in Sources */,
+				CB050EA824F56D6D001B992B /* CAPToggle.swift in Sources */,
 				CB050E8924F2EFB3001B992B /* SceneDelegate.swift in Sources */,
 				CB050E8B24F2EFB3001B992B /* ListView.swift in Sources */,
+				CB2B470924F57726006394DE /* OutCAPManagement.swift in Sources */,
 				CB050E9F24F43176001B992B /* Condition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

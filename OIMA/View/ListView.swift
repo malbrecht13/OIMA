@@ -9,7 +9,7 @@
 import SwiftUI
 
 fileprivate let conditions: [Condition] = [
-    Condition(name: "Community-acquired pneumonia (CAP)", field: .ID, nextView: AnyView(CAPFirst())),
+    Condition(name: "Community-acquired pneumonia (CAP), treatment", field: .ID, nextView: AnyView(CAPFirst())),
     Condition(name: "Low back pain", field: .sportsMed, nextView: AnyView(CAPFirst()))
     
 ]
