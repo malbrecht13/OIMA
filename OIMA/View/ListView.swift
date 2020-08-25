@@ -8,12 +8,17 @@
 
 import SwiftUI
 
-fileprivate var conditions: [Condition] = [
-    Condition(name: "Community-acquired pneumonia (CAP)", field: .ID, nextView: AnyView(CAPFirst()))
+fileprivate let conditions: [Condition] = [
+    Condition(name: "Community-acquired pneumonia (CAP)", field: .ID, nextView: AnyView(CAPFirst())),
+    Condition(name: "Low back pain", field: .sportsMed, nextView: AnyView(CAPFirst()))
     
 ]
 
-fileprivate var sortedConditions = conditions.sorted{$0.name < $1.name}
+
+
+fileprivate let sortedByField = conditions.sorted{$0.field.rawValue < $1.field.rawValue}
+
+fileprivate let sortedConditions = conditions.sorted{$0.name < $1.name}
 
 struct ListView: View {
     

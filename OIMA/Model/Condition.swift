@@ -29,3 +29,5 @@ struct Condition: Identifiable {
     var nextView: AnyView
 
 }
+
+
