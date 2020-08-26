@@ -21,6 +21,5 @@ struct NextButtonStyle: ButtonStyle {
                .padding(.horizontal, 20)
                .foregroundColor(.white)
                .font(.headline)
-               .shadow(color: .black, radius: 0, x: 1, y: 2)
        }
 }

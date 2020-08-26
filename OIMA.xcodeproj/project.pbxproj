@@ -21,6 +21,10 @@
 		CB050EA824F56D6D001B992B /* CAPToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB050EA724F56D6D001B992B /* CAPToggle.swift */; };
 		CB050EAC24F56E8D001B992B /* NextButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB050EAB24F56E8D001B992B /* NextButtonStyle.swift */; };
 		CB2B470924F57726006394DE /* OutCAPManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2B470824F57726006394DE /* OutCAPManagement.swift */; };
+		CB2FDCBC24F6E9AB00C433CE /* VTEFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCBB24F6E9AB00C433CE /* VTEFirst.swift */; };
+		CB2FDCC024F6EB8D00C433CE /* VTEdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCBF24F6EB8D00C433CE /* VTEdata.swift */; };
+		CB2FDCC424F6F02A00C433CE /* TitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCC324F6F02A00C433CE /* TitleModifier.swift */; };
+		CB2FDCC624F6F35C00C433CE /* VTEProvokingFactors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCC524F6F35C00C433CE /* VTEProvokingFactors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +44,10 @@
 		CB050EA724F56D6D001B992B /* CAPToggle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CAPToggle.swift; path = "../../../../medlearn/medlearn/Views/Community Acquired Pneumonia/CAPToggle.swift"; sourceTree = "<group>"; };
 		CB050EAB24F56E8D001B992B /* NextButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButtonStyle.swift; sourceTree = "<group>"; };
 		CB2B470824F57726006394DE /* OutCAPManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutCAPManagement.swift; sourceTree = "<group>"; };
+		CB2FDCBB24F6E9AB00C433CE /* VTEFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTEFirst.swift; sourceTree = "<group>"; };
+		CB2FDCBF24F6EB8D00C433CE /* VTEdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTEdata.swift; sourceTree = "<group>"; };
+		CB2FDCC324F6F02A00C433CE /* TitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleModifier.swift; sourceTree = "<group>"; };
+		CB2FDCC524F6F35C00C433CE /* VTEProvokingFactors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTEProvokingFactors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,12 +103,14 @@
 		CB050E9A24F2F741001B992B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CB2FDCB924F6E8BC00C433CE /* VTEAnticoag */,
 				CB050EA024F437ED001B992B /* CAP */,
 				CB050E8A24F2EFB3001B992B /* ListView.swift */,
 				CB050E9B24F2F78B001B992B /* SearchBar.swift */,
 				CB050EA324F56CF6001B992B /* ShowPicker.swift */,
 				CB050EA524F56D32001B992B /* SegmentedPickerModifier.swift */,
 				CB050EAB24F56E8D001B992B /* NextButtonStyle.swift */,
+				CB2FDCC324F6F02A00C433CE /* TitleModifier.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -110,6 +120,7 @@
 			children = (
 				CB050E9E24F43176001B992B /* Condition.swift */,
 				CB050EA724F56D6D001B992B /* CAPToggle.swift */,
+				CB2FDCBF24F6EB8D00C433CE /* VTEdata.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -121,6 +132,15 @@
 				CB2B470824F57726006394DE /* OutCAPManagement.swift */,
 			);
 			path = CAP;
+			sourceTree = "<group>";
+		};
+		CB2FDCB924F6E8BC00C433CE /* VTEAnticoag */ = {
+			isa = PBXGroup;
+			children = (
+				CB2FDCBB24F6E9AB00C433CE /* VTEFirst.swift */,
+				CB2FDCC524F6F35C00C433CE /* VTEProvokingFactors.swift */,
+			);
+			path = VTEAnticoag;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,7 +214,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB2FDCBC24F6E9AB00C433CE /* VTEFirst.swift in Sources */,
 				CB050EAC24F56E8D001B992B /* NextButtonStyle.swift in Sources */,
+				CB2FDCC424F6F02A00C433CE /* TitleModifier.swift in Sources */,
 				CB050E8724F2EFB3001B992B /* AppDelegate.swift in Sources */,
 				CB050EA624F56D32001B992B /* SegmentedPickerModifier.swift in Sources */,
 				CB050EA424F56CF6001B992B /* ShowPicker.swift in Sources */,
@@ -203,8 +225,10 @@
 				CB050EA824F56D6D001B992B /* CAPToggle.swift in Sources */,
 				CB050E8924F2EFB3001B992B /* SceneDelegate.swift in Sources */,
 				CB050E8B24F2EFB3001B992B /* ListView.swift in Sources */,
+				CB2FDCC624F6F35C00C433CE /* VTEProvokingFactors.swift in Sources */,
 				CB2B470924F57726006394DE /* OutCAPManagement.swift in Sources */,
 				CB050E9F24F43176001B992B /* Condition.swift in Sources */,
+				CB2FDCC024F6EB8D00C433CE /* VTEdata.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

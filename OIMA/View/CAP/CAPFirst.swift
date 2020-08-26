@@ -11,6 +11,8 @@ import SwiftUI
 struct CAPFirst: View {
     
     @ObservedObject var capToggle: CAPToggle = CAPToggle()
+    @State private var selection = 0
+    @State private var nextView = false
     
     private let rfs = ["Prior respiratory isolation of MRSA", "Prior respiratory isolation of Pseudmonas", "Chronic heart disease", "Chronic lung disease", "Chronic liver disease", "Chronic renal disease", "Diabetes mellitus", "Alcoholism", "Malignancy", "Asplenia"]
     
@@ -28,12 +30,12 @@ struct CAPFirst: View {
                             Text("\(rf)").font(.body).fontWeight(.medium)
                         }
                     }
-                    ShowPicker(parentBinding: $capToggle.selection, text: "", parentArray: answer)
-                        .padding()
+                    ShowPicker(parentBinding: $selection, text: "", parentArray: answer)
+                        
                     HStack {
                         Spacer()
                         Button("Next") {
-                            self.capToggle.nextView = true
+                            self.nextView = true
                         }.buttonStyle(NextButtonStyle(fillColor: fillColor)).padding()
                         Spacer()
                     }
@@ -43,10 +45,9 @@ struct CAPFirst: View {
             }
             
             
-            NavigationLink(destination: OutCAPManagement(capToggle: capToggle), isActive: $capToggle.nextView) {
+            NavigationLink(destination: OutCAPManagement(capToggle: capToggle), isActive: $nextView) {
                 EmptyView()
-            }
-            
+            }.navigationBarItems(trailing: Text("Community-acquired pneumonia")).font(.headline).foregroundColor(.gray)
         }
     }
 }

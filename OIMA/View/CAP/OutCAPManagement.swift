@@ -13,7 +13,7 @@ struct OutCAPManagement: View {
     @ObservedObject var capToggle: CAPToggle
     
     var body: some View {
-        NavigationView {
+ 
             ScrollView {
             Group {
                 Text("Management")
@@ -30,7 +30,7 @@ struct OutCAPManagement: View {
                     Group {
                         Text("Renal dosing may be necessary").font(.footnote)
                         Text("You've indicated that the patient has risk factors for MRSA or Pseudomonas").font(.footnote).padding()
-                        Text("Treat using the following combination therapy:").underline().padding()
+                        Text("Treat using the following combination therapy:").underline().padding().multilineTextAlignment(.center)
                         Text("Choose one of these:").padding()
                         VStack(alignment: .leading) {
                             Text("Amoxicillin/clavulanate 500mg/125mg PO TID")
@@ -72,10 +72,11 @@ struct OutCAPManagement: View {
                 Text("Treatment duration is 5 days unless patients fail to improve").font(.footnote).padding()
                 
                 
-            }.edgesIgnoringSafeArea(.top).padding(.bottom, 50)
+            }
+            .edgesIgnoringSafeArea(.top).padding(.bottom, 50)
         }
         
-    }
+    
 }
 
 struct OutCAPManagement_Previews: PreviewProvider {
