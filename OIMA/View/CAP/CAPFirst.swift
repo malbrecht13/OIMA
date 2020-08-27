@@ -23,7 +23,7 @@ struct CAPFirst: View {
     var body: some View {
         VStack {
             Form {
-                Section(header: Text("Does the patient have any of these risk factors?").foregroundColor(fillColor).font(.callout).fontWeight(.black).padding(.top, -50)) {
+                Section(header: Text("Does the patient have any of these risk factors?").foregroundColor(fillColor).font(.callout).fontWeight(.black).padding()) {
                     ForEach(rfs, id: \.self) { rf in
                         HStack {
                             Text("•")
@@ -47,7 +47,7 @@ struct CAPFirst: View {
             
             NavigationLink(destination: OutCAPManagement(capToggle: capToggle), isActive: $nextView) {
                 EmptyView()
-            }.navigationBarItems(trailing: Text("Community-acquired pneumonia")).font(.headline).foregroundColor(.gray)
+            }.navigationBarTitle("Risk factors", displayMode: .inline)
         }
     }
 }

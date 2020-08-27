@@ -22,6 +22,6 @@ struct TitleModifier: ViewModifier {
         .padding(10)
         .cornerRadius(10.0)
         .background(fillColor)
-        .padding(.vertical, 20)
+        .padding(.vertical)
     }
 }
