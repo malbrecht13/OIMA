@@ -14,8 +14,7 @@ struct VTEFirst: View {
     @State private var nextView = false
     
     private let vteType = ["PE", "DVT"]
-    
-    private let fillColor = Color(hue: 0.67, saturation: 0.46, brightness: 0.69, opacity: 1.00)
+
     
     var body: some View {
         VStack {
@@ -27,7 +26,7 @@ struct VTEFirst: View {
                 self.nextView = true
             }) {
                 Text("Next")
-            }.buttonStyle(NextButtonStyle(fillColor: fillColor))
+            }.buttonStyle(NextButtonStyle(fillColor: purple))
             
             
             NavigationLink(destination: VTEProvokingFactors(vte: VTEData()), isActive: $nextView) {
@@ -36,7 +35,7 @@ struct VTEFirst: View {
             
             Spacer()
             
-            Text("An algorithm to decide on anticoagulant and duration of therapy in VTE disease.").padding().font(.caption)
+            Text("This algorithm helps with choosing an anticoagulant.  It also helps in determining duration of therapy in VTE disease.").padding()
             
             
 

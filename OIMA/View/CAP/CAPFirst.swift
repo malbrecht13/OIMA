@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CAPFirst: View {
     
-    @ObservedObject var capToggle: CAPToggle = CAPToggle()
+    @ObservedObject var capToggle: CAPData = CAPData()
     @State private var selection = 0
     @State private var nextView = false
     

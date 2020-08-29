@@ -10,7 +10,7 @@ import SwiftUI
 
 struct OutCAPManagement: View {
     
-    @ObservedObject var capToggle: CAPToggle
+    @ObservedObject var capToggle: CAPData
     
     var body: some View {
  
@@ -81,6 +81,6 @@ struct OutCAPManagement: View {
 
 struct OutCAPManagement_Previews: PreviewProvider {
     static var previews: some View {
-        OutCAPManagement(capToggle: CAPToggle())
+        OutCAPManagement(capToggle: CAPData())
     }
 }

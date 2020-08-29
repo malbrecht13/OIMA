@@ -15,9 +15,6 @@ struct ProximalDistalDVT: View {
     private let siteChoice = ["Proximal", "Distal"]
     private let severeChoice = ["Yes", "No"]
     
-    
-    private let fillColor = Color(hue: 0.67, saturation: 0.46, brightness: 0.69, opacity: 1.00)
-    
     var body: some View {
         VStack {
             Spacer()
@@ -32,8 +29,9 @@ struct ProximalDistalDVT: View {
                 //do something
             }) {
                 Text("Next")
-            }.buttonStyle(NextButtonStyle(fillColor: fillColor))
+            }.buttonStyle(NextButtonStyle(fillColor: purple))
             Spacer()
+            Text("*A distal DVT is one that is soley in a deep vein below the knee").padding()
                 .navigationBarTitle("DVT site", displayMode: .inline)
         }
     }

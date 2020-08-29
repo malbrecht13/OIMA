@@ -12,7 +12,7 @@ import SwiftUI
 
 //for Toggles in Community Acquired pneumonia
 
-class CAPToggle: ObservableObject {
+class CAPData: ObservableObject {
     
     //variables for OutpatientCAP.swift
     @Published var selection = 0

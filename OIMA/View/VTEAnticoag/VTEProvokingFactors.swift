@@ -11,27 +11,31 @@ import SwiftUI
 struct VTEProvokingFactors: View {
     
     @ObservedObject var vte: VTEData
-    
-    private let fillColor = Color(hue: 0.67, saturation: 0.46, brightness: 0.69, opacity: 1.00)
+    @State private var nextView = false
     
     var body: some View {
         VStack {
             Form {
-                Section(header: Text("Select any provoking factors that apply").font(.headline).foregroundColor(fillColor).padding()) {
+                Section(header: Text("Select any provoking factors that apply").font(.headline).foregroundColor(purple).padding()) {
                     ShowToggle(binding: $vte.surgery, count: $vte.insignificantCount, text: "Surgery in last 3 months")
                     ShowToggle(binding: $vte.malignancy, count: $vte.insignificantCount, text: "Active malignancy")
                     ShowToggle(binding: $vte.estrogen, count: $vte.insignificantCount, text: "Estrogen therapy")
                     ShowToggle(binding: $vte.flight8hours, count: $vte.insignificantCount, text: "Flight/trip > 8 hours")
                     ShowToggle(binding: $vte.legInjury, count: $vte.insignificantCount, text: "Significant leg injury")
                     ShowToggle(binding: $vte.pregnancy, count: $vte.insignificantCount, text: "Pregnancy")
+                    Text("(If none apply, simply select the 'Next' button below)").font(.caption)
                 }
             }
             
+            NavigationLink(destination: VTEAnticoagChoiceInfluencers(vte: VTEData()), isActive: $nextView) {
+                EmptyView()
+            }
+            
             Button(action: {
-                //do something
+                self.nextView = true
             }) {
                 Text("Next")
-            }.buttonStyle(NextButtonStyle(fillColor: fillColor))
+            }.buttonStyle(NextButtonStyle(fillColor: purple))
             }.navigationBarTitle("Provoking factors", displayMode: .inline)
     }
 }
