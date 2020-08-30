@@ -9,13 +9,27 @@
 import SwiftUI
 
 struct VTEManagement: View {
+    
+    @ObservedObject var vte: VTEData
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Management")
+                .fontWeight(.black)
+                .modifier(ManagementMod(textColor: purple))
+            Spacer()
+        }
     }
+    
+    
+}
+
+//TODO: - VTE Bleed Score calculation
+func vteBleedScore() -> Double {
+    return 0.0
 }
 
 struct VTEManagement_Previews: PreviewProvider {
     static var previews: some View {
-        VTEManagement()
+        VTEManagement(vte: VTEData())
     }
 }

@@ -16,7 +16,7 @@ struct VTEAnticoagChoiceInfluencers: View {
     var body: some View {
         VStack {
         Form {
-            Section(header: Text("Below are factors that also influence anticoagulant choice.  Select any that apply.").font(.headline).foregroundColor(purple).padding()) {
+            Section(header: Text("Below are factors that influence anticoagulant choice.  Select any that apply.").font(.headline).foregroundColor(purple).padding()) {
                 ShowToggle(binding: $vte.liverDisease, count: $vte.insignificantCount, text: "Liver disease with coagulopathy")
                 ShowToggle(binding: $vte.lowCrClearance, count: $vte.insignificantCount, text: "CrCl < 30 mL/min")
                 ShowToggle(binding: $vte.cad, count: $vte.insignificantCount, text: "History of CAD")
@@ -34,7 +34,7 @@ struct VTEAnticoagChoiceInfluencers: View {
             }) {
                 Text("Next")
             }.buttonStyle(NextButtonStyle(fillColor: purple))
-        }.navigationBarTitle("Provoking factors", displayMode: .inline)
+        }.navigationBarTitle("Anticoagulation influencers", displayMode: .inline)
         
         
     }

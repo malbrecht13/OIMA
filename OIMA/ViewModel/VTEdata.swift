@@ -13,6 +13,7 @@ import SwiftUI
 class VTEData: ObservableObject {
     //Used in VTEFirst.swift
     @Published var selection = 0
+    @Published var occurrence = 0
     
     //Used in VTEProvokingFactors.swift
     @Published var insignificantCount = 0

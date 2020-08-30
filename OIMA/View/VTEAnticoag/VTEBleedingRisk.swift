@@ -11,6 +11,7 @@ import SwiftUI
 struct VTEBleedingRisk: View {
     
     @ObservedObject var vte: VTEData
+    @State private var nextView = false
     
     var body: some View {
         VStack {
@@ -22,16 +23,18 @@ struct VTEBleedingRisk: View {
                     ShowToggle(binding: $vte.activeCancer, count: $vte.bleedRFCount, text: "Active cancer")
                     ShowToggle(binding: $vte.renalFailure, count: $vte.bleedRFCount, text: "Renal insufficiency/failure")
                     ShowToggle(binding: $vte.maleHTN, count: $vte.bleedRFCount, text: "Male with uncontrolled hypertension")
-                    Text("*Based on VTE-BLEED score*").font(.caption)
+                    Text("Based on VTE-BLEED score").font(.caption)
                 }
             }
-            Button(action: {
-                
-                print(self.vte.bleedRFCount)
-            }) {
-                Text("Next")
-            }.buttonStyle(NextButtonStyle(fillColor: purple))
-        }.navigationBarTitle("Provoking factors", displayMode: .inline)
+            NavigationLink(destination: VTEManagement(vte: VTEData()), isActive: $nextView) {
+                Button(action: {
+                    self.nextView = true
+                }) {
+                    Text("Next")
+                }.buttonStyle(NextButtonStyle(fillColor: purple))
+            }
+           
+        }.navigationBarTitle("Bleeding risk", displayMode: .inline)
     }
 }
 

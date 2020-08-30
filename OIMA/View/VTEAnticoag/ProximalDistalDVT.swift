@@ -11,6 +11,7 @@ import SwiftUI
 struct ProximalDistalDVT: View {
     
     @ObservedObject var vte: VTEData
+    @State private var nextView = false
     
     private let siteChoice = ["Proximal", "Distal"]
     private let severeChoice = ["Yes", "No"]
@@ -18,18 +19,21 @@ struct ProximalDistalDVT: View {
     var body: some View {
         VStack {
             Spacer()
-            ShowPicker(parentBinding: $vte.proxDistSelection, text: "Was the DVT proximal or distal?", parentArray: siteChoice)
+            ShowPicker(parentBinding: $vte.proxDistSelection, text: "Was the DVT proximal or distal*?", parentArray: siteChoice)
 
             
             if vte.proxDistSelection == 1 {
                 ShowPicker(parentBinding: $vte.severeSymptoms, text: "Were the distal DVT symptoms severe?", parentArray: severeChoice)
                 
             }
-            Button(action: {
-                //do something
-            }) {
-                Text("Next")
-            }.buttonStyle(NextButtonStyle(fillColor: purple))
+            NavigationLink(destination: VTEProvokingFactors(vte: VTEData()), isActive: $nextView) {
+                Button(action: {
+                    self.nextView = true
+                }) {
+                    Text("Next")
+                }.buttonStyle(NextButtonStyle(fillColor: purple))
+            }
+            
             Spacer()
             Text("*A distal DVT is one that is soley in a deep vein below the knee").padding()
                 .navigationBarTitle("DVT site", displayMode: .inline)

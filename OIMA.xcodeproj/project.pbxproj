@@ -17,7 +17,6 @@
 		CB050E9F24F43176001B992B /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB050E9E24F43176001B992B /* Condition.swift */; };
 		CB050EA224F4393C001B992B /* CAPFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB050EA124F4393C001B992B /* CAPFirst.swift */; };
 		CB050EA424F56CF6001B992B /* ShowPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB050EA324F56CF6001B992B /* ShowPicker.swift */; };
-		CB050EA624F56D32001B992B /* SegmentedPickerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB050EA524F56D32001B992B /* SegmentedPickerModifier.swift */; };
 		CB050EAC24F56E8D001B992B /* NextButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB050EAB24F56E8D001B992B /* NextButtonStyle.swift */; };
 		CB2B470924F57726006394DE /* OutCAPManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2B470824F57726006394DE /* OutCAPManagement.swift */; };
 		CB2FDCBC24F6E9AB00C433CE /* VTEFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCBB24F6E9AB00C433CE /* VTEFirst.swift */; };
@@ -31,6 +30,8 @@
 		CB2FDCD024F858E700C433CE /* VTEManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCCF24F858E700C433CE /* VTEManagement.swift */; };
 		CB2FDCD324F85BDD00C433CE /* CAPData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCD224F85BDD00C433CE /* CAPData.swift */; };
 		CB2FDCD524F9B5CF00C433CE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCD424F9B5CF00C433CE /* Constants.swift */; };
+		CB8656A224FC5EDD0081A034 /* SegmentedPickerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8656A124FC5EDD0081A034 /* SegmentedPickerModifier.swift */; };
+		CB8656A424FC5FC70081A034 /* ManagementMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8656A324FC5FC70081A034 /* ManagementMod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +47,6 @@
 		CB050E9E24F43176001B992B /* Condition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
 		CB050EA124F4393C001B992B /* CAPFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAPFirst.swift; sourceTree = "<group>"; };
 		CB050EA324F56CF6001B992B /* ShowPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowPicker.swift; path = "../../../../medlearn/medlearn/Views/General Views/ShowPicker.swift"; sourceTree = "<group>"; };
-		CB050EA524F56D32001B992B /* SegmentedPickerModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SegmentedPickerModifier.swift; path = ../../../../medlearn/medlearn/Views/ViewModifiers/SegmentedPickerModifier.swift; sourceTree = "<group>"; };
 		CB050EAB24F56E8D001B992B /* NextButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButtonStyle.swift; sourceTree = "<group>"; };
 		CB2B470824F57726006394DE /* OutCAPManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutCAPManagement.swift; sourceTree = "<group>"; };
 		CB2FDCBB24F6E9AB00C433CE /* VTEFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTEFirst.swift; sourceTree = "<group>"; };
@@ -60,6 +60,8 @@
 		CB2FDCCF24F858E700C433CE /* VTEManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTEManagement.swift; sourceTree = "<group>"; };
 		CB2FDCD224F85BDD00C433CE /* CAPData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAPData.swift; sourceTree = "<group>"; };
 		CB2FDCD424F9B5CF00C433CE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CB8656A124FC5EDD0081A034 /* SegmentedPickerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPickerModifier.swift; sourceTree = "<group>"; };
+		CB8656A324FC5FC70081A034 /* ManagementMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementMod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,15 +119,13 @@
 		CB050E9A24F2F741001B992B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CB8656A024FC5EB80081A034 /* ViewModifiers */,
 				CB2FDCB924F6E8BC00C433CE /* VTEAnticoag */,
 				CB050EA024F437ED001B992B /* CAP */,
 				CB050E8A24F2EFB3001B992B /* ListView.swift */,
 				CB050E9B24F2F78B001B992B /* SearchBar.swift */,
 				CB050EA324F56CF6001B992B /* ShowPicker.swift */,
 				CB2FDCC724F7264E00C433CE /* ShowToggle.swift */,
-				CB050EA524F56D32001B992B /* SegmentedPickerModifier.swift */,
-				CB050EAB24F56E8D001B992B /* NextButtonStyle.swift */,
-				CB2FDCC324F6F02A00C433CE /* TitleModifier.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -151,10 +151,10 @@
 			isa = PBXGroup;
 			children = (
 				CB2FDCBB24F6E9AB00C433CE /* VTEFirst.swift */,
+				CB2FDCC924F8587100C433CE /* ProximalDistalDVT.swift */,
 				CB2FDCC524F6F35C00C433CE /* VTEProvokingFactors.swift */,
 				CB2FDCCB24F8589B00C433CE /* VTEAnticoagChoiceInfluencers.swift */,
 				CB2FDCCD24F858B600C433CE /* VTEBleedingRisk.swift */,
-				CB2FDCC924F8587100C433CE /* ProximalDistalDVT.swift */,
 				CB2FDCCF24F858E700C433CE /* VTEManagement.swift */,
 			);
 			path = VTEAnticoag;
@@ -167,6 +167,17 @@
 				CB2FDCD224F85BDD00C433CE /* CAPData.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CB8656A024FC5EB80081A034 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				CB2FDCC324F6F02A00C433CE /* TitleModifier.swift */,
+				CB050EAB24F56E8D001B992B /* NextButtonStyle.swift */,
+				CB8656A124FC5EDD0081A034 /* SegmentedPickerModifier.swift */,
+				CB8656A324FC5FC70081A034 /* ManagementMod.swift */,
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,14 +252,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB2FDCBC24F6E9AB00C433CE /* VTEFirst.swift in Sources */,
+				CB8656A224FC5EDD0081A034 /* SegmentedPickerModifier.swift in Sources */,
 				CB050EAC24F56E8D001B992B /* NextButtonStyle.swift in Sources */,
 				CB2FDCCA24F8587100C433CE /* ProximalDistalDVT.swift in Sources */,
 				CB2FDCC424F6F02A00C433CE /* TitleModifier.swift in Sources */,
 				CB050E8724F2EFB3001B992B /* AppDelegate.swift in Sources */,
-				CB050EA624F56D32001B992B /* SegmentedPickerModifier.swift in Sources */,
 				CB2FDCD024F858E700C433CE /* VTEManagement.swift in Sources */,
 				CB050EA424F56CF6001B992B /* ShowPicker.swift in Sources */,
 				CB2FDCCC24F8589B00C433CE /* VTEAnticoagChoiceInfluencers.swift in Sources */,
+				CB8656A424FC5FC70081A034 /* ManagementMod.swift in Sources */,
 				CB2FDCCE24F858B600C433CE /* VTEBleedingRisk.swift in Sources */,
 				CB050EA224F4393C001B992B /* CAPFirst.swift in Sources */,
 				CB2FDCD524F9B5CF00C433CE /* Constants.swift in Sources */,
