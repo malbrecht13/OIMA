@@ -26,9 +26,10 @@ struct VTEBleedingRisk: View {
                     Text("Based on VTE-BLEED score").font(.caption)
                 }
             }
-            NavigationLink(destination: VTEManagement(vte: VTEData()), isActive: $nextView) {
+            NavigationLink(destination: VTEManagement(vte: vte), isActive: $nextView) {
                 Button(action: {
                     self.nextView = true
+                    print(self.vte.malignancy)
                 }) {
                     Text("Next")
                 }.buttonStyle(NextButtonStyle(fillColor: purple))

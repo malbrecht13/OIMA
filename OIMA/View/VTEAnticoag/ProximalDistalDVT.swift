@@ -26,16 +26,17 @@ struct ProximalDistalDVT: View {
                 ShowPicker(parentBinding: $vte.severeSymptoms, text: "Were the distal DVT symptoms severe?", parentArray: severeChoice)
                 
             }
-            NavigationLink(destination: VTEProvokingFactors(vte: VTEData()), isActive: $nextView) {
+            NavigationLink(destination: VTEProvokingFactors(vte: vte), isActive: $nextView) {
                 Button(action: {
                     self.nextView = true
+                    print(self.vte.malignancy)
                 }) {
                     Text("Next")
                 }.buttonStyle(NextButtonStyle(fillColor: purple))
             }
             
             Spacer()
-            Text("*A distal DVT is one that is soley in a deep vein below the knee").padding()
+            Text("*A distal DVT is one that is soley in a deep vein below the knee. An upper extremity DVT can be treated similarly to a proximal DVT of the leg.").padding()
                 .navigationBarTitle("DVT site", displayMode: .inline)
         }
     }

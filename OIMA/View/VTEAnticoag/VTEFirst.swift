@@ -14,7 +14,9 @@ struct VTEFirst: View {
     @State private var nextView: String? = nil
     
     private let vteType = ["PE", "DVT"]
-    private let occurrences = ["First", "Second or greater"]
+    private let occurrences = ["First occurrence", "Second or greater"]
+    private let subseg = ["Yes", "No"]
+    private let onAnticoag = ["Yes", "No"]
 
     
     var body: some View {
@@ -22,7 +24,16 @@ struct VTEFirst: View {
             Spacer()
             
             ShowPicker(parentBinding: $vte.selection, text: "Select VTE type", parentArray: vteType)
+            
+            if vte.selection == 0 {
+                ShowPicker(parentBinding: $vte.subsegmental, text: "Was the PE subsegmental and no DVT?", parentArray: subseg).animation(.easeInOut(duration: 1)).transition(.slide)
+            }
             ShowPicker(parentBinding: $vte.occurrence, text: "Select number of VTE occurrences", parentArray: occurrences).minimumScaleFactor(0.5)
+            
+            if vte.occurrence == 1 {
+                ShowPicker(parentBinding: $vte.vteOnAnticoag, text: "Did the VTE recur while adherent to taking anticoagulation?", parentArray: onAnticoag).animation(.easeInOut(duration: 1)).transition(.slide)
+            }
+            
             
             Button(action: {
                 if self.vte.selection == 0 {
@@ -35,16 +46,16 @@ struct VTEFirst: View {
             }.buttonStyle(NextButtonStyle(fillColor: purple))
             
             
-            NavigationLink(destination: VTEProvokingFactors(vte: VTEData()), tag: "PE", selection: $nextView) {
+            NavigationLink(destination: VTEProvokingFactors(vte: vte), tag: "PE", selection: $nextView) {
                 EmptyView()
             }
-            NavigationLink(destination: ProximalDistalDVT(vte: VTEData()), tag: "DVT", selection: $nextView) {
+            NavigationLink(destination: ProximalDistalDVT(vte: vte), tag: "DVT", selection: $nextView) {
                 EmptyView()
             }
             
             Spacer()
             
-            Text("This algorithm helps with choosing an anticoagulant.  It also helps in determining duration of therapy in VTE disease.").padding()
+            Text("This algorithm helps with choosing an anticoagulant.  It also helps in determining duration of therapy in VTE disease.  None of the recommendations provided are set in stone.").padding()
             
             
 
