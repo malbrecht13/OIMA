@@ -27,13 +27,12 @@ struct VTEProvokingFactors: View {
                 }
             }
             
-            NavigationLink(destination: VTEAnticoagChoiceInfluencers(vte: vte), isActive: $nextView) {
+            NavigationLink(destination: VTEBleedingRisk(vte: vte), isActive: $nextView) {
                 EmptyView()
             }
             
             Button(action: {
                 self.nextView = true
-                print(self.vte.malignancy)
             }) {
                 Text("Next")
             }.buttonStyle(NextButtonStyle(fillColor: purple))

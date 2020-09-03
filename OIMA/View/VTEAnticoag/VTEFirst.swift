@@ -25,9 +25,6 @@ struct VTEFirst: View {
             
             ShowPicker(parentBinding: $vte.selection, text: "Select VTE type", parentArray: vteType)
             
-            if vte.selection == 0 {
-                ShowPicker(parentBinding: $vte.subsegmental, text: "Was the PE subsegmental and no DVT?", parentArray: subseg).animation(.easeInOut(duration: 1)).transition(.slide)
-            }
             ShowPicker(parentBinding: $vte.occurrence, text: "Select number of VTE occurrences", parentArray: occurrences).minimumScaleFactor(0.5)
             
             if vte.occurrence == 1 {
@@ -55,7 +52,7 @@ struct VTEFirst: View {
             
             Spacer()
             
-            Text("This algorithm helps with choosing an anticoagulant.  It also helps in determining duration of therapy in VTE disease.  None of the recommendations provided are set in stone.").padding()
+            Text("This algorithm helps with choosing duration of therapy in VTE disease.  None of the recommendations provided are set in stone. For those on long-term anticoagulation, assess risk/benefit ratio of continuing anticoagulation at least once yearly.").padding()
             
             
 

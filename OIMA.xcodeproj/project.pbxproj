@@ -25,7 +25,6 @@
 		CB2FDCC624F6F35C00C433CE /* VTEProvokingFactors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCC524F6F35C00C433CE /* VTEProvokingFactors.swift */; };
 		CB2FDCC824F7264E00C433CE /* ShowToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCC724F7264E00C433CE /* ShowToggle.swift */; };
 		CB2FDCCA24F8587100C433CE /* ProximalDistalDVT.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCC924F8587100C433CE /* ProximalDistalDVT.swift */; };
-		CB2FDCCC24F8589B00C433CE /* VTEAnticoagChoiceInfluencers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCCB24F8589B00C433CE /* VTEAnticoagChoiceInfluencers.swift */; };
 		CB2FDCCE24F858B600C433CE /* VTEBleedingRisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCCD24F858B600C433CE /* VTEBleedingRisk.swift */; };
 		CB2FDCD024F858E700C433CE /* VTEManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCCF24F858E700C433CE /* VTEManagement.swift */; };
 		CB2FDCD324F85BDD00C433CE /* CAPData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCD224F85BDD00C433CE /* CAPData.swift */; };
@@ -55,7 +54,6 @@
 		CB2FDCC524F6F35C00C433CE /* VTEProvokingFactors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTEProvokingFactors.swift; sourceTree = "<group>"; };
 		CB2FDCC724F7264E00C433CE /* ShowToggle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShowToggle.swift; path = "../../../../medlearn/medlearn/Views/General Views/ShowToggle.swift"; sourceTree = "<group>"; };
 		CB2FDCC924F8587100C433CE /* ProximalDistalDVT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProximalDistalDVT.swift; sourceTree = "<group>"; };
-		CB2FDCCB24F8589B00C433CE /* VTEAnticoagChoiceInfluencers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTEAnticoagChoiceInfluencers.swift; sourceTree = "<group>"; };
 		CB2FDCCD24F858B600C433CE /* VTEBleedingRisk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTEBleedingRisk.swift; sourceTree = "<group>"; };
 		CB2FDCCF24F858E700C433CE /* VTEManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTEManagement.swift; sourceTree = "<group>"; };
 		CB2FDCD224F85BDD00C433CE /* CAPData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAPData.swift; sourceTree = "<group>"; };
@@ -153,7 +151,6 @@
 				CB2FDCBB24F6E9AB00C433CE /* VTEFirst.swift */,
 				CB2FDCC924F8587100C433CE /* ProximalDistalDVT.swift */,
 				CB2FDCC524F6F35C00C433CE /* VTEProvokingFactors.swift */,
-				CB2FDCCB24F8589B00C433CE /* VTEAnticoagChoiceInfluencers.swift */,
 				CB2FDCCD24F858B600C433CE /* VTEBleedingRisk.swift */,
 				CB2FDCCF24F858E700C433CE /* VTEManagement.swift */,
 			);
@@ -259,7 +256,6 @@
 				CB050E8724F2EFB3001B992B /* AppDelegate.swift in Sources */,
 				CB2FDCD024F858E700C433CE /* VTEManagement.swift in Sources */,
 				CB050EA424F56CF6001B992B /* ShowPicker.swift in Sources */,
-				CB2FDCCC24F8589B00C433CE /* VTEAnticoagChoiceInfluencers.swift in Sources */,
 				CB8656A424FC5FC70081A034 /* ManagementMod.swift in Sources */,
 				CB2FDCCE24F858B600C433CE /* VTEBleedingRisk.swift in Sources */,
 				CB050EA224F4393C001B992B /* CAPFirst.swift in Sources */,

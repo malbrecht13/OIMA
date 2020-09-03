@@ -14,7 +14,7 @@ struct VTEManagement: View {
     
     private let LMWH = ["Enoxaparin 1 mg/kg q12", "Dalteparin 200 units/kg/day divided qd-bid (18,000U max per dose)"]
     private let DOACindefinite = ["Apixaban 10 mg PO BID x 7 days, then 5 mg PO BID for 6 months, then 2.5 mg bid thereafter", "Rivaroxoban 15 mg PO BID x 21 days, then 20 mg PO qd for 6 months, then 10 mg thereafter", "Dabigatran 150 mg PO BID after parenteral anticoagulation for 5 days"]
-    private let DOAC3Months = ["Apixaban 10 mg PO BID x 7 days, then 5 mg PO BID x 3 months, then stop", "Rivaroxaban 15 mg PO BID x 21 days, then 20 mg PO qd x 3 months, then stop", "Dabigatran 150 mg PO BID after parenteral anticoagulation for 5 days"]
+    private let DOAC3Months = ["Apixaban 10 mg PO BID x 7 days, then 5 mg PO BID", "Rivaroxaban 15 mg PO BID x 21 days, then 20 mg PO qd", "Dabigatran 150 mg PO BID after parenteral anticoagulation for 5 days"]
     
     var body: some View {
         VStack {
@@ -22,30 +22,15 @@ struct VTEManagement: View {
                 .fontWeight(.black)
                 .modifier(ManagementMod(textColor: purple))
             VStack(alignment: .leading) {
-                Text("\(vteBleedScore())")
                 //if patient has active cancer
                 if vte.malignancy {
                     Text("You've indicated the patient has active malignancy.")
                     
                     Text("\nIndefinite therapy should be used for most patients with active cancer.  However, management decisions are complex and must be indidualized and based on patient input.")
                     
-                    
-                    Text("\nFirst-line options:").underline()
-                    ForEach(DOACindefinite, id: \.self) { treatment in
-                        Text("• " + treatment)
-                    }
-                    Text("\nSecond-line options: ").underline()
-                        ForEach(LMWH, id: \.self) { treatment in
-                            Text("• " + treatment)
-                        }
-                    Text("• Warfarin, overlap with heparin until INR therapeutic")
-                    
                     Text("\nNote: LMWH is first-line if patient has severe liver disease with coagulopathy or if they have a GI/GU cancer.")
                   
-                }
-                
-                // if patient has a distal DVT
-                if vte.proxDistSelection == 1 {
+                } else if vte.proxDistSelection == 1 {
                     Text("You've indicated the patient has a distal DVT")
                     if vte.severeSymptoms == 0 {
                         Text("You've indicated that symptoms for the DVT were not severe.")
@@ -55,13 +40,62 @@ struct VTEManagement: View {
                         Text("\nConsider treating for 3 months, then stop, particularly if bleed risk is not high.")
                     }
                 } else if vte.proxDistSelection == 0 {
-                    //TODO: - provoked
-                    //TODO: - unprovoked
-                        //1st instance low bleed risk
-                        //1st instance high bleed risk
-                        //2nd instance low bleed risk
-                        //2nd instance high bleed risk
+                    //provoked
+                    if vte.insignificantCount > 0 {
+                        Text("You've indicated that there were transient risk factors that may have caused the VTE. Treat for 3 months, then consider stopping.")
+                    } else {
+                        //unprovoked
+                        Text("The VTE was unprovoked.")
+                        //high bleed risk
+                        if vteBleedScore() >= 2.0 {
+                            Text("\nVTE-Bleed score is \(String(format: "%.1f", vteBleedScore())). This indicates a high bleeding risk.")
+                            if vte.occurrence == 0 {
+                                Text("\nSince this was the first occurrence of unprovoked VTE with high bleed risk, consider stopping anticoagulation after 3 months.")
+                            } else if vte.occurrence == 1 {
+                                Text("\nSince this is recurrent unprovoked VTE with a high bleeding risk, consider stopping anticoagulation after 3 months.")
+                            }
+                            Text("\nConsider long-term aspirin therapy after stopping anticoagulation.")
+                        //low bleed risk
+                        } else if vteBleedScore() < 2.0 {
+                            Text("\nVTE-Bleed score is \(String(format: "%.1f", vteBleedScore())).  This indicates a low bleeding risk.")
+                            if vte.occurrence == 0 {
+                                Text("\nSince this is the first occurrence of unprovoked VTE with low bleed risk, consider providing indefinite anticoagulation.")
+                            } else if vte.occurrence == 1 {
+                                Text("\nSince this is recurrent unprovoked VTE with low bleed risk, provide indefinite anticoagulation.")
+                            }
+                        }
+                    }
+                    
+                }//TODO: - anticoagulant selection
+                //if VTE occurred on recurrent anticoagulation
+                if vte.occurrence == 1 && vte.vteOnAnticoag == 0 {
+                    Text("\nSince the VTE occurred while on chronic anticoagulation, consider switching to Low-molecular weight heparin (LMWH) for at least one month.  If the VTE occurred while already on LMWH, consider increasing the dose of LMWH by one-quarter to one-third.")
+                    
+                    // indefinite therapy
+                } else if vte.insignificantCount == 0 && vteBleedScore() < 2.0 {
+                    Text("\nFirst-line options:").underline()
+                    ForEach(DOACindefinite, id: \.self) { treatment in
+                        Text("• " + treatment)
+                    }
+                    Text("\nSecond-line options: ").underline()
+                    Text("• Warfarin, overlap with heparin until INR therapeutic")
+                    ForEach(LMWH, id: \.self) { treatment in
+                        Text("• " + treatment)
+                    }
+                    // 3 months therapy
+                } else if vte.severeSymptoms == 1 || vte.insignificantCount > 0 {
+                    Text("\nFirst-line options:").underline()
+                    ForEach(DOAC3Months, id: \.self) { treatment in
+                        Text("• " + treatment)
+                    }
+                    Text("\nSecond-line options: ").underline()
+                    Text("• Warfarin, overlap with heparin until INR therapeutic")
+                    ForEach(LMWH, id: \.self) { treatment in
+                        Text("• " + treatment)
+                    }
                 }
+                Text("\nNote: If patient has severe liver disease with coagulopathy, LMWH is the treatment of choice.")
+                
                 }.font(.caption)
             
             Spacer()
@@ -76,7 +110,7 @@ struct VTEManagement: View {
 extension VTEManagement {
     /// Calculates the VTE-Bleed score.  Starts with the bleedRFCount and adds points based on the VTEScoring system
     /// - Returns: VTE-Bleed score embedded in a string message based on how high the score is.
-    func vteBleedScore() -> String {
+    func vteBleedScore() -> Double {
         
         //age > 60 1.5 points
         //previous bleeding 1.5 points
@@ -88,7 +122,6 @@ extension VTEManagement {
         //High risk is >= 2 points
         
         let startingBleedScore = Double(vte.bleedRFCount)
-        print(startingBleedScore)
         
         var finalBleedScore = startingBleedScore
         
@@ -108,17 +141,8 @@ extension VTEManagement {
             finalBleedScore += 0.5
         }
         
-        print(finalBleedScore)
         
-        let firstMessage = "VTE-Bleed score is \(String(format: "%.1f", finalBleedScore)). "
-        var secondMessage = ""
-        if finalBleedScore < 2.0 {
-            secondMessage = "This indicates a low bleeding risk."
-        } else {
-            secondMessage = "This indicates a high bleeding risk."
-        }
-        
-        return firstMessage + secondMessage
+        return finalBleedScore
     }
 }
 
