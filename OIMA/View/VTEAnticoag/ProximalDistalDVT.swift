@@ -29,7 +29,7 @@ struct ProximalDistalDVT: View {
             NavigationLink(destination: VTEProvokingFactors(vte: vte), isActive: $nextView) {
                 Button(action: {
                     self.nextView = true
-                    print(self.vte.malignancy)
+                    print(self.vte.proxDistSelection)
                 }) {
                     Text("Next")
                 }.buttonStyle(NextButtonStyle(fillColor: purple))
