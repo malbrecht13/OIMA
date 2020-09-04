@@ -26,53 +26,71 @@ struct VTEManagement: View {
                 if vte.malignancy {
                     Text("You've indicated the patient has active malignancy.")
                     
-                    Text("\nIndefinite therapy should be used for most patients with active cancer.  However, management decisions are complex and must be indidualized and based on patient input.")
+                    Text("\nIndefinite therapy should be used for most patients with active cancer.  However, management decisions are complex and must be individualized and based on patient input.")
                     
                     Text("\nNote: LMWH is first-line if patient has severe liver disease with coagulopathy or if they have a GI/GU cancer.")
-                  
+                  //Distal DVT
                 } else if vte.proxDistSelection == 1 {
-                    Text("You've indicated the patient has a distal DVT")
-                    if vte.severeSymptoms == 0 {
-                        Text("You've indicated that symptoms for the DVT were not severe.")
+                    Text("You've indicated the patient has a distal DVT.")
+                    //no severe symptoms
+                    if vte.severeSymptoms == 1 {
+                        Text("\nYou've indicated that symptoms for the DVT were not severe.")
                         Text("\nIf no severe symptoms or major risk factors for clot extension, can do serial imaging for 2 weeks without anticoagulation.  If repeat ultrasound shows clot extension, consider providing anticoagulation for 3 months, then stop.")
-                    } else if vte.severeSymptoms == 1 {
-                        Text("You've indicated that the distal DVT caused severe symptoms.")
-                        Text("\nConsider treating for 3 months, then stop, particularly if bleed risk is not high.")
+                    //severe symptoms
+                    } else if vte.severeSymptoms == 0 {
+                        Text("\nYou've indicated that the distal DVT caused severe symptoms.")
+                        Text("\nConsider treating for 3 months, then stop.")
                     }
                 } else if vte.proxDistSelection == 0 {
                     //provoked
-                    if vte.insignificantCount > 0 {
-                        Text("You've indicated that there were transient risk factors that may have caused the VTE. Treat for 3 months, then consider stopping.")
+                    if vte.provokedCount > 0 {
+                        //provoked, 1st occurrence
+                        if vte.occurrence == 0 {
+                            Text("You've indicated that there were transient risk factors that may have caused the VTE. Treat for 3 months, then consider stopping.")
+                        //provoked, 2nd or greater occurrence
+                        } else {
+                            //provoked, 2nd occurrence, low bleeding risk
+                            Text("You've indicated that there were transient risk factors that may have caused the VTE. But since this is recurrent VTE, consider indefinite anticoagulation.")
+                            //provoked, 2nd occurrence, high bleeding risk
+                            if vteBleedScore() > 2.0 {
+                                Text("\nHowever, also note that VTE-Bleed score is \(String(format: "%.1f", vteBleedScore())). This indicates a high bleeding risk.  3 months of anticoagulation or indefinite anticoagulation are both acceptable depending on the perceived risk-benefit ratio of anticoagulation.")
+                            }
+                        }
+                        
                     } else {
                         //unprovoked
                         Text("The VTE was unprovoked.")
                         //high bleed risk
                         if vteBleedScore() >= 2.0 {
                             Text("\nVTE-Bleed score is \(String(format: "%.1f", vteBleedScore())). This indicates a high bleeding risk.")
+                            //unprovoked, high bleed risk, 1st occurrence
                             if vte.occurrence == 0 {
                                 Text("\nSince this was the first occurrence of unprovoked VTE with high bleed risk, consider stopping anticoagulation after 3 months.")
+                                //unprovoked, high bleed risk, 2nd occurrence
                             } else if vte.occurrence == 1 {
-                                Text("\nSince this is recurrent unprovoked VTE with a high bleeding risk, consider stopping anticoagulation after 3 months.")
+                                Text("\nSince this is recurrent unprovoked VTE with a high bleeding risk, could consider stopping anticoagulation after 3 months if you and the patient feel the bleeding risk outweighs the recurrent VTE risk.")
                             }
                             Text("\nConsider long-term aspirin therapy after stopping anticoagulation.")
                         //low bleed risk
                         } else if vteBleedScore() < 2.0 {
                             Text("\nVTE-Bleed score is \(String(format: "%.1f", vteBleedScore())).  This indicates a low bleeding risk.")
+                            //unprovoked, low bleed risk, 1st occurrence
                             if vte.occurrence == 0 {
                                 Text("\nSince this is the first occurrence of unprovoked VTE with low bleed risk, consider providing indefinite anticoagulation.")
+                            //unprovoked, low bleed risk, 2nd occurrence
                             } else if vte.occurrence == 1 {
                                 Text("\nSince this is recurrent unprovoked VTE with low bleed risk, provide indefinite anticoagulation.")
                             }
                         }
                     }
                     
-                }//TODO: - anticoagulant selection
+                }
                 //if VTE occurred on recurrent anticoagulation
                 if vte.occurrence == 1 && vte.vteOnAnticoag == 0 {
                     Text("\nSince the VTE occurred while on chronic anticoagulation, consider switching to Low-molecular weight heparin (LMWH) for at least one month.  If the VTE occurred while already on LMWH, consider increasing the dose of LMWH by one-quarter to one-third.")
                     
                     // indefinite therapy
-                } else if vte.insignificantCount == 0 && vteBleedScore() < 2.0 {
+                } else if vte.provokedCount == 0 && vteBleedScore() < 2.0 {
                     Text("\nFirst-line options:").underline()
                     ForEach(DOACindefinite, id: \.self) { treatment in
                         Text("• " + treatment)
@@ -83,7 +101,7 @@ struct VTEManagement: View {
                         Text("• " + treatment)
                     }
                     // 3 months therapy
-                } else if vte.severeSymptoms == 1 || vte.insignificantCount > 0 {
+                } else {
                     Text("\nFirst-line options:").underline()
                     ForEach(DOAC3Months, id: \.self) { treatment in
                         Text("• " + treatment)
@@ -121,7 +139,10 @@ extension VTEManagement {
         //Low risk is < 2 points
         //High risk is >= 2 points
         
+        
+        
         let startingBleedScore = Double(vte.bleedRFCount)
+        
         
         var finalBleedScore = startingBleedScore
         
@@ -139,6 +160,10 @@ extension VTEManagement {
         }
         if vte.anemia {
             finalBleedScore += 0.5
+        }
+        
+        if finalBleedScore < 0 {
+            finalBleedScore = 0.0
         }
         
         

@@ -17,12 +17,12 @@ struct VTEProvokingFactors: View {
         VStack {
             Form {
                 Section(header: Text("Select any provoking factors that apply").font(.headline).foregroundColor(purple).padding()) {
-                    ShowToggle(binding: $vte.surgery, count: $vte.insignificantCount, text: "Surgery in last 3 months")
-                    ShowToggle(binding: $vte.malignancy, count: $vte.insignificantCount, text: "Active malignancy")
-                    ShowToggle(binding: $vte.estrogen, count: $vte.insignificantCount, text: "Estrogen therapy")
-                    ShowToggle(binding: $vte.flight8hours, count: $vte.insignificantCount, text: "Flight/trip > 8 hours")
-                    ShowToggle(binding: $vte.legInjury, count: $vte.insignificantCount, text: "Significant leg injury")
-                    ShowToggle(binding: $vte.pregnancy, count: $vte.insignificantCount, text: "Pregnancy")
+                    ShowToggle(binding: $vte.surgery, count: $vte.provokedCount, text: "Surgery in last 3 months")
+                    ShowToggle(binding: $vte.malignancy, count: $vte.provokedCount, text: "Active malignancy")
+                    ShowToggle(binding: $vte.estrogen, count: $vte.provokedCount, text: "Estrogen therapy")
+                    ShowToggle(binding: $vte.flight8hours, count: $vte.provokedCount, text: "Flight/trip > 8 hours")
+                    ShowToggle(binding: $vte.legInjury, count: $vte.provokedCount, text: "Significant leg injury")
+                    ShowToggle(binding: $vte.pregnancy, count: $vte.provokedCount, text: "Pregnancy")
                     Text("(If none apply, simply select the 'Next' button below)").font(.caption)
                 }
             }
