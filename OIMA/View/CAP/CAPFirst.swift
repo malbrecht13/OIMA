@@ -27,21 +27,22 @@ struct CAPFirst: View {
                     ForEach(rfs, id: \.self) { rf in
                         HStack {
                             Text("•")
-                            Text("\(rf)").font(.body).fontWeight(.medium)
+                            Text("\(rf)").font(.caption).fontWeight(.medium)
                         }
                     }
                     ShowPicker(parentBinding: $selection, text: "", parentArray: answer)
                         
-                    HStack {
-                        Spacer()
-                        Button("Next") {
-                            self.nextView = true
-                        }.buttonStyle(NextButtonStyle(fillColor: fillColor)).padding()
-                        Spacer()
-                    }
+                    
                     
                 }
                 
+            }
+            HStack {
+                Spacer()
+                Button("Next") {
+                    self.nextView = true
+                }.buttonStyle(NextButtonStyle(fillColor: fillColor)).padding()
+                Spacer()
             }
             
             

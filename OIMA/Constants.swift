@@ -10,3 +10,4 @@ import Foundation
 import SwiftUI
 
 let purple = Color(hue: 0.67, saturation: 0.46, brightness: 0.69, opacity: 1.00)
+let green = Color.green
