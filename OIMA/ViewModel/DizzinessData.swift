@@ -15,5 +15,9 @@ class DizzinessData: ObservableObject {
     //DizzinessFirst.swift
     @Published var symptDuration = 0  //0 is < 1 minute, 1 is > 1 minute
     @Published var triggered = 0  //0 is yes, 1 is no
+    
+    //EpisodicTriggeredDizziness.swift
+    @Published var dh = 0 // 0 is Yes (Dix-Hallpike abnormal), 1  is no (not abnormal)
+    @Published var ov = 0 // 0 is Yes (orthostatic vitals abnormal), 1 is no (not abnormal)
 }
 

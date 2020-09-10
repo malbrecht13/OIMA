@@ -26,7 +26,7 @@ struct DizzinessFirst: View {
             ShowPicker(parentBinding: $dizzy.symptDuration, text: "How long do the symptoms last when they occur?", parentArray: symptomDuration)
             
             if dizzy.symptDuration == 0 {
-                ShowPicker(parentBinding: $dizzy.triggered, text: "Are the symptoms triggered by head or body position change?", parentArray: ifTriggered).minimumScaleFactor(0.5)
+                ShowPicker(parentBinding: $dizzy.triggered, text: "Are the symptoms only triggered by head or body position change?", parentArray: ifTriggered).minimumScaleFactor(0.5)
             }
             Button(action: {
                 if self.dizzy.symptDuration == 1 {

@@ -9,13 +9,16 @@
 import SwiftUI
 
 struct DizzinessManagement: View {
+    
+    @ObservedObject var dizzy: DizzinessData
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Management")
     }
 }
 
 struct DizzinessManagement_Previews: PreviewProvider {
     static var previews: some View {
-        DizzinessManagement()
+        DizzinessManagement(dizzy: DizzinessData())
     }
 }

@@ -42,6 +42,7 @@
 		CBB74B4B25095398006D01CE /* HINTSExamSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B4A25095398006D01CE /* HINTSExamSheet.swift */; };
 		CBB74B4D250953E1006D01CE /* MedCausesOfDizzinessSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B4C250953E1006D01CE /* MedCausesOfDizzinessSheet.swift */; };
 		CBB74B4F25095456006D01CE /* DizzinessManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B4E25095456006D01CE /* DizzinessManagement.swift */; };
+		CBB74B51250ACDB9006D01CE /* OrthoVitalsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B50250ACDB9006D01CE /* OrthoVitalsSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		CBB74B4A25095398006D01CE /* HINTSExamSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HINTSExamSheet.swift; sourceTree = "<group>"; };
 		CBB74B4C250953E1006D01CE /* MedCausesOfDizzinessSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedCausesOfDizzinessSheet.swift; sourceTree = "<group>"; };
 		CBB74B4E25095456006D01CE /* DizzinessManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DizzinessManagement.swift; sourceTree = "<group>"; };
+		CBB74B50250ACDB9006D01CE /* OrthoVitalsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrthoVitalsSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 				CBB74B42250952F8006D01CE /* TriggeredDizzinessTests.swift */,
 				CBB74B4425095321006D01CE /* NeuroTestsDizziness.swift */,
 				CBB74B4625095375006D01CE /* Dix-HallpikeSheet.swift */,
+				CBB74B50250ACDB9006D01CE /* OrthoVitalsSheet.swift */,
 				CBB74B4825095387006D01CE /* EpleyManeuverSheet.swift */,
 				CBB74B4A25095398006D01CE /* HINTSExamSheet.swift */,
 				CBB74B4C250953E1006D01CE /* MedCausesOfDizzinessSheet.swift */,
@@ -294,6 +297,7 @@
 				CB050EAC24F56E8D001B992B /* NextButtonStyle.swift in Sources */,
 				CBB74B4725095375006D01CE /* Dix-HallpikeSheet.swift in Sources */,
 				CB2FDCCA24F8587100C433CE /* ProximalDistalDVT.swift in Sources */,
+				CBB74B51250ACDB9006D01CE /* OrthoVitalsSheet.swift in Sources */,
 				CB2FDCC424F6F02A00C433CE /* TitleModifier.swift in Sources */,
 				CB050E8724F2EFB3001B992B /* AppDelegate.swift in Sources */,
 				CB2FDCD024F858E700C433CE /* VTEManagement.swift in Sources */,

@@ -10,7 +10,23 @@ import SwiftUI
 
 struct Dix_HallpikeSheet: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Dix-Hallpike manuever instructions").modifier(TitleModifier(fillColor: green)).padding(.bottom)
+            
+            VStack(alignment: .leading, spacing: 10) {
+               Text("1. Patient sits on the exam table, facing forward, eyes open.")
+               Text("2. Turn patient's head 45 degrees to the right and support patient's head as they lay down.")
+               Text("3. Patient's head should now be hanging off the end of the exam table.  Support them in this position for 30 seconds and look for nystagmus.")
+               Text("4. Returns patient to upright position and observe for 30 seconds.")
+               Text("5. Repeat steps 1-4 on the left side.")
+                
+               Text("\nA positive test is one in which any of these maneuvers causes vertigo, with or without nystagmus.  \n\nThe most common form of BPPV is posterior canal BPPV.  In this type, nystagmus will be beating upward and torsionally towards the affected ear.  \n\nHorizontal canal BPPV is less common and results in horizontal nystamus when the patient is lying down during the maneuver.")
+               
+            }.padding()
+            
+            
+            Spacer()
+        }
     }
 }
 
