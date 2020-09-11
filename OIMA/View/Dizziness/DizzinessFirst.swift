@@ -45,7 +45,7 @@ struct DizzinessFirst: View {
             NavigationLink(destination: EpisodicSpontaneous(dizzy: dizzy), tag: "EpisodicSpontaneous", selection: $nextView) { EmptyView() }
             Spacer()
             
-            Text("*Are any of the patient's signs abnormal for the patient?  If so, work up and treat the abnormal vital sign before conducting this algorithm.  For example, if the patient is bradycardic or tachycardic, hypotensive, low O2 sat, fever, or high respiratory rate, the dizziness the patient is experiencing may be related to these.").minimumScaleFactor(0.5)
+            Text("*Are any of the patient's vital signs abnormal?  If so, work up and treat the abnormal vital sign before conducting this algorithm.  For example, if the patient is bradycardic or tachycardic, hypotensive, low O2 sat, fever, or high respiratory rate, the dizziness the patient is experiencing may be related to these.").minimumScaleFactor(0.5)
             
                 
             
