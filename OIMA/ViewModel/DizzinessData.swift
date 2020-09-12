@@ -27,7 +27,8 @@ class DizzinessData: ObservableObject {
     @Published var ataxia = false
     @Published var nystagmus = false
     @Published var migraine = false
-    @Published var psychSymptoms = false
+    @Published var trauma = false
+    @Published var medications = false
     @Published var nullCount = 0
 }
 
