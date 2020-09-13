@@ -10,7 +10,28 @@ import SwiftUI
 
 struct HINTSExamSheet: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack {
+            Text("HINTS exam instructions").modifier(TitleModifier(fillColor: green)).padding(.bottom)
+            
+            Button(action: {
+                let url = URL(string: "https://youtu.be/1q-VTKPweuk")
+                
+                if let url = url {
+                    UIApplication.shared.open(url)
+                }
+                
+            }) {
+                Text("HINTS exam YouTube Video")
+            }.buttonStyle(NextButtonStyle(fillColor: red))
+            
+            VStack(alignment: .leading, spacing: 10) {
+                Text("This test is to be performed in patients with ongoing vertigo and nystagmus. HINTS consists of three exam maneuvers, described below:")
+                
+                Text("Head-impulse test")
+                Text("\n")
+            }
+        }
     }
 }
 

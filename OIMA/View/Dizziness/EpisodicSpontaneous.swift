@@ -25,6 +25,8 @@ struct EpisodicSpontaneous: View {
                     ShowToggle(binding: $dizzy.migraine, count: $dizzy.nullCount, text: "History of migraine")
                     ShowToggle(binding: $dizzy.medications, count: $dizzy.nullCount, text: "Recent new medication that could cause dizziness")
                     ShowToggle(binding: $dizzy.trauma, count: $dizzy.nullCount, text: "Head trauma")
+                    ShowToggle(binding: $dizzy.alcohol, count: $dizzy.nullCount, text: "Alcohol use/abuse")
+                    ShowToggle(binding: $dizzy.psych, count: $dizzy.nullCount, text: "Psychiatric symptoms")
 
                 }
 
@@ -41,7 +43,7 @@ struct EpisodicSpontaneous: View {
             
             NavigationLink(destination: NeuroTestsDizziness(dizzy: dizzy), tag: "NeuroTests", selection: $nextView) { EmptyView() }
             NavigationLink(destination: DizzinessManagement(dizzy: dizzy), tag: "Management", selection: $nextView) { EmptyView() }
-        }.navigationBarTitle("Other factors")
+        }.navigationBarTitle("Other factors", displayMode: .inline)
     }
 }
 

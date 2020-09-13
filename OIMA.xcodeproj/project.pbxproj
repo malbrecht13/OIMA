@@ -35,7 +35,6 @@
 		CBB74B3D250949C2006D01CE /* DizzinessData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B3C250949C2006D01CE /* DizzinessData.swift */; };
 		CBB74B3F250950E6006D01CE /* EpisodicTriggeredDizziness.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B3E250950E6006D01CE /* EpisodicTriggeredDizziness.swift */; };
 		CBB74B41250952C9006D01CE /* EpisodicSpontaneous.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B40250952C9006D01CE /* EpisodicSpontaneous.swift */; };
-		CBB74B43250952F8006D01CE /* TriggeredDizzinessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B42250952F8006D01CE /* TriggeredDizzinessTests.swift */; };
 		CBB74B4525095321006D01CE /* NeuroTestsDizziness.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B4425095321006D01CE /* NeuroTestsDizziness.swift */; };
 		CBB74B4725095375006D01CE /* Dix-HallpikeSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B4625095375006D01CE /* Dix-HallpikeSheet.swift */; };
 		CBB74B4925095387006D01CE /* EpleyManeuverSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B4825095387006D01CE /* EpleyManeuverSheet.swift */; };
@@ -76,7 +75,6 @@
 		CBB74B3C250949C2006D01CE /* DizzinessData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DizzinessData.swift; sourceTree = "<group>"; };
 		CBB74B3E250950E6006D01CE /* EpisodicTriggeredDizziness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodicTriggeredDizziness.swift; sourceTree = "<group>"; };
 		CBB74B40250952C9006D01CE /* EpisodicSpontaneous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodicSpontaneous.swift; sourceTree = "<group>"; };
-		CBB74B42250952F8006D01CE /* TriggeredDizzinessTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggeredDizzinessTests.swift; sourceTree = "<group>"; };
 		CBB74B4425095321006D01CE /* NeuroTestsDizziness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeuroTestsDizziness.swift; sourceTree = "<group>"; };
 		CBB74B4625095375006D01CE /* Dix-HallpikeSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dix-HallpikeSheet.swift"; sourceTree = "<group>"; };
 		CBB74B4825095387006D01CE /* EpleyManeuverSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpleyManeuverSheet.swift; sourceTree = "<group>"; };
@@ -209,7 +207,6 @@
 				CBB74B3A2509499F006D01CE /* DizzinessFirst.swift */,
 				CBB74B3E250950E6006D01CE /* EpisodicTriggeredDizziness.swift */,
 				CBB74B40250952C9006D01CE /* EpisodicSpontaneous.swift */,
-				CBB74B42250952F8006D01CE /* TriggeredDizzinessTests.swift */,
 				CBB74B4425095321006D01CE /* NeuroTestsDizziness.swift */,
 				CBB74B4625095375006D01CE /* Dix-HallpikeSheet.swift */,
 				CBB74B50250ACDB9006D01CE /* OrthoVitalsSheet.swift */,
@@ -322,7 +319,6 @@
 				CB2B470924F57726006394DE /* OutCAPManagement.swift in Sources */,
 				CB2FDCD324F85BDD00C433CE /* CAPData.swift in Sources */,
 				CB050E9F24F43176001B992B /* Condition.swift in Sources */,
-				CBB74B43250952F8006D01CE /* TriggeredDizzinessTests.swift in Sources */,
 				CB2FDCC824F7264E00C433CE /* ShowToggle.swift in Sources */,
 				CB2FDCC024F6EB8D00C433CE /* VTEData.swift in Sources */,
 			);

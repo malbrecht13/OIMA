@@ -29,6 +29,11 @@ class DizzinessData: ObservableObject {
     @Published var migraine = false
     @Published var trauma = false
     @Published var medications = false
+    @Published var alcohol = false
+    @Published var psych = false
     @Published var nullCount = 0
+    
+    //Used in NeuroTestsDizziness.swift
+    @Published var hints = 0 // 0 is yes (HINTS is abnormal), 1 is no (HINTS is normal)
 }
 
