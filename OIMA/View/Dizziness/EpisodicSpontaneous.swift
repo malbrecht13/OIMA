@@ -32,7 +32,7 @@ struct EpisodicSpontaneous: View {
 
             }
             Button(action: {
-                if self.dizzy.nystagmus || self.dizzy.ataxia || self.dizzy.doubleVision {
+                if self.dizzy.nystagmus && self.dizzy.symptDuration == 1 {
                     self.nextView = "NeuroTests"
                 } else {
                     self.nextView = "Management"

@@ -30,7 +30,7 @@ struct DizzinessFirst: View {
             }
             Button(action: {
                 if self.dizzy.symptDuration == 1 {
-                    self.nextView = "Continuous"
+                    self.nextView = "EpisodicSpontaneous"
                 } else if self.dizzy.triggered == 0 {
                     self.nextView = "EpisodicTriggered"
                 } else if self.dizzy.triggered == 1 {
@@ -40,7 +40,6 @@ struct DizzinessFirst: View {
                 Text("Next")
             }.buttonStyle(NextButtonStyle(fillColor: green))
             
-            NavigationLink(destination: NeuroTestsDizziness(dizzy: dizzy), tag: "Continuous", selection: $nextView) { EmptyView() }
             NavigationLink(destination: EpisodicTriggeredDizziness(dizzy: dizzy), tag: "EpisodicTriggered", selection: $nextView) { EmptyView() }
             NavigationLink(destination: EpisodicSpontaneous(dizzy: dizzy), tag: "EpisodicSpontaneous", selection: $nextView) { EmptyView() }
             Spacer()

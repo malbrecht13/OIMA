@@ -39,7 +39,6 @@
 		CBB74B4725095375006D01CE /* Dix-HallpikeSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B4625095375006D01CE /* Dix-HallpikeSheet.swift */; };
 		CBB74B4925095387006D01CE /* EpleyManeuverSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B4825095387006D01CE /* EpleyManeuverSheet.swift */; };
 		CBB74B4B25095398006D01CE /* HINTSExamSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B4A25095398006D01CE /* HINTSExamSheet.swift */; };
-		CBB74B4D250953E1006D01CE /* MedCausesOfDizzinessSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B4C250953E1006D01CE /* MedCausesOfDizzinessSheet.swift */; };
 		CBB74B4F25095456006D01CE /* DizzinessManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B4E25095456006D01CE /* DizzinessManagement.swift */; };
 		CBB74B51250ACDB9006D01CE /* OrthoVitalsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B50250ACDB9006D01CE /* OrthoVitalsSheet.swift */; };
 /* End PBXBuildFile section */
@@ -79,7 +78,6 @@
 		CBB74B4625095375006D01CE /* Dix-HallpikeSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dix-HallpikeSheet.swift"; sourceTree = "<group>"; };
 		CBB74B4825095387006D01CE /* EpleyManeuverSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpleyManeuverSheet.swift; sourceTree = "<group>"; };
 		CBB74B4A25095398006D01CE /* HINTSExamSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HINTSExamSheet.swift; sourceTree = "<group>"; };
-		CBB74B4C250953E1006D01CE /* MedCausesOfDizzinessSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedCausesOfDizzinessSheet.swift; sourceTree = "<group>"; };
 		CBB74B4E25095456006D01CE /* DizzinessManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DizzinessManagement.swift; sourceTree = "<group>"; };
 		CBB74B50250ACDB9006D01CE /* OrthoVitalsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrthoVitalsSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -210,9 +208,8 @@
 				CBB74B4425095321006D01CE /* NeuroTestsDizziness.swift */,
 				CBB74B4625095375006D01CE /* Dix-HallpikeSheet.swift */,
 				CBB74B50250ACDB9006D01CE /* OrthoVitalsSheet.swift */,
-				CBB74B4825095387006D01CE /* EpleyManeuverSheet.swift */,
 				CBB74B4A25095398006D01CE /* HINTSExamSheet.swift */,
-				CBB74B4C250953E1006D01CE /* MedCausesOfDizzinessSheet.swift */,
+				CBB74B4825095387006D01CE /* EpleyManeuverSheet.swift */,
 				CBB74B4E25095456006D01CE /* DizzinessManagement.swift */,
 			);
 			path = Dizziness;
@@ -309,7 +306,6 @@
 				CBB74B3F250950E6006D01CE /* EpisodicTriggeredDizziness.swift in Sources */,
 				CBB74B4B25095398006D01CE /* HINTSExamSheet.swift in Sources */,
 				CBB74B3B2509499F006D01CE /* DizzinessFirst.swift in Sources */,
-				CBB74B4D250953E1006D01CE /* MedCausesOfDizzinessSheet.swift in Sources */,
 				CBB74B4F25095456006D01CE /* DizzinessManagement.swift in Sources */,
 				CBB74B4525095321006D01CE /* NeuroTestsDizziness.swift in Sources */,
 				CB050E9C24F2F78B001B992B /* SearchBar.swift in Sources */,
