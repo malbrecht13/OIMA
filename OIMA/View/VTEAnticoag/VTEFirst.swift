@@ -33,6 +33,7 @@ struct VTEFirst: View {
             
             
             Button(action: {
+                
                 if self.vte.selection == 0 {
                     self.nextView = "PE"
                 } else if self.vte.selection == 1 {

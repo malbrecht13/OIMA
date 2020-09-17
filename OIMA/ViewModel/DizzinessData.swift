@@ -17,20 +17,18 @@ class DizzinessData: ObservableObject {
     @Published var triggered = 0  //0 is yes, 1 is no
     
     //EpisodicTriggeredDizziness.swift
-    @Published var dh = 0 // 0 is Yes (Dix-Hallpike abnormal), 1  is no (not abnormal)
-    @Published var ov = 0 // 0 is Yes (orthostatic vitals abnormal), 1 is no (not abnormal)
+    @Published var dh = 1 // 0 is Yes (Dix-Hallpike abnormal), 1  is no (not abnormal)
+    @Published var ov = 1 // 0 is Yes (orthostatic vitals abnormal), 1 is no (not abnormal)
     
     //EpisodicSpontaneous.swift (toggles)
     @Published var hearingLoss = false  //if assymetric, need MRI brain to r/o Schwannoma.  Could also be Meniere's
-    @Published var earSymptoms = false
-    @Published var doubleVision = false
-    @Published var ataxia = false
     @Published var nystagmus = false
     @Published var migraine = false
     @Published var trauma = false
     @Published var medications = false
     @Published var alcohol = false
     @Published var psych = false
+    @Published var neuroDeficits = false // doubleVision, gait or limb ataxia, new focal neurologic deficits
     @Published var nullCount = 0
     
     //Used in NeuroTestsDizziness.swift

@@ -18,10 +18,9 @@ struct EpisodicSpontaneous: View {
         VStack {
             Form {
                 Section(header: Text("Select if any of these patient factors are present:").font(.headline).foregroundColor(green).padding()) {
-                    ShowToggle(binding: $dizzy.nystagmus, count: $dizzy.nullCount, text: "Nystagmus")
-                    ShowToggle(binding: $dizzy.ataxia, count: $dizzy.nullCount, text: "Ataxic gait")
-                    ShowToggle(binding: $dizzy.doubleVision, count: $dizzy.nullCount, text: "Diplopia")
-                    ShowToggle(binding: $dizzy.earSymptoms, count: $dizzy.nullCount, text: "Ear pain, pressure, or fullness")
+                    ShowToggle(binding: $dizzy.nystagmus, count: $dizzy.nullCount, text: "Ongoing nystagmus")
+                    ShowToggle(binding: $dizzy.neuroDeficits, count: $dizzy.nullCount, text: "New focal neurologic deficits, ataxic gait, limb ataxia (abnormal finger-nose or heel-shin testing), or diplopia")
+                    ShowToggle(binding: $dizzy.hearingLoss, count: $dizzy.nullCount, text: "New hearing loss")
                     ShowToggle(binding: $dizzy.migraine, count: $dizzy.nullCount, text: "History of migraine")
                     ShowToggle(binding: $dizzy.medications, count: $dizzy.nullCount, text: "Recent new medication that could cause dizziness")
                     ShowToggle(binding: $dizzy.trauma, count: $dizzy.nullCount, text: "Head trauma")
@@ -32,7 +31,9 @@ struct EpisodicSpontaneous: View {
 
             }
             Button(action: {
-                if self.dizzy.nystagmus && self.dizzy.symptDuration == 1 {
+                self.dizzy.nullCount = 0
+                
+                if self.dizzy.nystagmus {
                     self.nextView = "NeuroTests"
                 } else {
                     self.nextView = "Management"

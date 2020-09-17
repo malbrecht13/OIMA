@@ -29,6 +29,21 @@ struct DizzinessFirst: View {
                 ShowPicker(parentBinding: $dizzy.triggered, text: "Are the symptoms only triggered by head or body position change?", parentArray: ifTriggered).minimumScaleFactor(0.5)
             }
             Button(action: {
+                //reset all variables for subsequent views
+                self.dizzy.dh = 1
+                self.dizzy.ov = 1
+                self.dizzy.hearingLoss = false
+                self.dizzy.nystagmus = false
+                self.dizzy.migraine = false
+                self.dizzy.trauma = false
+                self.dizzy.medications = false
+                self.dizzy.alcohol = false
+                self.dizzy.psych = false
+                self.dizzy.neuroDeficits = false
+                self.dizzy.nullCount = 0
+                self.dizzy.hints = 0
+
+                //choose next view based on selections
                 if self.dizzy.symptDuration == 1 {
                     self.nextView = "EpisodicSpontaneous"
                 } else if self.dizzy.triggered == 0 {
@@ -44,7 +59,7 @@ struct DizzinessFirst: View {
             NavigationLink(destination: EpisodicSpontaneous(dizzy: dizzy), tag: "EpisodicSpontaneous", selection: $nextView) { EmptyView() }
             Spacer()
             
-            Text("*Are any of the patient's vital signs abnormal?  If so, work up and treat the abnormal vital sign before conducting this algorithm.  For example, if the patient is bradycardic or tachycardic, hypotensive, low O2 sat, fever, or high respiratory rate, the dizziness the patient is experiencing may be related to these.").minimumScaleFactor(0.5)
+            Text("First: are any of the patient's vital signs abnormal?  If so, work up and treat the abnormal vital sign before conducting this algorithm.  For example, if the patient is bradycardic or tachycardic, hypotensive, low O2 sat, fever, or high respiratory rate, the dizziness the patient is experiencing may be related to these. ").minimumScaleFactor(0.5)
             
                 
             
