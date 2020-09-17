@@ -52,6 +52,9 @@ struct EpisodicTriggeredDizziness: View {
             Spacer()
             
             Button(action: {
+                
+                resetVariables()
+                
                 //if dix-hallpike and/or orthostatic vitals are abnormal, go to management page
                 if self.dizzy.dh == 0 || self.dizzy.ov == 0 {
                     self.nextView = "Management"
@@ -67,6 +70,21 @@ struct EpisodicTriggeredDizziness: View {
             
         }.navigationBarTitle("Episodic dizziness tests", displayMode: .inline)
     }
+    
+    
+    /// Resets variables so that management screen doesn't have the wrong information
+    func resetVariables() {
+        dizzy.hearingLoss = false
+        dizzy.nystagmus = false
+        dizzy.migraine = false
+        dizzy.trauma = false
+        dizzy.medications = false
+        dizzy.alcohol = false
+        dizzy.psych = false
+        dizzy.neuroDeficits = false
+        dizzy.nullCount = 0
+    }
+
 }
 
 struct EpisodicDizziness_Previews: PreviewProvider {

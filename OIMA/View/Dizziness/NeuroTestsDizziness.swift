@@ -35,7 +35,7 @@ struct NeuroTestsDizziness: View {
             
             Spacer()
             
-            ShowPicker(parentBinding: $dizzy.hints, text: "Are any of the HINTS exam tests suggestive of central etiology?", parentArray: hintsPositive).minimumScaleFactor(0.5)
+            ShowPicker(parentBinding: $dizzy.hints, text: "Are any of the HINTS exam tests suggestive of central etiology?", parentArray: hintsPositive).lineLimit(3)
             NavigationLink(destination: DizzinessManagement(dizzy: dizzy), isActive: $nextView) {
                 Button(action: {
                     self.nextView = true

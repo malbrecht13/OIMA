@@ -29,19 +29,8 @@ struct DizzinessFirst: View {
                 ShowPicker(parentBinding: $dizzy.triggered, text: "Are the symptoms only triggered by head or body position change?", parentArray: ifTriggered).minimumScaleFactor(0.5)
             }
             Button(action: {
-                //reset all variables for subsequent views
-                self.dizzy.dh = 1
-                self.dizzy.ov = 1
-                self.dizzy.hearingLoss = false
-                self.dizzy.nystagmus = false
-                self.dizzy.migraine = false
-                self.dizzy.trauma = false
-                self.dizzy.medications = false
-                self.dizzy.alcohol = false
-                self.dizzy.psych = false
-                self.dizzy.neuroDeficits = false
-                self.dizzy.nullCount = 0
-                self.dizzy.hints = 0
+                
+                resetVariables()
 
                 //choose next view based on selections
                 if self.dizzy.symptDuration == 1 {
@@ -66,6 +55,25 @@ struct DizzinessFirst: View {
             
         }.navigationBarTitle("Dizziness symptom duration", displayMode: .inline)
         .padding()
+    }
+    
+    
+    // Methods
+    
+    /// Resets all variables so that subsequent views have their toggles and pickers reset
+    func resetVariables() {
+        self.dizzy.dh = 1
+        self.dizzy.ov = 1
+        self.dizzy.hearingLoss = false
+        self.dizzy.nystagmus = false
+        self.dizzy.migraine = false
+        self.dizzy.trauma = false
+        self.dizzy.medications = false
+        self.dizzy.alcohol = false
+        self.dizzy.psych = false
+        self.dizzy.neuroDeficits = false
+        self.dizzy.nullCount = 0
+        self.dizzy.hints = 0
     }
 }
 

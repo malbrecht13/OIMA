@@ -15,6 +15,17 @@ struct Dix_HallpikeSheet: View {
             VStack {
                 Text("Dix-Hallpike manuever instructions").modifier(TitleModifier(fillColor: green)).padding(.bottom)
                 
+                Button(action: {
+                    let url = URL(string: "https://youtu.be/LxD-lgqix-s")
+                    
+                    if let url = url {
+                        UIApplication.shared.open(url)
+                    }
+                    
+                }) {
+                    Text("Dix-Hallpike YouTube Video")
+                    }.buttonStyle(NextButtonStyle(fillColor: red)).padding()
+                
                 VStack(alignment: .leading, spacing: 10) {
                    Text("Steps:")
                    Text("1. Patient sits on the exam table with eyes open.")
