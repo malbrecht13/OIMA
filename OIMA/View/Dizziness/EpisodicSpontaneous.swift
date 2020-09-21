@@ -21,7 +21,7 @@ struct EpisodicSpontaneous: View {
                     ShowToggle(binding: $dizzy.nystagmus, count: $dizzy.nullCount, text: "Ongoing nystagmus")
                     ShowToggle(binding: $dizzy.neuroDeficits, count: $dizzy.nullCount, text: "New focal neurologic deficits, ataxic gait, limb ataxia (abnormal finger-nose or heel-shin testing), or diplopia")
                     ShowToggle(binding: $dizzy.hearingLoss, count: $dizzy.nullCount, text: "New hearing loss")
-                    ShowToggle(binding: $dizzy.migraine, count: $dizzy.nullCount, text: "History of migraine")
+                    ShowToggle(binding: $dizzy.migraine, count: $dizzy.nullCount, text: "Headaches or history of migraine")
                     ShowToggle(binding: $dizzy.medications, count: $dizzy.nullCount, text: "Recent new medication that could cause dizziness")
                     ShowToggle(binding: $dizzy.trauma, count: $dizzy.nullCount, text: "Head trauma")
                     ShowToggle(binding: $dizzy.alcohol, count: $dizzy.nullCount, text: "Alcohol use/abuse")

@@ -14,16 +14,7 @@ struct EpleyManeuverSheet: View {
             
             Text("Epley maneuver instructions").modifier(TitleModifier(fillColor: green))
 
-            Button(action: {
-                let url = URL(string: "https://youtu.be/K4S4CbuN6QA")
-                
-                if let url = url {
-                    UIApplication.shared.open(url)
-                }
-                
-            }) {
-                Text("Epley maneuver YouTube video")
-                }.buttonStyle(NextButtonStyle(fillColor: red)).padding()
+            YouTubeButton(address: "https://youtu.be/K4S4CbuN6QA", text: "Epley maneuver YouTube video")
             
             VStack(alignment: .leading) {
                 Text("Steps:").underline()

@@ -15,16 +15,8 @@ struct HINTSExamSheet: View {
             VStack {
                 Text("HINTS exam instructions").modifier(TitleModifier(fillColor: green)).padding(.bottom)
                 
-                Button(action: {
-                    let url = URL(string: "https://youtu.be/1q-VTKPweuk")
-                    
-                    if let url = url {
-                        UIApplication.shared.open(url)
-                    }
-                    
-                }) {
-                    Text("HINTS exam YouTube Video")
-                    }.buttonStyle(NextButtonStyle(fillColor: red)).padding()
+                
+                YouTubeButton(address: "https://youtu.be/1q-VTKPweuk", text: "HINTS exam YouTube Video")
                 
                 VStack(alignment: .leading, spacing: 10) {
                     Group {

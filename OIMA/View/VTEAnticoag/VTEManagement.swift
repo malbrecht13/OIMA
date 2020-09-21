@@ -117,6 +117,7 @@ struct VTEManagement: View {
                 }.font(.caption)
             
             Spacer()
+            Text("***Please note: this algorithm tried to make decision-making as simple as possible, but there are nuances that may not be addressed here.  For instance, D-dimer levels are sometimes checked to assess for need for continued anticoagulation.  Subsegmental PEs may not need any treatment if patient has low risk for recurrence. For whatever decision is made, patient preferences must also be taken into account. If it is still unclear what the best decision is after discussion with the patient, a referral to a hematologist is likely appropriate.").padding().font(.caption)
         }.padding(.horizontal)
     }
     

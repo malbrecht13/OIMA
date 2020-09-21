@@ -41,6 +41,7 @@
 		CBB74B4B25095398006D01CE /* HINTSExamSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B4A25095398006D01CE /* HINTSExamSheet.swift */; };
 		CBB74B4F25095456006D01CE /* DizzinessManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B4E25095456006D01CE /* DizzinessManagement.swift */; };
 		CBB74B51250ACDB9006D01CE /* OrthoVitalsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B50250ACDB9006D01CE /* OrthoVitalsSheet.swift */; };
+		CBF28F6F25154EC9001E4841 /* YouTubeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF28F6E25154EC9001E4841 /* YouTubeButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		CBB74B4A25095398006D01CE /* HINTSExamSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HINTSExamSheet.swift; sourceTree = "<group>"; };
 		CBB74B4E25095456006D01CE /* DizzinessManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DizzinessManagement.swift; sourceTree = "<group>"; };
 		CBB74B50250ACDB9006D01CE /* OrthoVitalsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrthoVitalsSheet.swift; sourceTree = "<group>"; };
+		CBF28F6E25154EC9001E4841 /* YouTubeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				CB050E9B24F2F78B001B992B /* SearchBar.swift */,
 				CB050EA324F56CF6001B992B /* ShowPicker.swift */,
 				CB2FDCC724F7264E00C433CE /* ShowToggle.swift */,
+				CBF28F6E25154EC9001E4841 /* YouTubeButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				CBB74B4F25095456006D01CE /* DizzinessManagement.swift in Sources */,
 				CBB74B4525095321006D01CE /* NeuroTestsDizziness.swift in Sources */,
 				CB050E9C24F2F78B001B992B /* SearchBar.swift in Sources */,
+				CBF28F6F25154EC9001E4841 /* YouTubeButton.swift in Sources */,
 				CB050E8924F2EFB3001B992B /* SceneDelegate.swift in Sources */,
 				CB050E8B24F2EFB3001B992B /* ListView.swift in Sources */,
 				CB2FDCC624F6F35C00C433CE /* VTEProvokingFactors.swift in Sources */,

@@ -21,22 +21,37 @@ struct CAPFirst: View {
     private let fillColor = Color.pink
     
     var body: some View {
-        VStack {
-            Form {
-                Section(header: Text("Does the patient have any of these risk factors?").foregroundColor(fillColor).font(.callout).fontWeight(.black).padding()) {
-                    ForEach(rfs, id: \.self) { rf in
-                        HStack {
-                            Text("•")
-                            Text("\(rf)").font(.caption).fontWeight(.medium)
-                        }
-                    }
-                    ShowPicker(parentBinding: $selection, text: "", parentArray: answer)
-                        
-                    
-                    
-                }
+        VStack  {
+            
+            VStack (alignment: .leading) {
+                Text("Does the patient have any of these risk factors?").foregroundColor(fillColor).font(.callout).fontWeight(.black).padding()
                 
+                ForEach(rfs, id: \.self) { rf in
+                    HStack {
+                        Text("•")
+                        Text("\(rf)").font(.caption).fontWeight(.medium)
+                    }
+                }
             }
+            
+            
+            
+            ShowPicker(parentBinding: $selection, text: "", parentArray: answer)
+//            Form {
+//                Section(header: Text("Does the patient have any of these risk factors?").foregroundColor(fillColor).font(.callout).fontWeight(.black).padding()) {
+//                    ForEach(rfs, id: \.self) { rf in
+//                        HStack {
+//                            Text("•")
+//                            Text("\(rf)").font(.caption).fontWeight(.medium)
+//                        }
+//                    }
+//                    ShowPicker(parentBinding: $selection, text: "", parentArray: answer)
+//
+//
+//
+//                }
+//
+//            }
             HStack {
                 Spacer()
                 Button("Next") {
@@ -49,7 +64,9 @@ struct CAPFirst: View {
             NavigationLink(destination: OutCAPManagement(capToggle: capToggle), isActive: $nextView) {
                 EmptyView()
             }.navigationBarTitle("Risk factors", displayMode: .inline)
-        }
+            
+            Spacer()
+        }.padding()
     }
 }
 

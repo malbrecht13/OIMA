@@ -49,11 +49,10 @@ struct DizzinessManagement: View {
                             Text("\nThe HINTS exam suggests central etiology.  Consider urgent referral to the emergency department to rule out stroke.")
                         }
                         //if HINTS exam suggests peripheral etiology in setting of nystagmus
-                        else if dizzy.hints == 1 && dizzy.nystagmus {
-                            Text("\nThe patient has nystagmus with a negative HINTS exam.  The patient may have a peripheral vestibular disorder such as vestibular neuritis, often related to viral infection. Symptoms can include vertigo, nausea, abnormal gait with tendency to fall towards affected side.  It may take a few days to months to resolve.  Vertigo may recur in this condition.  \n\nRefer the patient for vestibular rehabilitation.  \n\nAntihistamines and/or antinausea medications can be used up to three days at a time such as meclizine 25 mg PO q6-8 hours x 3 days.  Other options include metoclopramide, prochlorperazine, dimenhydrinate, promethazine, diazepam, lorazepam.")
+                        if dizzy.hints == 1 && dizzy.nystagmus && !dizzy.neuroDeficits {
+                            Text("\nThe patient has nystagmus with a negative HINTS exam.  The patient may have a peripheral vestibular disorder such as vestibular neuritis, often related to viral infection. Symptoms can include vertigo, nausea, abnormal gait with tendency to fall towards affected side.  It may take a few days to months to resolve.  Vertigo may recur in this condition.  \n\nIf no other concerning neurologic findings, refer the patient for vestibular rehabilitation.  \n\nAntihistamines and/or antinausea medications can be used up to three days at a time such as meclizine 25 mg PO q6-8 hours x 3 days.  Other options include metoclopramide, prochlorperazine, dimenhydrinate, promethazine, diazepam, lorazepam.")
                         }
-                        //if hints is negative
-                        if dizzy.hints == 1 {
+                        if (dizzy.hints == 1 && dizzy.nystagmus) || !dizzy.nystagmus {
                             //Neuro deficits
                             if dizzy.neuroDeficits {
                                 Text("\nYou've indicated that the patient has new focal neurologic deficits, gait or limb ataxia, or diplopia.  Neuroimaging is indicated.  If presentation suggests stroke or other acute process, referral to the emergency department is indicated.  Otherwise, patient needs MRI and/or CT brain imaging.")
@@ -83,8 +82,8 @@ struct DizzinessManagement: View {
                                 if dizzy.psych {
                                     Text("\nYou've indicated the patient has significant psychiatric symptoms.  Dizziness can be a somatic manifestation of psychiatric illness.  Consider this diagnosis if otherwise normal exam/workup and patient has manifestations of psych illness such as anxiety or depression.  Treatment may include antidepressants (such as SSRIs), vestibular rehab, and/or pscyhology/psychiatry referral.  ")
                                 }
-                                if dizzy.ov == 1 && dizzy.dh == 1 && !(dizzy.neuroDeficits || dizzy.hearingLoss || dizzy.migraine || dizzy.trauma || dizzy.alcohol || dizzy.psych) {
-                                    Text("If no clear cause identified after using this algorithm, consider reducing or eliminating medications that might be causing dizziness.  Consider lab workup to rule out medical conditions such as anemia, hyponatremia, and many others.  If no clear cause after appropriate workup, consider referral to a specialist such as ENT or neurology.")
+                                if dizzy.ov == 1 && dizzy.dh == 1 && !(dizzy.nystagmus || dizzy.neuroDeficits || dizzy.hearingLoss || dizzy.migraine || dizzy.trauma || dizzy.alcohol || dizzy.psych) {
+                                    Text("\nIf no clear cause identified after using this algorithm, consider reducing or eliminating medications that might be causing dizziness.  Consider lab workup to rule out medical conditions such as anemia, hyponatremia, and many others.  If no clear cause after appropriate workup, consider referral to a specialist such as ENT or neurology.")
                                 }
                         }
                         
