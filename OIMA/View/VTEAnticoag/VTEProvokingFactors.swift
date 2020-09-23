@@ -16,15 +16,15 @@ struct VTEProvokingFactors: View {
     var body: some View {
         VStack {
             Form {
-                Section(header: Text("Select any provoking factors that apply").font(.headline).foregroundColor(purple).padding()) {
-                    ShowToggle(binding: $vte.surgery, count: $vte.provokedCount, text: "Surgery in last 3 months")
-                    ShowToggle(binding: $vte.malignancy, count: $vte.provokedCount, text: "Active malignancy")
-                    ShowToggle(binding: $vte.estrogen, count: $vte.provokedCount, text: "Estrogen therapy")
-                    ShowToggle(binding: $vte.flight8hours, count: $vte.provokedCount, text: "Flight/trip > 8 hours")
-                    ShowToggle(binding: $vte.legInjury, count: $vte.provokedCount, text: "Significant leg injury")
-                    ShowToggle(binding: $vte.pregnancy, count: $vte.provokedCount, text: "Pregnancy")
+                Section(header: Text("Select any provoking factors that apply").font(.headline).foregroundColor(purple).padding(), content: {
+                    ShowToggle(binding: $vte.surgery, text: "Surgery in last 3 months")
+                    ShowToggle(binding: $vte.malignancy,  text: "Active malignancy")
+                    ShowToggle(binding: $vte.estrogen, text: "Estrogen therapy")
+                    ShowToggle(binding: $vte.flight8hours,  text: "Flight/trip > 8 hours")
+                    ShowToggle(binding: $vte.legInjury, text: "Significant leg injury")
+                    ShowToggle(binding: $vte.pregnancy, text: "Pregnancy")
                     Text("(If none apply, simply select the 'Next' button below)").font(.caption)
-                }
+                })
             }
             
             NavigationLink(destination: VTEBleedingRisk(vte: vte), isActive: $nextView) {

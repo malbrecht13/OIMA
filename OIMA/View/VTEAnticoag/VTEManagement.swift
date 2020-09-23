@@ -141,26 +141,26 @@ extension VTEManagement {
         //High risk is >= 2 points
         
         
-        
-        let startingBleedScore = Double(vte.bleedRFCount)
-        
-        
-        var finalBleedScore = startingBleedScore
+        var finalBleedScore = 0.0
         
         if vte.age60 {
-            finalBleedScore += 0.5
+            finalBleedScore += 1.5
         }
         if vte.previousBleed {
-            finalBleedScore += 0.5
+            finalBleedScore += 1.5
         }
         if vte.activeCancer {
-            finalBleedScore += 1.0
+            finalBleedScore += 2.0
         }
         if vte.renalFailure {
-            finalBleedScore += 0.5
+            finalBleedScore += 1.5
         }
         if vte.anemia {
-            finalBleedScore += 0.5
+            finalBleedScore += 1.5
+        }
+        
+        if vte.maleHTN {
+            finalBleedScore += 1.0
         }
         
         if finalBleedScore < 0 {

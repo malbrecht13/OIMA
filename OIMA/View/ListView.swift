@@ -11,7 +11,8 @@ import SwiftUI
 fileprivate let conditions: [Condition] = [
     Condition(name: "Community-acquired pneumonia (CAP), treatment", nextView: AnyView(CAPFirst())),
     Condition(name: "VTE Anticoagulation (DVT or PE)", nextView: AnyView(VTEFirst())),
-    Condition(name: "Dizziness evaluation", nextView: AnyView(DizzinessFirst()))
+    Condition(name: "Dizziness evaluation", nextView: AnyView(DizzinessFirst())),
+    Condition(name: "Sinusitis", nextView: AnyView(SinusitisDuration())),
 ]
 
 fileprivate let sortedConditions = conditions.sorted{$0.name < $1.name}
