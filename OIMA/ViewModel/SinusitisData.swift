@@ -20,4 +20,9 @@ class SinusitisData: ObservableObject {
     @Published var purulent = false
     @Published var obstruction = false
     @Published var faceSymptoms = false
+    @Published var complication = false
+    
+    //in ViralVBacterialSinusitis.swift
+    @Published var notImproved10Days = false
+    @Published var worsenIn10Days = false
 }

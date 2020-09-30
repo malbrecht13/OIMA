@@ -14,12 +14,6 @@ Rosenfeld et al. Clinical practice guideline (update): adult sinusitis.  Otolary
 Page S6
 If a patient has up to 4 weeks of purulent drainage accompanied by nasal obstruction or facial pain-pressure-fullness, or both, they have Acute rhinosinusitis (ARS).  If there is no purulent drainage, there is no rhinosinusitis.  If a patient has ARS then the clinician should distinguish between viral (AVS) and bacterial rhinosinusitis (ABRS).
 
-Page S9
-Additional symptoms of ABRS include fever, cough, fatigue, reduced sense of smell (hyposmia), lack of sense of smell (anosmia), maxillary dental pain, and ear fullness or pressure
-
-If a patient has facial pain/pressure/fullness but not purulent drainage, migraine, tension headache, or dental abscess could be considered
- 
-Initial diagnostic eval of ARS: vital signs, exam of head/neck, exam for hyponasal speech, edema over cheek bone or periorbital area, palpable cheek tenderness, percussion tenderness over upper teeth, purulent drainage in nose or posterior pharynx, extra-sinus involvement signs: orbital/facial cellulitis, orbital protrusions, abnormalities of eye movement, neck stiffness.  However, purulent drainage is only finding shown to have diagnostic value.
  */
 
 import SwiftUI
@@ -28,16 +22,37 @@ struct AcuteSinusitis: View {
     
     @ObservedObject var sinusitis: SinusitisData
     
+    @State private var nextView: String? = nil
+    
     var body: some View {
         
         VStack {
             Form {
                 Section(header: Text("Select if the patient has any of the following").modifier(SectionHeaderModifier(textColor: green)), content: {
+                    
+                    //Patient needs purulenet drainage plus either nasal obstruction or facial pain/pressure/fullness to qualify for ARS.  Need new slide to differentiate viral from bacterial if ARS is present.  Otherwise, patient has viral URI (management)
                     ShowToggle(binding: $sinusitis.purulent, text: "Purulent (not clear) nasal drainage in nasal cavity or posterior oropharynx")
                     ShowToggle(binding: $sinusitis.obstruction, text: "Nasal obstruction")
                     ShowToggle(binding: $sinusitis.faceSymptoms, text: "Facial pain, pressure, or fullness")
+                    
+                    
                 })
             }
+            
+            Button(action: {
+                if self.sinusitis.purulent && (self.sinusitis.obstruction || self.sinusitis.faceSymptoms) {
+                    self.nextView = "viralVBacterial"
+                } else {
+                    self.nextView = "management"
+                }
+            }) {
+                Text("Next")
+            }.buttonStyle(NextButtonStyle(fillColor: green))
+            
+            NavigationLink(destination: ViralVBacterialSinusitis(sinusitis: sinusitis), tag: "viralVBacterial", selection: $nextView) { EmptyView() }
+            NavigationLink(destination: SinusitisManagement(sinusitis: sinusitis), tag: "management", selection: $nextView) { EmptyView() }
+            
+                .navigationBarTitle("Symptoms", displayMode: .inline)
         }
     }
 }

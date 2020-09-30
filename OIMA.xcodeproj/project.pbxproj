@@ -32,6 +32,8 @@
 		CB8656A224FC5EDD0081A034 /* SegmentedPickerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8656A124FC5EDD0081A034 /* SegmentedPickerModifier.swift */; };
 		CB8656A424FC5FC70081A034 /* ManagementMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8656A324FC5FC70081A034 /* ManagementMod.swift */; };
 		CBADCFE3251BFFDE0059CC6F /* SectionHeaderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBADCFE2251BFFDE0059CC6F /* SectionHeaderModifier.swift */; };
+		CBADCFE6252530220059CC6F /* ViralVBacterialSinusitis.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBADCFE5252530220059CC6F /* ViralVBacterialSinusitis.swift */; };
+		CBADCFE9252530580059CC6F /* SinusitisManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBADCFE8252530580059CC6F /* SinusitisManagement.swift */; };
 		CBB74B3B2509499F006D01CE /* DizzinessFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B3A2509499F006D01CE /* DizzinessFirst.swift */; };
 		CBB74B3D250949C2006D01CE /* DizzinessData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B3C250949C2006D01CE /* DizzinessData.swift */; };
 		CBB74B3F250950E6006D01CE /* EpisodicTriggeredDizziness.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B3E250950E6006D01CE /* EpisodicTriggeredDizziness.swift */; };
@@ -77,6 +79,8 @@
 		CB8656A124FC5EDD0081A034 /* SegmentedPickerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPickerModifier.swift; sourceTree = "<group>"; };
 		CB8656A324FC5FC70081A034 /* ManagementMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementMod.swift; sourceTree = "<group>"; };
 		CBADCFE2251BFFDE0059CC6F /* SectionHeaderModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderModifier.swift; sourceTree = "<group>"; };
+		CBADCFE5252530220059CC6F /* ViralVBacterialSinusitis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViralVBacterialSinusitis.swift; sourceTree = "<group>"; };
+		CBADCFE8252530580059CC6F /* SinusitisManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinusitisManagement.swift; sourceTree = "<group>"; };
 		CBB74B3A2509499F006D01CE /* DizzinessFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DizzinessFirst.swift; sourceTree = "<group>"; };
 		CBB74B3C250949C2006D01CE /* DizzinessData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DizzinessData.swift; sourceTree = "<group>"; };
 		CBB74B3E250950E6006D01CE /* EpisodicTriggeredDizziness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodicTriggeredDizziness.swift; sourceTree = "<group>"; };
@@ -237,6 +241,8 @@
 				CBF28F78251A6B9B001E4841 /* SinusitisDuration.swift */,
 				CBF28F7F251A70D9001E4841 /* AcuteSinusitis.swift */,
 				CBF28F82251A70E5001E4841 /* ChronicSinusitis.swift */,
+				CBADCFE5252530220059CC6F /* ViralVBacterialSinusitis.swift */,
+				CBADCFE8252530580059CC6F /* SinusitisManagement.swift */,
 			);
 			path = Sinusitis;
 			sourceTree = "<group>";
@@ -321,8 +327,10 @@
 				CBF28F83251A70E5001E4841 /* ChronicSinusitis.swift in Sources */,
 				CBB74B51250ACDB9006D01CE /* OrthoVitalsSheet.swift in Sources */,
 				CBADCFE3251BFFDE0059CC6F /* SectionHeaderModifier.swift in Sources */,
+				CBADCFE6252530220059CC6F /* ViralVBacterialSinusitis.swift in Sources */,
 				CB2FDCC424F6F02A00C433CE /* TitleModifier.swift in Sources */,
 				CB050E8724F2EFB3001B992B /* AppDelegate.swift in Sources */,
+				CBADCFE9252530580059CC6F /* SinusitisManagement.swift in Sources */,
 				CB2FDCD024F858E700C433CE /* VTEManagement.swift in Sources */,
 				CBF28F7D251A6C67001E4841 /* SinusitisData.swift in Sources */,
 				CBB74B41250952C9006D01CE /* EpisodicSpontaneous.swift in Sources */,
