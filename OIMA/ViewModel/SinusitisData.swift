@@ -25,4 +25,12 @@ class SinusitisData: ObservableObject {
     //in ViralVBacterialSinusitis.swift
     @Published var notImproved10Days = false
     @Published var worsenIn10Days = false
+    
+    //in ChronicSinusitis.swift
+    @Published var nasalObstruction = false
+    @Published var congestion = false
+    @Published var discoloredDischarge = false
+    @Published var hyposmia = false
+    @Published var inflammationSigns = 0
+
 }

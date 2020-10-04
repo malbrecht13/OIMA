@@ -6,6 +6,16 @@
 //  Copyright © 2020 Michael Albrecht. All rights reserved.
 //
 
+/*
+ Definitions:
+ 
+ Acute: < 4 weeks
+ Subacute: 4-12 weeks
+ Chronic: > 12 weeks
+ 
+ If subacute, must use clinical judgment to decide if patient is presenting more like an acute sinusitis or a chronic sinusitis.  
+ */
+
 import SwiftUI
 
 struct SinusitisDuration: View {
@@ -28,6 +38,26 @@ struct SinusitisDuration: View {
             }
             
             Button(action: {
+                //reset variables
+                
+                //in AcuteSinusitis.swift
+                sinusitis.purulent = false
+                sinusitis.obstruction = false
+                sinusitis.faceSymptoms = false
+                sinusitis.complication = false
+                
+                //in ViralVBacterialSinusitis.swift
+                sinusitis.notImproved10Days = false
+                sinusitis.worsenIn10Days = false
+                
+                //in ChronicSinusitis.swift
+                sinusitis.nasalObstruction = false
+                sinusitis.congestion = false
+                sinusitis.discoloredDischarge = false
+                sinusitis.hyposmia = false
+                sinusitis.inflammationSigns = 0
+
+                
                 if self.sinusitis.duration == 0 || (self.sinusitis.duration == 1 && self.sinusitis.subacute == 0) {
                     self.nextView = "Acute"
                 } else {
