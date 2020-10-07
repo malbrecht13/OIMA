@@ -14,9 +14,10 @@ class VTEData: ObservableObject {
     //Used in VTEFirst.swift
     @Published var selection = 0
     @Published var occurrence = 0
+    @Published var vteOnAnticoag = 0
     
     //Used in VTEProvokingFactors.swift
-    @Published var insignificantCount = 0
+    @Published var provokedCount = 0
     @Published var surgery = false
     @Published var malignancy = false
     @Published var estrogen = false
@@ -26,7 +27,7 @@ class VTEData: ObservableObject {
     
     //Used in ProximalDistalDVT.swift
     @Published var proxDistSelection = 0
-    @Published var severeSymptoms = 0
+    @Published var severeSymptoms = 0 //0 is "Yes", 1 is "No"
     
     //Used in VTEAnticagChoiceInfluencers.swift
     @Published var liverDisease = false
@@ -44,6 +45,8 @@ class VTEData: ObservableObject {
     @Published var renalFailure = false //1.5 points
     @Published var anemia = false //1.5 points
     @Published var maleHTN = false //1 point
+    
+    
 
     
 }

@@ -25,7 +25,7 @@ struct ListView: View {
         NavigationView {
             VStack {
                 SearchBar(text: $searchText).padding(.top, 5)
-                List(sortedConditions.filter({ searchText.isEmpty ? true : $0.name.contains(searchText) })) { condition in
+                List(sortedConditions.filter({ searchText.isEmpty ? true : $0.name.lowercased().contains(searchText.lowercased()) })) { condition in
                     NavigationLink(destination: condition.nextView) {
                         Text(condition.name)
                     }

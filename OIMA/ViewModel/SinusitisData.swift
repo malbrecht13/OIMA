@@ -31,6 +31,6 @@ class SinusitisData: ObservableObject {
     @Published var congestion = false
     @Published var discoloredDischarge = false
     @Published var hyposmia = false
-    @Published var inflammationSigns = 0
+    @Published var inflammationSigns = 1 // 1 is no inflammation
 
 }

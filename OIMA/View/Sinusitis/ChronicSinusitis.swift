@@ -19,7 +19,7 @@ struct ChronicSinusitis: View {
     @ObservedObject var sinusitis: SinusitisData
     
     @State private var inflammationSelection = ["Yes", "No"]
-    @State private var nextView: String? = nil
+    @State private var nextView = false
     
     var body: some View {
         VStack {
@@ -40,16 +40,17 @@ struct ChronicSinusitis: View {
             }
             
             Button(action: {
-                if self.symptomCount() >= 2 && self.sinusitis.inflammationSigns == 0 {
-                    self.nextView = "CRS"
-                } else {
-                    self.nextView = "Management"
+                //this block of code is here in case the user first selects that there are 2 or more symptoms, changes inflammationsigns to Yes (0), and later deselects symptoms so that there are less than 2.  We don't want chronic sinusitis to be the diagnosis unless there are at least 2 symptoms plus inflammation.
+                if self.symptomCount() < 2 {
+                    self.sinusitis.inflammationSigns = 1
                 }
+                
+                self.nextView = true
             }) {
                 Text("Next")
             }.buttonStyle(NextButtonStyle(fillColor: green))
             
-            NavigationLink(destination: SinusitisManagement(sinusitis: sinusitis), tag: "Management", selection: $nextView) { EmptyView() }
+            NavigationLink(destination: SinusitisManagement(sinusitis: sinusitis), isActive: $nextView) { EmptyView() }
         }
     }
     
@@ -72,6 +73,8 @@ struct ChronicSinusitis: View {
         if self.sinusitis.hyposmia {
             count += 1
         }
+        
+       
 
         
         return count
