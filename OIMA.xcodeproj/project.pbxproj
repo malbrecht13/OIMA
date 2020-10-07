@@ -31,6 +31,9 @@
 		CB2FDCD524F9B5CF00C433CE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCD424F9B5CF00C433CE /* Constants.swift */; };
 		CB8656A224FC5EDD0081A034 /* SegmentedPickerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8656A124FC5EDD0081A034 /* SegmentedPickerModifier.swift */; };
 		CB8656A424FC5FC70081A034 /* ManagementMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8656A324FC5FC70081A034 /* ManagementMod.swift */; };
+		CB915A3B252E74AA00125E8B /* Reference.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB915A3A252E74AA00125E8B /* Reference.swift */; };
+		CB915A3E252E75BC00125E8B /* ReferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB915A3D252E75BC00125E8B /* ReferenceView.swift */; };
+		CB915A41252E775500125E8B /* SinusitisReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB915A40252E775500125E8B /* SinusitisReference.swift */; };
 		CBA74D11252DBF6600231F13 /* NasalSteroidInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA74D10252DBF6600231F13 /* NasalSteroidInstructions.swift */; };
 		CBADCFE3251BFFDE0059CC6F /* SectionHeaderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBADCFE2251BFFDE0059CC6F /* SectionHeaderModifier.swift */; };
 		CBADCFE6252530220059CC6F /* ViralVBacterialSinusitis.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBADCFE5252530220059CC6F /* ViralVBacterialSinusitis.swift */; };
@@ -79,6 +82,9 @@
 		CB2FDCD424F9B5CF00C433CE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CB8656A124FC5EDD0081A034 /* SegmentedPickerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPickerModifier.swift; sourceTree = "<group>"; };
 		CB8656A324FC5FC70081A034 /* ManagementMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementMod.swift; sourceTree = "<group>"; };
+		CB915A3A252E74AA00125E8B /* Reference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reference.swift; sourceTree = "<group>"; };
+		CB915A3D252E75BC00125E8B /* ReferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceView.swift; sourceTree = "<group>"; };
+		CB915A40252E775500125E8B /* SinusitisReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinusitisReference.swift; sourceTree = "<group>"; };
 		CBA74D10252DBF6600231F13 /* NasalSteroidInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalSteroidInstructions.swift; sourceTree = "<group>"; };
 		CBADCFE2251BFFDE0059CC6F /* SectionHeaderModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderModifier.swift; sourceTree = "<group>"; };
 		CBADCFE5252530220059CC6F /* ViralVBacterialSinusitis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViralVBacterialSinusitis.swift; sourceTree = "<group>"; };
@@ -165,6 +171,7 @@
 				CB050EA324F56CF6001B992B /* ShowPicker.swift */,
 				CB2FDCC724F7264E00C433CE /* ShowToggle.swift */,
 				CBF28F6E25154EC9001E4841 /* YouTubeButton.swift */,
+				CB915A3D252E75BC00125E8B /* ReferenceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				CB050E9E24F43176001B992B /* Condition.swift */,
+				CB915A3A252E74AA00125E8B /* Reference.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -246,6 +254,7 @@
 				CBADCFE5252530220059CC6F /* ViralVBacterialSinusitis.swift */,
 				CBA74D10252DBF6600231F13 /* NasalSteroidInstructions.swift */,
 				CBADCFE8252530580059CC6F /* SinusitisManagement.swift */,
+				CB915A40252E775500125E8B /* SinusitisReference.swift */,
 			);
 			path = Sinusitis;
 			sourceTree = "<group>";
@@ -323,6 +332,7 @@
 			files = (
 				CB2FDCBC24F6E9AB00C433CE /* VTEFirst.swift in Sources */,
 				CB8656A224FC5EDD0081A034 /* SegmentedPickerModifier.swift in Sources */,
+				CB915A41252E775500125E8B /* SinusitisReference.swift in Sources */,
 				CB050EAC24F56E8D001B992B /* NextButtonStyle.swift in Sources */,
 				CBB74B4725095375006D01CE /* Dix-HallpikeSheet.swift in Sources */,
 				CBF28F80251A70D9001E4841 /* AcuteSinusitis.swift in Sources */,
@@ -343,6 +353,7 @@
 				CB8656A424FC5FC70081A034 /* ManagementMod.swift in Sources */,
 				CB2FDCCE24F858B600C433CE /* VTEBleedingRisk.swift in Sources */,
 				CB050EA224F4393C001B992B /* CAPFirst.swift in Sources */,
+				CB915A3E252E75BC00125E8B /* ReferenceView.swift in Sources */,
 				CB2FDCD524F9B5CF00C433CE /* Constants.swift in Sources */,
 				CBB74B3F250950E6006D01CE /* EpisodicTriggeredDizziness.swift in Sources */,
 				CBB74B4B25095398006D01CE /* HINTSExamSheet.swift in Sources */,
@@ -354,6 +365,7 @@
 				CBF28F6F25154EC9001E4841 /* YouTubeButton.swift in Sources */,
 				CB050E8924F2EFB3001B992B /* SceneDelegate.swift in Sources */,
 				CB050E8B24F2EFB3001B992B /* ListView.swift in Sources */,
+				CB915A3B252E74AA00125E8B /* Reference.swift in Sources */,
 				CB2FDCC624F6F35C00C433CE /* VTEProvokingFactors.swift in Sources */,
 				CB2B470924F57726006394DE /* OutCAPManagement.swift in Sources */,
 				CB2FDCD324F85BDD00C433CE /* CAPData.swift in Sources */,

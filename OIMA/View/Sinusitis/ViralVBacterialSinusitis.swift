@@ -13,6 +13,7 @@ struct ViralVBacterialSinusitis: View {
     @ObservedObject var sinusitis: SinusitisData
     
     @State private var nextView = false
+    @State private var showReferences = false
     
     var body: some View {
         VStack {
@@ -37,6 +38,13 @@ struct ViralVBacterialSinusitis: View {
                 }.buttonStyle(NextButtonStyle(fillColor: green))
             }
             .navigationBarTitle("Viral vs. Bacterial", displayMode: .inline)
+            .navigationBarItems(trailing: Button(action: {
+                self.showReferences.toggle()
+            }) {
+                Image(systemName: "r.square")
+            }.sheet(isPresented: $showReferences) {
+                SinusitisReference()
+            })
         }
     }
 }

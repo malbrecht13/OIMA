@@ -20,6 +20,7 @@ struct ChronicSinusitis: View {
     
     @State private var inflammationSelection = ["Yes", "No"]
     @State private var nextView = false
+    @State private var showReferences = false
     
     var body: some View {
         VStack {
@@ -53,6 +54,13 @@ struct ChronicSinusitis: View {
             NavigationLink(destination: SinusitisManagement(sinusitis: sinusitis), isActive: $nextView) { EmptyView() }
             
                 .navigationBarTitle("Chronic sinusitis symptoms", displayMode: .inline)
+                .navigationBarItems(trailing: Button(action: {
+                    self.showReferences.toggle()
+                }) {
+                    Image(systemName: "r.square")
+                }.sheet(isPresented: $showReferences) {
+                    SinusitisReference()
+                })
         }
     }
     

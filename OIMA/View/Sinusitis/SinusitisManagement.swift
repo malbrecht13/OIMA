@@ -26,6 +26,7 @@ struct SinusitisManagement: View {
     @ObservedObject var sinusitis: SinusitisData
     
     @State private var showNasalSteroidInstructionSheet = false
+    @State private var showReferences = false
     
     var body: some View {
         ScrollView {
@@ -86,6 +87,13 @@ struct SinusitisManagement: View {
                 }.font(.footnote)
                 
             }.padding(.horizontal)
+            .navigationBarItems(trailing: Button(action: {
+                self.showReferences.toggle()
+            }) {
+                Image(systemName: "r.square")
+            }.sheet(isPresented: $showReferences) {
+                SinusitisReference()
+            })
         }
     }
 }

@@ -23,6 +23,7 @@ struct AcuteSinusitis: View {
     @ObservedObject var sinusitis: SinusitisData
     
     @State private var nextView: String? = nil
+    @State private var showReferences = false
     
     var body: some View {
         
@@ -53,6 +54,13 @@ struct AcuteSinusitis: View {
             NavigationLink(destination: SinusitisManagement(sinusitis: sinusitis), tag: "management", selection: $nextView) { EmptyView() }
             
                 .navigationBarTitle("Symptoms", displayMode: .inline)
+                .navigationBarItems(trailing: Button(action: {
+                    self.showReferences.toggle()
+                }) {
+                    Image(systemName: "r.square")
+                }.sheet(isPresented: $showReferences) {
+                    SinusitisReference()
+                })
         }
     }
 }

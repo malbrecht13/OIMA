@@ -23,6 +23,7 @@ struct SinusitisDuration: View {
     @ObservedObject var sinusitis: SinusitisData = SinusitisData()
     
     @State private var nextView: String? = nil
+    @State private var showReferences = false
     
     private let durationOptions = ["< 4 weeks", "4-12 weeks", "> 12 weeks"]
     private let subacuteDifferentiator = ["Acute", "Chronic"]
@@ -72,6 +73,13 @@ struct SinusitisDuration: View {
                 
         }.padding()
         .navigationBarTitle("Sinusitis duration", displayMode: .inline)
+        .navigationBarItems(trailing: Button(action: {
+            self.showReferences.toggle()
+        }) {
+            Image(systemName: "r.square")
+        }.sheet(isPresented: $showReferences) {
+            SinusitisReference()
+        })
     }
 }
 
