@@ -51,6 +51,8 @@ struct ChronicSinusitis: View {
             }.buttonStyle(NextButtonStyle(fillColor: green))
             
             NavigationLink(destination: SinusitisManagement(sinusitis: sinusitis), isActive: $nextView) { EmptyView() }
+            
+                .navigationBarTitle("Chronic sinusitis symptoms", displayMode: .inline)
         }
     }
     

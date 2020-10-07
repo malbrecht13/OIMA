@@ -244,8 +244,8 @@
 				CBF28F7F251A70D9001E4841 /* AcuteSinusitis.swift */,
 				CBF28F82251A70E5001E4841 /* ChronicSinusitis.swift */,
 				CBADCFE5252530220059CC6F /* ViralVBacterialSinusitis.swift */,
-				CBADCFE8252530580059CC6F /* SinusitisManagement.swift */,
 				CBA74D10252DBF6600231F13 /* NasalSteroidInstructions.swift */,
+				CBADCFE8252530580059CC6F /* SinusitisManagement.swift */,
 			);
 			path = Sinusitis;
 			sourceTree = "<group>";
