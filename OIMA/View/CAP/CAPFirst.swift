@@ -11,7 +11,6 @@ import SwiftUI
 struct CAPFirst: View {
     
     @ObservedObject var capToggle: CAPData = CAPData()
-    @State private var selection = 0
     @State private var nextView = false
     
     private let rfs = ["Prior respiratory isolation of MRSA", "Prior respiratory isolation of Pseudmonas", "Chronic heart disease", "Chronic lung disease", "Chronic liver disease", "Chronic renal disease", "Diabetes mellitus", "Alcoholism", "Malignancy", "Asplenia"]
@@ -34,24 +33,8 @@ struct CAPFirst: View {
                 }
             }
             
+            ShowPicker(parentBinding: $capToggle.selection, text: "", parentArray: answer)
             
-            
-            ShowPicker(parentBinding: $selection, text: "", parentArray: answer)
-//            Form {
-//                Section(header: Text("Does the patient have any of these risk factors?").foregroundColor(fillColor).font(.callout).fontWeight(.black).padding()) {
-//                    ForEach(rfs, id: \.self) { rf in
-//                        HStack {
-//                            Text("•")
-//                            Text("\(rf)").font(.caption).fontWeight(.medium)
-//                        }
-//                    }
-//                    ShowPicker(parentBinding: $selection, text: "", parentArray: answer)
-//
-//
-//
-//                }
-//
-//            }
             HStack {
                 Spacer()
                 Button("Next") {
