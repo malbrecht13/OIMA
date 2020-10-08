@@ -11,7 +11,9 @@ import SwiftUI
 struct CAPFirst: View {
     
     @ObservedObject var capToggle: CAPData = CAPData()
+    
     @State private var nextView = false
+    @State private var showReferences = false
     
     private let rfs = ["Prior respiratory isolation of MRSA", "Prior respiratory isolation of Pseudmonas", "Chronic heart disease", "Chronic lung disease", "Chronic liver disease", "Chronic renal disease", "Diabetes mellitus", "Alcoholism", "Malignancy", "Asplenia"]
     
@@ -47,8 +49,17 @@ struct CAPFirst: View {
             NavigationLink(destination: OutCAPManagement(capToggle: capToggle), isActive: $nextView) {
                 EmptyView()
             }.navigationBarTitle("Risk factors", displayMode: .inline)
+            .navigationBarItems(trailing: Button(action: {
+                self.showReferences.toggle()
+            }) {
+                Image(systemName: "r.square")
+            }.sheet(isPresented: $showReferences) {
+                CAPReference()
+            })
             
             Spacer()
+            
+            
         }.padding()
     }
 }

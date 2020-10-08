@@ -34,6 +34,7 @@
 		CB915A3B252E74AA00125E8B /* Reference.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB915A3A252E74AA00125E8B /* Reference.swift */; };
 		CB915A3E252E75BC00125E8B /* ReferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB915A3D252E75BC00125E8B /* ReferenceView.swift */; };
 		CB915A41252E775500125E8B /* SinusitisReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB915A40252E775500125E8B /* SinusitisReference.swift */; };
+		CB915A44252FDADE00125E8B /* CAPReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB915A43252FDADE00125E8B /* CAPReference.swift */; };
 		CBA74D11252DBF6600231F13 /* NasalSteroidInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA74D10252DBF6600231F13 /* NasalSteroidInstructions.swift */; };
 		CBADCFE3251BFFDE0059CC6F /* SectionHeaderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBADCFE2251BFFDE0059CC6F /* SectionHeaderModifier.swift */; };
 		CBADCFE6252530220059CC6F /* ViralVBacterialSinusitis.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBADCFE5252530220059CC6F /* ViralVBacterialSinusitis.swift */; };
@@ -85,6 +86,7 @@
 		CB915A3A252E74AA00125E8B /* Reference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reference.swift; sourceTree = "<group>"; };
 		CB915A3D252E75BC00125E8B /* ReferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceView.swift; sourceTree = "<group>"; };
 		CB915A40252E775500125E8B /* SinusitisReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinusitisReference.swift; sourceTree = "<group>"; };
+		CB915A43252FDADE00125E8B /* CAPReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAPReference.swift; sourceTree = "<group>"; };
 		CBA74D10252DBF6600231F13 /* NasalSteroidInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalSteroidInstructions.swift; sourceTree = "<group>"; };
 		CBADCFE2251BFFDE0059CC6F /* SectionHeaderModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderModifier.swift; sourceTree = "<group>"; };
 		CBADCFE5252530220059CC6F /* ViralVBacterialSinusitis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViralVBacterialSinusitis.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			children = (
 				CB050EA124F4393C001B992B /* CAPFirst.swift */,
 				CB2B470824F57726006394DE /* OutCAPManagement.swift */,
+				CB915A43252FDADE00125E8B /* CAPReference.swift */,
 			);
 			path = CAP;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				CB050E8924F2EFB3001B992B /* SceneDelegate.swift in Sources */,
 				CB050E8B24F2EFB3001B992B /* ListView.swift in Sources */,
 				CB915A3B252E74AA00125E8B /* Reference.swift in Sources */,
+				CB915A44252FDADE00125E8B /* CAPReference.swift in Sources */,
 				CB2FDCC624F6F35C00C433CE /* VTEProvokingFactors.swift in Sources */,
 				CB2B470924F57726006394DE /* OutCAPManagement.swift in Sources */,
 				CB2FDCD324F85BDD00C433CE /* CAPData.swift in Sources */,

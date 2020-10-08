@@ -20,7 +20,7 @@ struct SinusitisReference: View {
     
     
     var body: some View {
-        ReferenceView(sortedCitationArray: sortedCitations, topic: topic, fillColor: green)
+        ReferenceView(sortedCitationArray: sortedCitations, topic: topic, fillColor: fillColor)
     }
 }
 
