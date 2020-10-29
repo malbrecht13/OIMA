@@ -11,7 +11,9 @@ import SwiftUI
 struct VTEBleedingRisk: View {
     
     @ObservedObject var vte: VTEData
+    
     @State private var nextView = false
+    @State private var showReferences = false
     
     var body: some View {
         VStack {
@@ -36,6 +38,14 @@ struct VTEBleedingRisk: View {
             }
            
         }.navigationBarTitle("Bleeding risk", displayMode: .inline)
+        //References nav button
+        .navigationBarItems(trailing: Button(action: {
+            self.showReferences.toggle()
+        }) {
+            Image(systemName: "r.square")
+        }.sheet(isPresented: $showReferences) {
+            VTEReferences()
+        })
     }
 }
 

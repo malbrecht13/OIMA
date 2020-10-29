@@ -27,7 +27,7 @@ class VTEData: ObservableObject {
     
     //Used in ProximalDistalDVT.swift
     @Published var proxDistSelection = 0
-    @Published var severeSymptoms = 0 //0 is "Yes", 1 is "No"
+    @Published var severeSymptoms = 0
     
     //Used in VTEAnticagChoiceInfluencers.swift
     @Published var liverDisease = false
@@ -45,8 +45,6 @@ class VTEData: ObservableObject {
     @Published var renalFailure = false //1.5 points
     @Published var anemia = false //1.5 points
     @Published var maleHTN = false //1 point
-    
-    
 
     
 }

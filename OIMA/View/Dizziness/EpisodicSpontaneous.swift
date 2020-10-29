@@ -13,6 +13,7 @@ struct EpisodicSpontaneous: View {
     @ObservedObject var dizzy: DizzinessData
     
     @State private var nextView: String? = nil
+    @State private var showReferences = false
     
     var body: some View {
         VStack {
@@ -46,6 +47,15 @@ struct EpisodicSpontaneous: View {
             NavigationLink(destination: NeuroTestsDizziness(dizzy: dizzy), tag: "NeuroTests", selection: $nextView) { EmptyView() }
             NavigationLink(destination: DizzinessManagement(dizzy: dizzy), tag: "Management", selection: $nextView) { EmptyView() }
                 .navigationBarTitle("Other factors", displayMode: .inline)
+                
+                //References nav button
+                .navigationBarItems(trailing: Button(action: {
+                    self.showReferences.toggle()
+                }) {
+                    Image(systemName: "r.square")
+                }.sheet(isPresented: $showReferences) {
+                    DizzinessReference()
+                })
         }
     }
 

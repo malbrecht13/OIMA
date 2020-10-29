@@ -13,6 +13,7 @@ struct DizzinessManagement: View {
     @ObservedObject var dizzy: DizzinessData
     
     @State private var epleyView = false
+    @State private var showReferences = false
     
     var body: some View {
         ScrollView {
@@ -98,6 +99,15 @@ struct DizzinessManagement: View {
                     }.font(.footnote).padding()
                 
             }.padding(.horizontal)
+            
+            //References nav button
+            .navigationBarItems(trailing: Button(action: {
+                self.showReferences.toggle()
+            }) {
+                Image(systemName: "r.square")
+            }.sheet(isPresented: $showReferences) {
+                DizzinessReference()
+            })
         }
     }
 }

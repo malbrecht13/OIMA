@@ -33,32 +33,17 @@ struct SinusitisDuration: View {
         VStack {
             ShowPicker(parentBinding: $sinusitis.duration, text: "Select duration of current episode of symptoms", parentArray: durationOptions)
             
-            //if subacute
+            //if subacute sinusitis (4-12 weeks duration), this view will appear
             if sinusitis.duration == 1 {
                 ShowPicker(parentBinding: $sinusitis.subacute, text: "Using your clinical judgment, is this more like acute or chronic sinusitis?", parentArray: subacuteDifferentiator)
             }
             
+            //Next button
             Button(action: {
-                //reset variables
-                
-                //in AcuteSinusitis.swift
-                sinusitis.purulent = false
-                sinusitis.obstruction = false
-                sinusitis.faceSymptoms = false
-                sinusitis.complication = false
-                
-                //in ViralVBacterialSinusitis.swift
-                sinusitis.notImproved10Days = false
-                sinusitis.worsenIn10Days = false
-                
-                //in ChronicSinusitis.swift
-                sinusitis.nasalObstruction = false
-                sinusitis.congestion = false
-                sinusitis.discoloredDischarge = false
-                sinusitis.hyposmia = false
-                sinusitis.inflammationSigns = 0
-
-                
+                //reset variables so user can start over with selections on later screens
+                resetVariables()
+               
+                //go to the Next view based on selections
                 if self.sinusitis.duration == 0 || (self.sinusitis.duration == 1 && self.sinusitis.subacute == 0) {
                     self.nextView = "Acute"
                 } else {
@@ -72,7 +57,11 @@ struct SinusitisDuration: View {
             NavigationLink(destination: ChronicSinusitis(sinusitis: sinusitis), tag: "Chronic", selection: $nextView) {EmptyView()}
                 
         }.padding()
+        
+        //title of the screen in the navbar
         .navigationBarTitle("Sinusitis duration", displayMode: .inline)
+        
+        //Reference button in navbar
         .navigationBarItems(trailing: Button(action: {
             self.showReferences.toggle()
         }) {
@@ -81,7 +70,30 @@ struct SinusitisDuration: View {
             SinusitisReference()
         })
     }
+    
+    
+    //Resets variables for subsequent views for sinusitis
+    private func resetVariables() {
+        //in AcuteSinusitis.swift
+        self.sinusitis.purulent = false
+        self.sinusitis.obstruction = false
+        self.sinusitis.faceSymptoms = false
+        self.sinusitis.complication = false
+        
+        //in ViralVBacterialSinusitis.swift
+        self.sinusitis.notImproved10Days = false
+        self.sinusitis.worsenIn10Days = false
+        
+        //in ChronicSinusitis.swift
+        self.sinusitis.nasalObstruction = false
+        self.sinusitis.congestion = false
+        self.sinusitis.discoloredDischarge = false
+        self.sinusitis.hyposmia = false
+        self.sinusitis.inflammationSigns = 0
+    }
 }
+
+
 
 struct SinusitisDuration_Previews: PreviewProvider {
     static var previews: some View {

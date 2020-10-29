@@ -12,6 +12,8 @@ struct OutCAPManagement: View {
     
     @ObservedObject var capToggle: CAPData
     
+    @State private var showReferences = false
+    
     var body: some View {
  
         ScrollView {
@@ -47,7 +49,7 @@ struct OutCAPManagement: View {
                             Text("\nChoose one of these:").fontWeight(.bold)
                             Text("Levofloxacin 750 mg PO daily\nMoxifloxacin 400 mg PO daily\nGemifloxacin 320 mg PO daily")
                         }
-                        Text("\nTreatment duration is 5 days unless patients fail to improve.")
+                        Text("\nTreatment duration is 5 days unless patient fails to improve.")
                     }.font(.footnote).padding(.horizontal)
                 }
                 
@@ -61,12 +63,19 @@ struct OutCAPManagement: View {
                         Text("Azithromycin 500 mg day 1, then 250 mg daily for 4 days").lineLimit(2).minimumScaleFactor(0.5)
                         Text("Clarithromycin 500 mg PO BID\nClarithromycin ER 1,000 mg PO daily")
                         Text("\nNote: macrolides should be used as monotherapy only if local pneumococcal resistance is < 25%")
-                        Text("\nTreatment duration is 5 days unless patients fail to improve.")
+                        Text("\nTreatment duration is 5 days unless patient fails to improve.")
                     }.font(.footnote).padding(.horizontal)
                 }
 
             }
             .edgesIgnoringSafeArea(.top).padding(.bottom, 50)
+            .navigationBarItems(trailing: Button(action: {
+                self.showReferences.toggle()
+            }) {
+                Image(systemName: "r.square")
+            }.sheet(isPresented: $showReferences) {
+                CAPReference()
+            })
         }
     }
     

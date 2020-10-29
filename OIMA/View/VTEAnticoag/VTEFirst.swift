@@ -11,7 +11,9 @@ import SwiftUI
 struct VTEFirst: View {
     
     @ObservedObject var vte: VTEData = VTEData()
+    
     @State private var nextView: String? = nil
+    @State private var showReferences = false
     
     private let vteType = ["PE", "DVT"]
     private let occurrences = ["First occurrence", "Second or greater"]
@@ -58,7 +60,14 @@ struct VTEFirst: View {
             
 
             }.navigationBarTitle("VTE home", displayMode: .inline)
-        
+        //References nav button
+        .navigationBarItems(trailing: Button(action: {
+            self.showReferences.toggle()
+        }) {
+            Image(systemName: "r.square")
+        }.sheet(isPresented: $showReferences) {
+            VTEReferences()
+        })
         
             
     }

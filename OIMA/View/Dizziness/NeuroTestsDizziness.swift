@@ -15,6 +15,7 @@ struct NeuroTestsDizziness: View {
     @State private var hintsPositive = ["Yes", "No"]
     @State private var showHINTSsheet = false
     @State private var nextView = false
+    @State private var showReferences = false
     
     var body: some View {
         VStack {
@@ -25,6 +26,8 @@ struct NeuroTestsDizziness: View {
             
             Spacer()
             
+            
+            //HINTS exam instructions button
             Button(action: {
                 self.showHINTSsheet.toggle()
             }) {
@@ -36,6 +39,8 @@ struct NeuroTestsDizziness: View {
             Spacer()
             
             ShowPicker(parentBinding: $dizzy.hints, text: "Are any of the HINTS exam tests suggestive of central etiology?", parentArray: hintsPositive).lineLimit(3)
+            
+            //Next button
             NavigationLink(destination: DizzinessManagement(dizzy: dizzy), isActive: $nextView) {
                 Button(action: {
                     self.nextView = true
@@ -48,6 +53,15 @@ struct NeuroTestsDizziness: View {
             
         }.padding()
             .navigationBarTitle("HINTS exam", displayMode: .inline)
+        
+        //References nav button
+        .navigationBarItems(trailing: Button(action: {
+            self.showReferences.toggle()
+        }) {
+            Image(systemName: "r.square")
+        }.sheet(isPresented: $showReferences) {
+            DizzinessReference()
+        })
     }
 }
 

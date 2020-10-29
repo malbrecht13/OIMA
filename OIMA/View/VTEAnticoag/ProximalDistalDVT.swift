@@ -11,7 +11,9 @@ import SwiftUI
 struct ProximalDistalDVT: View {
     
     @ObservedObject var vte: VTEData
+    
     @State private var nextView = false
+    @State private var showReferences = false
     
     private let siteChoice = ["Proximal", "Distal"]
     private let severeChoice = ["Yes", "No"]
@@ -38,6 +40,14 @@ struct ProximalDistalDVT: View {
             Spacer()
             Text("*A distal DVT is one that is soley in a deep vein below the knee. An upper extremity DVT can be treated similarly to a proximal DVT of the leg.").padding()
                 .navigationBarTitle("DVT site", displayMode: .inline)
+                //References nav button
+                .navigationBarItems(trailing: Button(action: {
+                    self.showReferences.toggle()
+                }) {
+                    Image(systemName: "r.square")
+                }.sheet(isPresented: $showReferences) {
+                    VTEReferences()
+                })
         }
     }
 }

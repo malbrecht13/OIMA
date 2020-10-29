@@ -15,6 +15,7 @@ struct EpisodicTriggeredDizziness: View {
     @State private var showDixHallpikeSheet = false
     @State private var showOrthoVitalsSheet = false
     @State private var nextView: String? = nil
+    @State private var showReferences = false
     
     private let dixHallpike = ["Yes", "No"]
     private let orthoVitals = ["Yes", "No"]
@@ -69,6 +70,14 @@ struct EpisodicTriggeredDizziness: View {
             NavigationLink(destination: EpisodicSpontaneous(dizzy: dizzy), tag: "EpisodicSpontaneous", selection: $nextView) { EmptyView() }
             
         }.navigationBarTitle("Episodic dizziness tests", displayMode: .inline)
+        
+        .navigationBarItems(trailing: Button(action: {
+            self.showReferences.toggle()
+        }) {
+            Image(systemName: "r.square")
+        }.sheet(isPresented: $showReferences) {
+            DizzinessReference()
+        })
     }
     
     

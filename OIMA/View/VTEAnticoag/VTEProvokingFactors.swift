@@ -11,7 +11,9 @@ import SwiftUI
 struct VTEProvokingFactors: View {
     
     @ObservedObject var vte: VTEData
+    
     @State private var nextView = false
+    @State private var showReferences = false
     
     var body: some View {
         VStack {
@@ -26,17 +28,30 @@ struct VTEProvokingFactors: View {
                     Text("(If none apply, simply select the 'Next' button below)").font(.caption)
                 })
             }
-            
+            //nav link for Next button
             NavigationLink(destination: VTEBleedingRisk(vte: vte), isActive: $nextView) {
                 EmptyView()
             }
             
+            //Next button
             Button(action: {
+                if self.vte.surgery || self.vte.malignancy || self.vte.estrogen || self.vte.flight8hours || self.vte.legInjury || self.vte.pregnancy {
+                    self.vte.provokedCount = 1
+                }
+                
                 self.nextView = true
             }) {
                 Text("Next")
             }.buttonStyle(NextButtonStyle(fillColor: purple))
             }.navigationBarTitle("Provoking factors", displayMode: .inline)
+        //References nav button
+        .navigationBarItems(trailing: Button(action: {
+            self.showReferences.toggle()
+        }) {
+            Image(systemName: "r.square")
+        }.sheet(isPresented: $showReferences) {
+            VTEReferences()
+        })
     }
 }
 
