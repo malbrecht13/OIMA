@@ -31,6 +31,8 @@
 		CB2FDCD024F858E700C433CE /* VTEManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCCF24F858E700C433CE /* VTEManagement.swift */; };
 		CB2FDCD324F85BDD00C433CE /* CAPData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCD224F85BDD00C433CE /* CAPData.swift */; };
 		CB2FDCD524F9B5CF00C433CE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCD424F9B5CF00C433CE /* Constants.swift */; };
+		CB715AC7255D06E500261FDD /* LBPTxFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB715AC6255D06E500261FDD /* LBPTxFirst.swift */; };
+		CB715ACB255D07BB00261FDD /* MechLBPTreatmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB715ACA255D07BB00261FDD /* MechLBPTreatmentData.swift */; };
 		CB8656A224FC5EDD0081A034 /* SegmentedPickerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8656A124FC5EDD0081A034 /* SegmentedPickerModifier.swift */; };
 		CB8656A424FC5FC70081A034 /* ManagementMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8656A324FC5FC70081A034 /* ManagementMod.swift */; };
 		CB915A3B252E74AA00125E8B /* Reference.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB915A3A252E74AA00125E8B /* Reference.swift */; };
@@ -85,6 +87,8 @@
 		CB2FDCCF24F858E700C433CE /* VTEManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTEManagement.swift; sourceTree = "<group>"; };
 		CB2FDCD224F85BDD00C433CE /* CAPData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAPData.swift; sourceTree = "<group>"; };
 		CB2FDCD424F9B5CF00C433CE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CB715AC6255D06E500261FDD /* LBPTxFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBPTxFirst.swift; sourceTree = "<group>"; };
+		CB715ACA255D07BB00261FDD /* MechLBPTreatmentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MechLBPTreatmentData.swift; sourceTree = "<group>"; };
 		CB8656A124FC5EDD0081A034 /* SegmentedPickerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPickerModifier.swift; sourceTree = "<group>"; };
 		CB8656A324FC5FC70081A034 /* ManagementMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagementMod.swift; sourceTree = "<group>"; };
 		CB915A3A252E74AA00125E8B /* Reference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reference.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 		CB050E9A24F2F741001B992B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CB715AC5255D06C400261FDD /* Low Back Pain, Treatment */,
 				CBF28F77251A6B7B001E4841 /* Sinusitis */,
 				CBB74B392509497D006D01CE /* Dizziness */,
 				CB8656A024FC5EB80081A034 /* ViewModifiers */,
@@ -221,8 +226,17 @@
 				CB2FDCD224F85BDD00C433CE /* CAPData.swift */,
 				CBB74B3C250949C2006D01CE /* DizzinessData.swift */,
 				CBF28F7C251A6C67001E4841 /* SinusitisData.swift */,
+				CB715ACA255D07BB00261FDD /* MechLBPTreatmentData.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CB715AC5255D06C400261FDD /* Low Back Pain, Treatment */ = {
+			isa = PBXGroup;
+			children = (
+				CB715AC6255D06E500261FDD /* LBPTxFirst.swift */,
+			);
+			path = "Low Back Pain, Treatment";
 			sourceTree = "<group>";
 		};
 		CB8656A024FC5EB80081A034 /* ViewModifiers */ = {
@@ -383,7 +397,9 @@
 				CB2FDCD324F85BDD00C433CE /* CAPData.swift in Sources */,
 				CB050E9F24F43176001B992B /* Condition.swift in Sources */,
 				CB2FDCC824F7264E00C433CE /* ShowToggle.swift in Sources */,
+				CB715AC7255D06E500261FDD /* LBPTxFirst.swift in Sources */,
 				CB2FDCC024F6EB8D00C433CE /* VTEData.swift in Sources */,
+				CB715ACB255D07BB00261FDD /* MechLBPTreatmentData.swift in Sources */,
 				CBA74D11252DBF6600231F13 /* NasalSteroidInstructions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

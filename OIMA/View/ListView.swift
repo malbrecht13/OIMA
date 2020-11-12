@@ -13,6 +13,7 @@ fileprivate let conditions: [Condition] = [
     Condition(name: "VTE Anticoagulation (DVT or PE)", nextView: AnyView(VTEFirst())),
     Condition(name: "Dizziness evaluation", nextView: AnyView(DizzinessFirst())),
     Condition(name: "Sinusitis", nextView: AnyView(SinusitisDuration())),
+    Condition(name: "Mechanical low back pain, treatment", nextView: AnyView(LBPTxFirst())),
 ]
 
 fileprivate let sortedConditions = conditions.sorted{$0.name < $1.name}
