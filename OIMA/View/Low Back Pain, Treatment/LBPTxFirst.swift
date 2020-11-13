@@ -11,7 +11,7 @@
  */
 
 
-// TODO: - Navigation Link, References, Create Views, nextView should be optional string not boolean
+// TODO: - References, Create Views, nextView should be optional string not boolean
 
 import SwiftUI
 
@@ -21,6 +21,7 @@ struct LBPTxFirst: View {
     
     @State private var duration = ["< 12 weeks", "> 12 weeks"]
     @State private var nextView = false
+    @State private var showReferences = false
     
     var body: some View {
         VStack {
@@ -34,8 +35,19 @@ struct LBPTxFirst: View {
                 Text("Next")
             }.buttonStyle(NextButtonStyle(fillColor: orange))
             
-            .navigationBarTitle("Duration", displayMode: .inline)
+            NavigationLink(destination: LBPTxManagement(mlbpt: mlbpt), isActive: $nextView) {
+                EmptyView()
+            }
             
+            .navigationBarTitle("Duration", displayMode: .inline)
+            //Reference button in navbar
+            .navigationBarItems(trailing: Button(action: {
+                self.showReferences.toggle()
+            }) {
+                Image(systemName: "r.square")
+            }.sheet(isPresented: $showReferences) {
+                LBPTxReference()
+            })
             Spacer()
         }
     }

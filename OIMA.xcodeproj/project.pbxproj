@@ -31,6 +31,8 @@
 		CB2FDCD024F858E700C433CE /* VTEManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCCF24F858E700C433CE /* VTEManagement.swift */; };
 		CB2FDCD324F85BDD00C433CE /* CAPData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCD224F85BDD00C433CE /* CAPData.swift */; };
 		CB2FDCD524F9B5CF00C433CE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCD424F9B5CF00C433CE /* Constants.swift */; };
+		CB6F02A3255E13CF00FA9C94 /* LBPTxManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F02A2255E13CF00FA9C94 /* LBPTxManagement.swift */; };
+		CB6F02A6255E148D00FA9C94 /* LBPTxReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F02A5255E148D00FA9C94 /* LBPTxReference.swift */; };
 		CB715AC7255D06E500261FDD /* LBPTxFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB715AC6255D06E500261FDD /* LBPTxFirst.swift */; };
 		CB715ACB255D07BB00261FDD /* MechLBPTreatmentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB715ACA255D07BB00261FDD /* MechLBPTreatmentData.swift */; };
 		CB8656A224FC5EDD0081A034 /* SegmentedPickerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB8656A124FC5EDD0081A034 /* SegmentedPickerModifier.swift */; };
@@ -87,6 +89,8 @@
 		CB2FDCCF24F858E700C433CE /* VTEManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTEManagement.swift; sourceTree = "<group>"; };
 		CB2FDCD224F85BDD00C433CE /* CAPData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAPData.swift; sourceTree = "<group>"; };
 		CB2FDCD424F9B5CF00C433CE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CB6F02A2255E13CF00FA9C94 /* LBPTxManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBPTxManagement.swift; sourceTree = "<group>"; };
+		CB6F02A5255E148D00FA9C94 /* LBPTxReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBPTxReference.swift; sourceTree = "<group>"; };
 		CB715AC6255D06E500261FDD /* LBPTxFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBPTxFirst.swift; sourceTree = "<group>"; };
 		CB715ACA255D07BB00261FDD /* MechLBPTreatmentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MechLBPTreatmentData.swift; sourceTree = "<group>"; };
 		CB8656A124FC5EDD0081A034 /* SegmentedPickerModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPickerModifier.swift; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				CB715AC6255D06E500261FDD /* LBPTxFirst.swift */,
+				CB6F02A2255E13CF00FA9C94 /* LBPTxManagement.swift */,
+				CB6F02A5255E148D00FA9C94 /* LBPTxReference.swift */,
 			);
 			path = "Low Back Pain, Treatment";
 			sourceTree = "<group>";
@@ -361,6 +367,7 @@
 				CBF28F80251A70D9001E4841 /* AcuteSinusitis.swift in Sources */,
 				CB2FDCCA24F8587100C433CE /* ProximalDistalDVT.swift in Sources */,
 				CBF28F83251A70E5001E4841 /* ChronicSinusitis.swift in Sources */,
+				CB6F02A6255E148D00FA9C94 /* LBPTxReference.swift in Sources */,
 				CBB74B51250ACDB9006D01CE /* OrthoVitalsSheet.swift in Sources */,
 				CBADCFE3251BFFDE0059CC6F /* SectionHeaderModifier.swift in Sources */,
 				CBADCFE6252530220059CC6F /* ViralVBacterialSinusitis.swift in Sources */,
@@ -399,6 +406,7 @@
 				CB2FDCC824F7264E00C433CE /* ShowToggle.swift in Sources */,
 				CB715AC7255D06E500261FDD /* LBPTxFirst.swift in Sources */,
 				CB2FDCC024F6EB8D00C433CE /* VTEData.swift in Sources */,
+				CB6F02A3255E13CF00FA9C94 /* LBPTxManagement.swift in Sources */,
 				CB715ACB255D07BB00261FDD /* MechLBPTreatmentData.swift in Sources */,
 				CBA74D11252DBF6600231F13 /* NasalSteroidInstructions.swift in Sources */,
 			);
