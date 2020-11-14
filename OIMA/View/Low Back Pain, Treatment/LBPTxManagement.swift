@@ -10,6 +10,8 @@ import SwiftUI
 
 struct LBPTxManagement: View {
     
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    
     @ObservedObject var mlbpt: MLBPT
     
     @State private var showReferences = false
@@ -63,13 +65,23 @@ struct LBPTxManagement: View {
                 
                 
             }.padding(.horizontal)
-            .navigationBarItems(trailing: Button(action: {
-                self.showReferences.toggle()
-            }) {
-                Image(systemName: "r.square")
-            }.sheet(isPresented: $showReferences) {
-                LBPTxReference()
-            })
+            .navigationBarItems(trailing:
+                HStack {
+                    Button(action: {
+                        self.showReferences.toggle()
+                    }) {
+                        Image(systemName: "r.square")
+                    }.sheet(isPresented: $showReferences) {
+                        LBPTxReference()
+                    }
+                    Button(action: {
+                        self.mode.wrappedValue.dismiss()
+                        self.mode.wrappedValue.dismiss()
+                    }) {
+                        Image(systemName: "house")
+                    }
+                }
+            )
         }
         
     }

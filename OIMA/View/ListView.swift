@@ -31,7 +31,6 @@ struct ListView: View {
                         Text(condition.name)
                     }
                 }
-                
             }
             .navigationBarTitle("Algorithms")
         }

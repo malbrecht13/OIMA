@@ -17,6 +17,8 @@ import SwiftUI
 
 struct LBPTxFirst: View {
     
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    
     @ObservedObject var mlbpt: MLBPT = MLBPT()
     
     @State private var duration = ["< 12 weeks", "> 12 weeks"]
@@ -41,17 +43,30 @@ struct LBPTxFirst: View {
             
             .navigationBarTitle("Duration", displayMode: .inline)
             //Reference button in navbar
-            .navigationBarItems(trailing: Button(action: {
-                self.showReferences.toggle()
-            }) {
-                Image(systemName: "r.square")
-            }.sheet(isPresented: $showReferences) {
-                LBPTxReference()
-            })
+            .navigationBarItems(trailing:
+                HStack {
+                    Button(action: {
+                        self.showReferences.toggle()
+                    }) {
+                        Image(systemName: "r.square")
+                    }.sheet(isPresented: $showReferences) {
+                        LBPTxReference()
+                    }
+                    Button(action: {
+                        self.mode.wrappedValue.dismiss()
+                    
+                    }) {
+                        Image(systemName: "house")
+                    }
+                }
+            )
+            
             Spacer()
         }
     }
 }
+
+
 
 struct LBPTxFirst_Previews: PreviewProvider {
     static var previews: some View {
