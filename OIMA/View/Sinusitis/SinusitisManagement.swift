@@ -23,6 +23,8 @@ import SwiftUI
 
 struct SinusitisManagement: View {
     
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    
     @ObservedObject var sinusitis: SinusitisData
     
     @State private var showNasalSteroidInstructionSheet = false
@@ -87,13 +89,25 @@ struct SinusitisManagement: View {
                 }.font(.footnote)
                 
             }.padding(.horizontal)
-            .navigationBarItems(trailing: Button(action: {
-                self.showReferences.toggle()
-            }) {
-                Image(systemName: "r.square")
-            }.sheet(isPresented: $showReferences) {
-                SinusitisReference()
-            })
+            .navigationBarItems(trailing:
+                HStack {
+                    Button(action: {
+                        self.showReferences.toggle()
+                    }) {
+                        Image(systemName: "r.square")
+                    }.sheet(isPresented: $showReferences) {
+                        SinusitisReference()
+                    }
+                    Button(action: {
+                        self.mode.wrappedValue.dismiss()
+                        self.mode.wrappedValue.dismiss()
+                        self.mode.wrappedValue.dismiss()
+                        self.mode.wrappedValue.dismiss()
+                    }) {
+                        Image(systemName: "house")
+                    }
+                }
+            )
         }
     }
 }

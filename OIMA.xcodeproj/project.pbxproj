@@ -31,6 +31,10 @@
 		CB2FDCD024F858E700C433CE /* VTEManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCCF24F858E700C433CE /* VTEManagement.swift */; };
 		CB2FDCD324F85BDD00C433CE /* CAPData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCD224F85BDD00C433CE /* CAPData.swift */; };
 		CB2FDCD524F9B5CF00C433CE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCD424F9B5CF00C433CE /* Constants.swift */; };
+		CB35C560256337A8004150A5 /* CoughFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB35C55F256337A8004150A5 /* CoughFirst.swift */; };
+		CB35C563256337FF004150A5 /* CoughData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB35C562256337FF004150A5 /* CoughData.swift */; };
+		CB35C5662563394C004150A5 /* CoughRedFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB35C5652563394C004150A5 /* CoughRedFlags.swift */; };
+		CB35C56925633A4C004150A5 /* CoughReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB35C56825633A4C004150A5 /* CoughReference.swift */; };
 		CB6F02A3255E13CF00FA9C94 /* LBPTxManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F02A2255E13CF00FA9C94 /* LBPTxManagement.swift */; };
 		CB6F02A6255E148D00FA9C94 /* LBPTxReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6F02A5255E148D00FA9C94 /* LBPTxReference.swift */; };
 		CB715AC7255D06E500261FDD /* LBPTxFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB715AC6255D06E500261FDD /* LBPTxFirst.swift */; };
@@ -89,6 +93,10 @@
 		CB2FDCCF24F858E700C433CE /* VTEManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTEManagement.swift; sourceTree = "<group>"; };
 		CB2FDCD224F85BDD00C433CE /* CAPData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAPData.swift; sourceTree = "<group>"; };
 		CB2FDCD424F9B5CF00C433CE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CB35C55F256337A8004150A5 /* CoughFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoughFirst.swift; sourceTree = "<group>"; };
+		CB35C562256337FF004150A5 /* CoughData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoughData.swift; sourceTree = "<group>"; };
+		CB35C5652563394C004150A5 /* CoughRedFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoughRedFlags.swift; sourceTree = "<group>"; };
+		CB35C56825633A4C004150A5 /* CoughReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoughReference.swift; sourceTree = "<group>"; };
 		CB6F02A2255E13CF00FA9C94 /* LBPTxManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBPTxManagement.swift; sourceTree = "<group>"; };
 		CB6F02A5255E148D00FA9C94 /* LBPTxReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBPTxReference.swift; sourceTree = "<group>"; };
 		CB715AC6255D06E500261FDD /* LBPTxFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LBPTxFirst.swift; sourceTree = "<group>"; };
@@ -175,6 +183,7 @@
 		CB050E9A24F2F741001B992B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CB35C55E2563376C004150A5 /* Cough */,
 				CB715AC5255D06C400261FDD /* Low Back Pain, Treatment */,
 				CBF28F77251A6B7B001E4841 /* Sinusitis */,
 				CBB74B392509497D006D01CE /* Dizziness */,
@@ -231,8 +240,19 @@
 				CBB74B3C250949C2006D01CE /* DizzinessData.swift */,
 				CBF28F7C251A6C67001E4841 /* SinusitisData.swift */,
 				CB715ACA255D07BB00261FDD /* MechLBPTreatmentData.swift */,
+				CB35C562256337FF004150A5 /* CoughData.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CB35C55E2563376C004150A5 /* Cough */ = {
+			isa = PBXGroup;
+			children = (
+				CB35C55F256337A8004150A5 /* CoughFirst.swift */,
+				CB35C5652563394C004150A5 /* CoughRedFlags.swift */,
+				CB35C56825633A4C004150A5 /* CoughReference.swift */,
+			);
+			path = Cough;
 			sourceTree = "<group>";
 		};
 		CB715AC5255D06C400261FDD /* Low Back Pain, Treatment */ = {
@@ -376,6 +396,7 @@
 				CBADCFE9252530580059CC6F /* SinusitisManagement.swift in Sources */,
 				CB2FDCD024F858E700C433CE /* VTEManagement.swift in Sources */,
 				CBF28F7D251A6C67001E4841 /* SinusitisData.swift in Sources */,
+				CB35C5662563394C004150A5 /* CoughRedFlags.swift in Sources */,
 				CBB74B41250952C9006D01CE /* EpisodicSpontaneous.swift in Sources */,
 				CB050EA424F56CF6001B992B /* ShowPicker.swift in Sources */,
 				CBB74B3D250949C2006D01CE /* DizzinessData.swift in Sources */,
@@ -385,18 +406,21 @@
 				CB050EA224F4393C001B992B /* CAPFirst.swift in Sources */,
 				CB915A3E252E75BC00125E8B /* ReferenceView.swift in Sources */,
 				CB2FDCD524F9B5CF00C433CE /* Constants.swift in Sources */,
+				CB35C563256337FF004150A5 /* CoughData.swift in Sources */,
 				CBB74B3F250950E6006D01CE /* EpisodicTriggeredDizziness.swift in Sources */,
 				CBB74B4B25095398006D01CE /* HINTSExamSheet.swift in Sources */,
 				CBF28F79251A6B9B001E4841 /* SinusitisDuration.swift in Sources */,
 				CBB74B3B2509499F006D01CE /* DizzinessFirst.swift in Sources */,
 				CB08C21A254A4EF600BD8766 /* DizzinessReference.swift in Sources */,
 				CBB74B4F25095456006D01CE /* DizzinessManagement.swift in Sources */,
+				CB35C56925633A4C004150A5 /* CoughReference.swift in Sources */,
 				CB08C21D254A55E400BD8766 /* VTEReferences.swift in Sources */,
 				CBB74B4525095321006D01CE /* NeuroTestsDizziness.swift in Sources */,
 				CB050E9C24F2F78B001B992B /* SearchBar.swift in Sources */,
 				CBF28F6F25154EC9001E4841 /* YouTubeButton.swift in Sources */,
 				CB050E8924F2EFB3001B992B /* SceneDelegate.swift in Sources */,
 				CB050E8B24F2EFB3001B992B /* ListView.swift in Sources */,
+				CB35C560256337A8004150A5 /* CoughFirst.swift in Sources */,
 				CB915A3B252E74AA00125E8B /* Reference.swift in Sources */,
 				CB915A44252FDADE00125E8B /* CAPReference.swift in Sources */,
 				CB2FDCC624F6F35C00C433CE /* VTEProvokingFactors.swift in Sources */,

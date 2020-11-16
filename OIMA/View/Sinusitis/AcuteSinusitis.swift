@@ -20,6 +20,8 @@ import SwiftUI
 
 struct AcuteSinusitis: View {
     
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    
     @ObservedObject var sinusitis: SinusitisData
     
     @State private var nextView: String? = nil
@@ -54,13 +56,23 @@ struct AcuteSinusitis: View {
             NavigationLink(destination: SinusitisManagement(sinusitis: sinusitis), tag: "management", selection: $nextView) { EmptyView() }
             
                 .navigationBarTitle("Symptoms", displayMode: .inline)
-                .navigationBarItems(trailing: Button(action: {
-                    self.showReferences.toggle()
-                }) {
-                    Image(systemName: "r.square")
-                }.sheet(isPresented: $showReferences) {
-                    SinusitisReference()
-                })
+                .navigationBarItems(trailing:
+                    HStack {
+                        Button(action: {
+                            self.showReferences.toggle()
+                        }) {
+                            Image(systemName: "r.square")
+                        }.sheet(isPresented: $showReferences) {
+                            SinusitisReference()
+                        }
+                        Button(action: {
+                            self.mode.wrappedValue.dismiss()
+                            self.mode.wrappedValue.dismiss()
+                        }) {
+                            Image(systemName: "house")
+                        }
+                    }
+                )
         }
     }
 }

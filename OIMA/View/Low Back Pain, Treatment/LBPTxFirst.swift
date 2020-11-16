@@ -21,7 +21,7 @@ struct LBPTxFirst: View {
     
     @ObservedObject var mlbpt: MLBPT = MLBPT()
     
-    @State private var duration = ["< 12 weeks", "> 12 weeks"]
+    private var duration = ["< 12 weeks", "> 12 weeks"]
     @State private var nextView = false
     @State private var showReferences = false
     

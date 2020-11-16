@@ -16,6 +16,8 @@ import SwiftUI
 
 struct ChronicSinusitis: View {
     
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    
     @ObservedObject var sinusitis: SinusitisData
     
     @State private var inflammationSelection = ["Yes", "No"]
@@ -54,13 +56,23 @@ struct ChronicSinusitis: View {
             NavigationLink(destination: SinusitisManagement(sinusitis: sinusitis), isActive: $nextView) { EmptyView() }
             
                 .navigationBarTitle("Chronic sinusitis symptoms", displayMode: .inline)
-                .navigationBarItems(trailing: Button(action: {
-                    self.showReferences.toggle()
-                }) {
-                    Image(systemName: "r.square")
-                }.sheet(isPresented: $showReferences) {
-                    SinusitisReference()
-                })
+                .navigationBarItems(trailing:
+                    HStack {
+                        Button(action: {
+                            self.showReferences.toggle()
+                        }) {
+                            Image(systemName: "r.square")
+                        }.sheet(isPresented: $showReferences) {
+                            SinusitisReference()
+                        }
+                        Button(action: {
+                            self.mode.wrappedValue.dismiss()
+                            self.mode.wrappedValue.dismiss()
+                        }) {
+                            Image(systemName: "house")
+                        }
+                    }
+                )
         }
     }
     
