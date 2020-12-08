@@ -20,11 +20,7 @@ struct OutCAPManagement: View {
             VStack {
                 Group {
                     Text("Management")
-                        .font(.largeTitle)
-                        .fontWeight(.black)
-                        .foregroundColor(Color.pink)
-                        .padding()
-                        .padding(.top, 50)
+                        .fontWeight(.black).modifier(ManagementMod(textColor: pink))
                     }
                     
                     
@@ -40,7 +36,7 @@ struct OutCAPManagement: View {
                             
                             Text("\nAND one of these:").fontWeight(.bold)
                             
-                            Text("\n\nAzithromycin 500 mg day 1, then 250 mg daily for 4 days").lineLimit(2).minimumScaleFactor(0.5)
+                            Text("\nAzithromycin 500 mg day 1, then 250 mg daily for 4 days")
                             Text("Clarithromycin 500 mg PO BID\nClarithromycin ER 1000 mg PO daily\nDoxycycline 100 mg PO BID")
                         }
                         Group {
@@ -66,9 +62,9 @@ struct OutCAPManagement: View {
                         Text("\nTreatment duration is 5 days unless patient fails to improve.")
                     }.font(.footnote).padding(.horizontal)
                 }
-
+                
             }
-            .edgesIgnoringSafeArea(.top).padding(.bottom, 50)
+            
             .navigationBarItems(trailing: Button(action: {
                 self.showReferences.toggle()
             }) {

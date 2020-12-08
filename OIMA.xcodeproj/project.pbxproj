@@ -31,7 +31,6 @@
 		CB2FDCD024F858E700C433CE /* VTEManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCCF24F858E700C433CE /* VTEManagement.swift */; };
 		CB2FDCD324F85BDD00C433CE /* CAPData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCD224F85BDD00C433CE /* CAPData.swift */; };
 		CB2FDCD524F9B5CF00C433CE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2FDCD424F9B5CF00C433CE /* Constants.swift */; };
-		CB35C560256337A8004150A5 /* CoughFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB35C55F256337A8004150A5 /* CoughFirst.swift */; };
 		CB35C563256337FF004150A5 /* CoughData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB35C562256337FF004150A5 /* CoughData.swift */; };
 		CB35C5662563394C004150A5 /* CoughRedFlags.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB35C5652563394C004150A5 /* CoughRedFlags.swift */; };
 		CB35C56925633A4C004150A5 /* CoughReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB35C56825633A4C004150A5 /* CoughReference.swift */; };
@@ -46,6 +45,9 @@
 		CB915A41252E775500125E8B /* SinusitisReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB915A40252E775500125E8B /* SinusitisReference.swift */; };
 		CB915A44252FDADE00125E8B /* CAPReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB915A43252FDADE00125E8B /* CAPReference.swift */; };
 		CBA74D11252DBF6600231F13 /* NasalSteroidInstructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA74D10252DBF6600231F13 /* NasalSteroidInstructions.swift */; };
+		CBAA056D257EE340000357FA /* CoughManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA056C257EE340000357FA /* CoughManagement.swift */; };
+		CBAA0575257EF0EE000357FA /* BenignCough.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA0574257EF0EE000357FA /* BenignCough.swift */; };
+		CBAA0578257EF917000357FA /* CoughCommonCauses.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBAA0577257EF917000357FA /* CoughCommonCauses.swift */; };
 		CBADCFE3251BFFDE0059CC6F /* SectionHeaderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBADCFE2251BFFDE0059CC6F /* SectionHeaderModifier.swift */; };
 		CBADCFE6252530220059CC6F /* ViralVBacterialSinusitis.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBADCFE5252530220059CC6F /* ViralVBacterialSinusitis.swift */; };
 		CBADCFE9252530580059CC6F /* SinusitisManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBADCFE8252530580059CC6F /* SinusitisManagement.swift */; };
@@ -93,7 +95,6 @@
 		CB2FDCCF24F858E700C433CE /* VTEManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VTEManagement.swift; sourceTree = "<group>"; };
 		CB2FDCD224F85BDD00C433CE /* CAPData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAPData.swift; sourceTree = "<group>"; };
 		CB2FDCD424F9B5CF00C433CE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		CB35C55F256337A8004150A5 /* CoughFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoughFirst.swift; sourceTree = "<group>"; };
 		CB35C562256337FF004150A5 /* CoughData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoughData.swift; sourceTree = "<group>"; };
 		CB35C5652563394C004150A5 /* CoughRedFlags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoughRedFlags.swift; sourceTree = "<group>"; };
 		CB35C56825633A4C004150A5 /* CoughReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoughReference.swift; sourceTree = "<group>"; };
@@ -108,6 +109,9 @@
 		CB915A40252E775500125E8B /* SinusitisReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinusitisReference.swift; sourceTree = "<group>"; };
 		CB915A43252FDADE00125E8B /* CAPReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAPReference.swift; sourceTree = "<group>"; };
 		CBA74D10252DBF6600231F13 /* NasalSteroidInstructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasalSteroidInstructions.swift; sourceTree = "<group>"; };
+		CBAA056C257EE340000357FA /* CoughManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoughManagement.swift; sourceTree = "<group>"; };
+		CBAA0574257EF0EE000357FA /* BenignCough.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenignCough.swift; sourceTree = "<group>"; };
+		CBAA0577257EF917000357FA /* CoughCommonCauses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoughCommonCauses.swift; sourceTree = "<group>"; };
 		CBADCFE2251BFFDE0059CC6F /* SectionHeaderModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderModifier.swift; sourceTree = "<group>"; };
 		CBADCFE5252530220059CC6F /* ViralVBacterialSinusitis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViralVBacterialSinusitis.swift; sourceTree = "<group>"; };
 		CBADCFE8252530580059CC6F /* SinusitisManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinusitisManagement.swift; sourceTree = "<group>"; };
@@ -248,9 +252,11 @@
 		CB35C55E2563376C004150A5 /* Cough */ = {
 			isa = PBXGroup;
 			children = (
-				CB35C55F256337A8004150A5 /* CoughFirst.swift */,
 				CB35C5652563394C004150A5 /* CoughRedFlags.swift */,
 				CB35C56825633A4C004150A5 /* CoughReference.swift */,
+				CBAA0574257EF0EE000357FA /* BenignCough.swift */,
+				CBAA0577257EF917000357FA /* CoughCommonCauses.swift */,
+				CBAA056C257EE340000357FA /* CoughManagement.swift */,
 			);
 			path = Cough;
 			sourceTree = "<group>";
@@ -394,11 +400,13 @@
 				CB2FDCC424F6F02A00C433CE /* TitleModifier.swift in Sources */,
 				CB050E8724F2EFB3001B992B /* AppDelegate.swift in Sources */,
 				CBADCFE9252530580059CC6F /* SinusitisManagement.swift in Sources */,
+				CBAA0575257EF0EE000357FA /* BenignCough.swift in Sources */,
 				CB2FDCD024F858E700C433CE /* VTEManagement.swift in Sources */,
 				CBF28F7D251A6C67001E4841 /* SinusitisData.swift in Sources */,
 				CB35C5662563394C004150A5 /* CoughRedFlags.swift in Sources */,
 				CBB74B41250952C9006D01CE /* EpisodicSpontaneous.swift in Sources */,
 				CB050EA424F56CF6001B992B /* ShowPicker.swift in Sources */,
+				CBAA0578257EF917000357FA /* CoughCommonCauses.swift in Sources */,
 				CBB74B3D250949C2006D01CE /* DizzinessData.swift in Sources */,
 				CBB74B4925095387006D01CE /* EpleyManeuverSheet.swift in Sources */,
 				CB8656A424FC5FC70081A034 /* ManagementMod.swift in Sources */,
@@ -420,13 +428,13 @@
 				CBF28F6F25154EC9001E4841 /* YouTubeButton.swift in Sources */,
 				CB050E8924F2EFB3001B992B /* SceneDelegate.swift in Sources */,
 				CB050E8B24F2EFB3001B992B /* ListView.swift in Sources */,
-				CB35C560256337A8004150A5 /* CoughFirst.swift in Sources */,
 				CB915A3B252E74AA00125E8B /* Reference.swift in Sources */,
 				CB915A44252FDADE00125E8B /* CAPReference.swift in Sources */,
 				CB2FDCC624F6F35C00C433CE /* VTEProvokingFactors.swift in Sources */,
 				CB2B470924F57726006394DE /* OutCAPManagement.swift in Sources */,
 				CB2FDCD324F85BDD00C433CE /* CAPData.swift in Sources */,
 				CB050E9F24F43176001B992B /* Condition.swift in Sources */,
+				CBAA056D257EE340000357FA /* CoughManagement.swift in Sources */,
 				CB2FDCC824F7264E00C433CE /* ShowToggle.swift in Sources */,
 				CB715AC7255D06E500261FDD /* LBPTxFirst.swift in Sources */,
 				CB2FDCC024F6EB8D00C433CE /* VTEData.swift in Sources */,

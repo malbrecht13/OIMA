@@ -11,5 +11,10 @@ import Combine
 import SwiftUI
 
 class CoughData: ObservableObject {
-    @Published var acuity = 0
+    
+    //CoughRedFlags.swift
+    @Published var coughRedFlags = 0 //yes is 0, no is 1
+    
+    //BenignCough.swift
+    @Published var coughEasyFixes = 0 //yes is 0, no is 1
 }
