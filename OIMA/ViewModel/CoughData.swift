@@ -17,4 +17,7 @@ class CoughData: ObservableObject {
     
     //BenignCough.swift
     @Published var coughEasyFixes = 0 //yes is 0, no is 1
+    
+    //CoughCommonCauses.swift
+    @Published var commonCausesRO = 0 //yes is 0, no is 1
 }
