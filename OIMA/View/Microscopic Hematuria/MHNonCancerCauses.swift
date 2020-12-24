@@ -15,14 +15,14 @@ struct MHNonCancerCauses: View {
     @State private var nextView: String? = nil
     @State private var showReferences = false
     
-    private let causes = ["UTI", "Nephrolithiasis", "Menstrual period", "Recent urinary tract trauma", "Urethral stricture or diverticulum", "Recent urological procedure or catheterization", "A glomerular kidney disorder (e.g., lupus, many others)"]
+    private let causes = ["UTI", "Nephrolithiasis", "Menstrual period", "Recent urinary tract trauma", "Urethral stricture or diverticulum", "Recent urological procedure or catheterization", "A glomerular kidney disorder (e.g., lupus, many others)", "Vaginal atrophy", "Pelvic organ prolapse"]
     
     private let answer = ["Yes", "No"]
     
     var body: some View {
         VStack {
             Form {
-                Section(header: Text("Do you believe any of these are the potential cause of the microscopic hematuria?").font(.headline).foregroundColor(blue).padding(), content: {
+                Section(header: Text("Do you believe any of these are the likely of the microscopic hematuria?").font(.headline).foregroundColor(blue).padding(), content: {
                     ForEach(causes, id: \.self) { item in
                         HStack {
                             Text("•")
