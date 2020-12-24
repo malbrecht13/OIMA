@@ -63,6 +63,12 @@
 		CBB74B51250ACDB9006D01CE /* OrthoVitalsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B50250ACDB9006D01CE /* OrthoVitalsSheet.swift */; };
 		CBC2EAC02594527C00CC1E70 /* IntroMH.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC2EABF2594527C00CC1E70 /* IntroMH.swift */; };
 		CBC2EAC4259455EB00CC1E70 /* MHReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC2EAC3259455EB00CC1E70 /* MHReference.swift */; };
+		CBC2EACC25945B8000CC1E70 /* NextButton1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC2EACB25945B8000CC1E70 /* NextButton1.swift */; };
+		CBC2EAD425945F0700CC1E70 /* HighRiskMH.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC2EAD325945F0700CC1E70 /* HighRiskMH.swift */; };
+		CBC2EAD72594901E00CC1E70 /* MHNonCancerCauses.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC2EAD62594901E00CC1E70 /* MHNonCancerCauses.swift */; };
+		CBC2EADA2594920500CC1E70 /* MHData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC2EAD92594920500CC1E70 /* MHData.swift */; };
+		CBC2EADE259493D900CC1E70 /* MHManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC2EADD259493D900CC1E70 /* MHManagement.swift */; };
+		CBC2EAE22594B0A700CC1E70 /* IntRiskMH.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC2EAE12594B0A700CC1E70 /* IntRiskMH.swift */; };
 		CBF28F6F25154EC9001E4841 /* YouTubeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF28F6E25154EC9001E4841 /* YouTubeButton.swift */; };
 		CBF28F79251A6B9B001E4841 /* SinusitisDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF28F78251A6B9B001E4841 /* SinusitisDuration.swift */; };
 		CBF28F7D251A6C67001E4841 /* SinusitisData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF28F7C251A6C67001E4841 /* SinusitisData.swift */; };
@@ -129,6 +135,12 @@
 		CBB74B50250ACDB9006D01CE /* OrthoVitalsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrthoVitalsSheet.swift; sourceTree = "<group>"; };
 		CBC2EABF2594527C00CC1E70 /* IntroMH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroMH.swift; sourceTree = "<group>"; };
 		CBC2EAC3259455EB00CC1E70 /* MHReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHReference.swift; sourceTree = "<group>"; };
+		CBC2EACB25945B8000CC1E70 /* NextButton1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButton1.swift; sourceTree = "<group>"; };
+		CBC2EAD325945F0700CC1E70 /* HighRiskMH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighRiskMH.swift; sourceTree = "<group>"; };
+		CBC2EAD62594901E00CC1E70 /* MHNonCancerCauses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHNonCancerCauses.swift; sourceTree = "<group>"; };
+		CBC2EAD92594920500CC1E70 /* MHData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHData.swift; sourceTree = "<group>"; };
+		CBC2EADD259493D900CC1E70 /* MHManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHManagement.swift; sourceTree = "<group>"; };
+		CBC2EAE12594B0A700CC1E70 /* IntRiskMH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntRiskMH.swift; sourceTree = "<group>"; };
 		CBF28F6E25154EC9001E4841 /* YouTubeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeButton.swift; sourceTree = "<group>"; };
 		CBF28F78251A6B9B001E4841 /* SinusitisDuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinusitisDuration.swift; sourceTree = "<group>"; };
 		CBF28F7C251A6C67001E4841 /* SinusitisData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinusitisData.swift; sourceTree = "<group>"; };
@@ -205,6 +217,7 @@
 				CB2FDCC724F7264E00C433CE /* ShowToggle.swift */,
 				CBF28F6E25154EC9001E4841 /* YouTubeButton.swift */,
 				CB915A3D252E75BC00125E8B /* ReferenceView.swift */,
+				CBC2EACB25945B8000CC1E70 /* NextButton1.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -250,6 +263,7 @@
 				CBF28F7C251A6C67001E4841 /* SinusitisData.swift */,
 				CB715ACA255D07BB00261FDD /* MechLBPTreatmentData.swift */,
 				CB35C562256337FF004150A5 /* CoughData.swift */,
+				CBC2EAD92594920500CC1E70 /* MHData.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -309,7 +323,11 @@
 			isa = PBXGroup;
 			children = (
 				CBC2EABF2594527C00CC1E70 /* IntroMH.swift */,
+				CBC2EAD62594901E00CC1E70 /* MHNonCancerCauses.swift */,
+				CBC2EAD325945F0700CC1E70 /* HighRiskMH.swift */,
+				CBC2EAE12594B0A700CC1E70 /* IntRiskMH.swift */,
 				CBC2EAC3259455EB00CC1E70 /* MHReference.swift */,
+				CBC2EADD259493D900CC1E70 /* MHManagement.swift */,
 			);
 			path = "Microscopic Hematuria";
 			sourceTree = "<group>";
@@ -402,6 +420,7 @@
 				CB2FDCBC24F6E9AB00C433CE /* VTEFirst.swift in Sources */,
 				CB8656A224FC5EDD0081A034 /* SegmentedPickerModifier.swift in Sources */,
 				CB915A41252E775500125E8B /* SinusitisReference.swift in Sources */,
+				CBC2EAE22594B0A700CC1E70 /* IntRiskMH.swift in Sources */,
 				CB050EAC24F56E8D001B992B /* NextButtonStyle.swift in Sources */,
 				CBB74B4725095375006D01CE /* Dix-HallpikeSheet.swift in Sources */,
 				CBF28F80251A70D9001E4841 /* AcuteSinusitis.swift in Sources */,
@@ -413,7 +432,9 @@
 				CBADCFE6252530220059CC6F /* ViralVBacterialSinusitis.swift in Sources */,
 				CB2FDCC424F6F02A00C433CE /* TitleModifier.swift in Sources */,
 				CB050E8724F2EFB3001B992B /* AppDelegate.swift in Sources */,
+				CBC2EACC25945B8000CC1E70 /* NextButton1.swift in Sources */,
 				CBADCFE9252530580059CC6F /* SinusitisManagement.swift in Sources */,
+				CBC2EAD72594901E00CC1E70 /* MHNonCancerCauses.swift in Sources */,
 				CBAA0575257EF0EE000357FA /* BenignCough.swift in Sources */,
 				CB2FDCD024F858E700C433CE /* VTEManagement.swift in Sources */,
 				CBF28F7D251A6C67001E4841 /* SinusitisData.swift in Sources */,
@@ -422,6 +443,7 @@
 				CBB74B41250952C9006D01CE /* EpisodicSpontaneous.swift in Sources */,
 				CB050EA424F56CF6001B992B /* ShowPicker.swift in Sources */,
 				CBAA0578257EF917000357FA /* CoughCommonCauses.swift in Sources */,
+				CBC2EADE259493D900CC1E70 /* MHManagement.swift in Sources */,
 				CBB74B3D250949C2006D01CE /* DizzinessData.swift in Sources */,
 				CBB74B4925095387006D01CE /* EpleyManeuverSheet.swift in Sources */,
 				CB8656A424FC5FC70081A034 /* ManagementMod.swift in Sources */,
@@ -447,7 +469,9 @@
 				CB915A3B252E74AA00125E8B /* Reference.swift in Sources */,
 				CB915A44252FDADE00125E8B /* CAPReference.swift in Sources */,
 				CB2FDCC624F6F35C00C433CE /* VTEProvokingFactors.swift in Sources */,
+				CBC2EAD425945F0700CC1E70 /* HighRiskMH.swift in Sources */,
 				CB2B470924F57726006394DE /* OutCAPManagement.swift in Sources */,
+				CBC2EADA2594920500CC1E70 /* MHData.swift in Sources */,
 				CB2FDCD324F85BDD00C433CE /* CAPData.swift in Sources */,
 				CB050E9F24F43176001B992B /* Condition.swift in Sources */,
 				CBAA056D257EE340000357FA /* CoughManagement.swift in Sources */,

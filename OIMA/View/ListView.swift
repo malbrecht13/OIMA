@@ -15,6 +15,7 @@ fileprivate let conditions: [Condition] = [
     Condition(name: "Sinusitis", nextView: AnyView(SinusitisDuration())),
     Condition(name: "Mechanical low back pain, treatment", nextView: AnyView(LBPTxFirst())),
     Condition(name: "Cough evaluation", nextView: AnyView(CoughRedFlags())),
+    Condition(name: "Hematuria evaluation", nextView: AnyView(IntroMH())),
 ]
 
 fileprivate let sortedConditions = conditions.sorted{$0.name < $1.name}
