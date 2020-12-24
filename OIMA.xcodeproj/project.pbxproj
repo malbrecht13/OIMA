@@ -69,6 +69,7 @@
 		CBC2EADA2594920500CC1E70 /* MHData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC2EAD92594920500CC1E70 /* MHData.swift */; };
 		CBC2EADE259493D900CC1E70 /* MHManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC2EADD259493D900CC1E70 /* MHManagement.swift */; };
 		CBC2EAE22594B0A700CC1E70 /* IntRiskMH.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC2EAE12594B0A700CC1E70 /* IntRiskMH.swift */; };
+		CBC2EAE72594E33D00CC1E70 /* IntroSyncope.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC2EAE62594E33D00CC1E70 /* IntroSyncope.swift */; };
 		CBF28F6F25154EC9001E4841 /* YouTubeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF28F6E25154EC9001E4841 /* YouTubeButton.swift */; };
 		CBF28F79251A6B9B001E4841 /* SinusitisDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF28F78251A6B9B001E4841 /* SinusitisDuration.swift */; };
 		CBF28F7D251A6C67001E4841 /* SinusitisData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF28F7C251A6C67001E4841 /* SinusitisData.swift */; };
@@ -141,6 +142,7 @@
 		CBC2EAD92594920500CC1E70 /* MHData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHData.swift; sourceTree = "<group>"; };
 		CBC2EADD259493D900CC1E70 /* MHManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHManagement.swift; sourceTree = "<group>"; };
 		CBC2EAE12594B0A700CC1E70 /* IntRiskMH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntRiskMH.swift; sourceTree = "<group>"; };
+		CBC2EAE62594E33D00CC1E70 /* IntroSyncope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroSyncope.swift; sourceTree = "<group>"; };
 		CBF28F6E25154EC9001E4841 /* YouTubeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeButton.swift; sourceTree = "<group>"; };
 		CBF28F78251A6B9B001E4841 /* SinusitisDuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinusitisDuration.swift; sourceTree = "<group>"; };
 		CBF28F7C251A6C67001E4841 /* SinusitisData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinusitisData.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 		CB050E9A24F2F741001B992B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CBC2EAE52594E32700CC1E70 /* Syncope */,
 				CBC2EABE2594523700CC1E70 /* Microscopic Hematuria */,
 				CB35C55E2563376C004150A5 /* Cough */,
 				CB715AC5255D06C400261FDD /* Low Back Pain, Treatment */,
@@ -330,6 +333,14 @@
 				CBC2EADD259493D900CC1E70 /* MHManagement.swift */,
 			);
 			path = "Microscopic Hematuria";
+			sourceTree = "<group>";
+		};
+		CBC2EAE52594E32700CC1E70 /* Syncope */ = {
+			isa = PBXGroup;
+			children = (
+				CBC2EAE62594E33D00CC1E70 /* IntroSyncope.swift */,
+			);
+			path = Syncope;
 			sourceTree = "<group>";
 		};
 		CBF28F77251A6B7B001E4841 /* Sinusitis */ = {
@@ -471,6 +482,7 @@
 				CB2FDCC624F6F35C00C433CE /* VTEProvokingFactors.swift in Sources */,
 				CBC2EAD425945F0700CC1E70 /* HighRiskMH.swift in Sources */,
 				CB2B470924F57726006394DE /* OutCAPManagement.swift in Sources */,
+				CBC2EAE72594E33D00CC1E70 /* IntroSyncope.swift in Sources */,
 				CBC2EADA2594920500CC1E70 /* MHData.swift in Sources */,
 				CB2FDCD324F85BDD00C433CE /* CAPData.swift in Sources */,
 				CB050E9F24F43176001B992B /* Condition.swift in Sources */,

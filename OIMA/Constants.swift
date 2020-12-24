@@ -12,7 +12,7 @@ import SwiftUI
 let purple = Color(hue: 0.67, saturation: 0.46, brightness: 0.69, opacity: 1.00)  //Heme/Onc
 let green = Color.green  //ENT
 let black = Color.black
-let red = Color.red
+let red = Color.red //cardiology
 let pink = Color.pink //pulmonology
 let orange = Color.orange //Rheumatology/MSK
 let blue = Color.blue //urology
