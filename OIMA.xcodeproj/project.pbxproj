@@ -61,6 +61,8 @@
 		CBB74B4B25095398006D01CE /* HINTSExamSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B4A25095398006D01CE /* HINTSExamSheet.swift */; };
 		CBB74B4F25095456006D01CE /* DizzinessManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B4E25095456006D01CE /* DizzinessManagement.swift */; };
 		CBB74B51250ACDB9006D01CE /* OrthoVitalsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB74B50250ACDB9006D01CE /* OrthoVitalsSheet.swift */; };
+		CBC2EAC02594527C00CC1E70 /* IntroMH.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC2EABF2594527C00CC1E70 /* IntroMH.swift */; };
+		CBC2EAC4259455EB00CC1E70 /* MHReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC2EAC3259455EB00CC1E70 /* MHReference.swift */; };
 		CBF28F6F25154EC9001E4841 /* YouTubeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF28F6E25154EC9001E4841 /* YouTubeButton.swift */; };
 		CBF28F79251A6B9B001E4841 /* SinusitisDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF28F78251A6B9B001E4841 /* SinusitisDuration.swift */; };
 		CBF28F7D251A6C67001E4841 /* SinusitisData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF28F7C251A6C67001E4841 /* SinusitisData.swift */; };
@@ -125,6 +127,8 @@
 		CBB74B4A25095398006D01CE /* HINTSExamSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HINTSExamSheet.swift; sourceTree = "<group>"; };
 		CBB74B4E25095456006D01CE /* DizzinessManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DizzinessManagement.swift; sourceTree = "<group>"; };
 		CBB74B50250ACDB9006D01CE /* OrthoVitalsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrthoVitalsSheet.swift; sourceTree = "<group>"; };
+		CBC2EABF2594527C00CC1E70 /* IntroMH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroMH.swift; sourceTree = "<group>"; };
+		CBC2EAC3259455EB00CC1E70 /* MHReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHReference.swift; sourceTree = "<group>"; };
 		CBF28F6E25154EC9001E4841 /* YouTubeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeButton.swift; sourceTree = "<group>"; };
 		CBF28F78251A6B9B001E4841 /* SinusitisDuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinusitisDuration.swift; sourceTree = "<group>"; };
 		CBF28F7C251A6C67001E4841 /* SinusitisData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinusitisData.swift; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 		CB050E9A24F2F741001B992B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CBC2EABE2594523700CC1E70 /* Microscopic Hematuria */,
 				CB35C55E2563376C004150A5 /* Cough */,
 				CB715AC5255D06C400261FDD /* Low Back Pain, Treatment */,
 				CBF28F77251A6B7B001E4841 /* Sinusitis */,
@@ -300,6 +305,15 @@
 			path = Dizziness;
 			sourceTree = "<group>";
 		};
+		CBC2EABE2594523700CC1E70 /* Microscopic Hematuria */ = {
+			isa = PBXGroup;
+			children = (
+				CBC2EABF2594527C00CC1E70 /* IntroMH.swift */,
+				CBC2EAC3259455EB00CC1E70 /* MHReference.swift */,
+			);
+			path = "Microscopic Hematuria";
+			sourceTree = "<group>";
+		};
 		CBF28F77251A6B7B001E4841 /* Sinusitis */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +418,7 @@
 				CB2FDCD024F858E700C433CE /* VTEManagement.swift in Sources */,
 				CBF28F7D251A6C67001E4841 /* SinusitisData.swift in Sources */,
 				CB35C5662563394C004150A5 /* CoughRedFlags.swift in Sources */,
+				CBC2EAC02594527C00CC1E70 /* IntroMH.swift in Sources */,
 				CBB74B41250952C9006D01CE /* EpisodicSpontaneous.swift in Sources */,
 				CB050EA424F56CF6001B992B /* ShowPicker.swift in Sources */,
 				CBAA0578257EF917000357FA /* CoughCommonCauses.swift in Sources */,
@@ -420,6 +435,7 @@
 				CBF28F79251A6B9B001E4841 /* SinusitisDuration.swift in Sources */,
 				CBB74B3B2509499F006D01CE /* DizzinessFirst.swift in Sources */,
 				CB08C21A254A4EF600BD8766 /* DizzinessReference.swift in Sources */,
+				CBC2EAC4259455EB00CC1E70 /* MHReference.swift in Sources */,
 				CBB74B4F25095456006D01CE /* DizzinessManagement.swift in Sources */,
 				CB35C56925633A4C004150A5 /* CoughReference.swift in Sources */,
 				CB08C21D254A55E400BD8766 /* VTEReferences.swift in Sources */,

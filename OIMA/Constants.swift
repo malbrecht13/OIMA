@@ -15,3 +15,6 @@ let black = Color.black
 let red = Color.red
 let pink = Color.pink //pulmonology
 let orange = Color.orange //Rheumatology/MSK
+let blue = Color.blue //urology
+
+
