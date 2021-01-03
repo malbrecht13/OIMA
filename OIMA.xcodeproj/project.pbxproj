@@ -70,11 +70,13 @@
 		CBC2EADE259493D900CC1E70 /* MHManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC2EADD259493D900CC1E70 /* MHManagement.swift */; };
 		CBC2EAE22594B0A700CC1E70 /* IntRiskMH.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC2EAE12594B0A700CC1E70 /* IntRiskMH.swift */; };
 		CBC2EAE72594E33D00CC1E70 /* IntroSyncope.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC2EAE62594E33D00CC1E70 /* IntroSyncope.swift */; };
+		CBC2EAEB2594F06600CC1E70 /* SyncopeHospitalizeReasons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC2EAEA2594F06600CC1E70 /* SyncopeHospitalizeReasons.swift */; };
 		CBF28F6F25154EC9001E4841 /* YouTubeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF28F6E25154EC9001E4841 /* YouTubeButton.swift */; };
 		CBF28F79251A6B9B001E4841 /* SinusitisDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF28F78251A6B9B001E4841 /* SinusitisDuration.swift */; };
 		CBF28F7D251A6C67001E4841 /* SinusitisData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF28F7C251A6C67001E4841 /* SinusitisData.swift */; };
 		CBF28F80251A70D9001E4841 /* AcuteSinusitis.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF28F7F251A70D9001E4841 /* AcuteSinusitis.swift */; };
 		CBF28F83251A70E5001E4841 /* ChronicSinusitis.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF28F82251A70E5001E4841 /* ChronicSinusitis.swift */; };
+		CBF5BD1825A23B7E0057EE48 /* SyncopeReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF5BD1725A23B7E0057EE48 /* SyncopeReference.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -143,11 +145,13 @@
 		CBC2EADD259493D900CC1E70 /* MHManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHManagement.swift; sourceTree = "<group>"; };
 		CBC2EAE12594B0A700CC1E70 /* IntRiskMH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntRiskMH.swift; sourceTree = "<group>"; };
 		CBC2EAE62594E33D00CC1E70 /* IntroSyncope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroSyncope.swift; sourceTree = "<group>"; };
+		CBC2EAEA2594F06600CC1E70 /* SyncopeHospitalizeReasons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncopeHospitalizeReasons.swift; sourceTree = "<group>"; };
 		CBF28F6E25154EC9001E4841 /* YouTubeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeButton.swift; sourceTree = "<group>"; };
 		CBF28F78251A6B9B001E4841 /* SinusitisDuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinusitisDuration.swift; sourceTree = "<group>"; };
 		CBF28F7C251A6C67001E4841 /* SinusitisData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinusitisData.swift; sourceTree = "<group>"; };
 		CBF28F7F251A70D9001E4841 /* AcuteSinusitis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcuteSinusitis.swift; sourceTree = "<group>"; };
 		CBF28F82251A70E5001E4841 /* ChronicSinusitis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChronicSinusitis.swift; sourceTree = "<group>"; };
+		CBF5BD1725A23B7E0057EE48 /* SyncopeReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncopeReference.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,6 +343,8 @@
 			isa = PBXGroup;
 			children = (
 				CBC2EAE62594E33D00CC1E70 /* IntroSyncope.swift */,
+				CBC2EAEA2594F06600CC1E70 /* SyncopeHospitalizeReasons.swift */,
+				CBF5BD1725A23B7E0057EE48 /* SyncopeReference.swift */,
 			);
 			path = Syncope;
 			sourceTree = "<group>";
@@ -468,6 +474,7 @@
 				CBF28F79251A6B9B001E4841 /* SinusitisDuration.swift in Sources */,
 				CBB74B3B2509499F006D01CE /* DizzinessFirst.swift in Sources */,
 				CB08C21A254A4EF600BD8766 /* DizzinessReference.swift in Sources */,
+				CBC2EAEB2594F06600CC1E70 /* SyncopeHospitalizeReasons.swift in Sources */,
 				CBC2EAC4259455EB00CC1E70 /* MHReference.swift in Sources */,
 				CBB74B4F25095456006D01CE /* DizzinessManagement.swift in Sources */,
 				CB35C56925633A4C004150A5 /* CoughReference.swift in Sources */,
@@ -480,6 +487,7 @@
 				CB915A3B252E74AA00125E8B /* Reference.swift in Sources */,
 				CB915A44252FDADE00125E8B /* CAPReference.swift in Sources */,
 				CB2FDCC624F6F35C00C433CE /* VTEProvokingFactors.swift in Sources */,
+				CBF5BD1825A23B7E0057EE48 /* SyncopeReference.swift in Sources */,
 				CBC2EAD425945F0700CC1E70 /* HighRiskMH.swift in Sources */,
 				CB2B470924F57726006394DE /* OutCAPManagement.swift in Sources */,
 				CBC2EAE72594E33D00CC1E70 /* IntroSyncope.swift in Sources */,
