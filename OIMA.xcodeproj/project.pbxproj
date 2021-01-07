@@ -77,6 +77,10 @@
 		CBF28F80251A70D9001E4841 /* AcuteSinusitis.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF28F7F251A70D9001E4841 /* AcuteSinusitis.swift */; };
 		CBF28F83251A70E5001E4841 /* ChronicSinusitis.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF28F82251A70E5001E4841 /* ChronicSinusitis.swift */; };
 		CBF5BD1825A23B7E0057EE48 /* SyncopeReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF5BD1725A23B7E0057EE48 /* SyncopeReference.swift */; };
+		CBF5BD1B25A791FB0057EE48 /* SyncopeQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF5BD1A25A791FB0057EE48 /* SyncopeQuestions.swift */; };
+		CBF5BD1E25A793460057EE48 /* SyncopeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF5BD1D25A793460057EE48 /* SyncopeData.swift */; };
+		CBF5BD2125A798CE0057EE48 /* SyncopeManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF5BD2025A798CE0057EE48 /* SyncopeManagement.swift */; };
+		CBF5BD2425A79A250057EE48 /* VVSSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF5BD2325A79A250057EE48 /* VVSSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -152,6 +156,10 @@
 		CBF28F7F251A70D9001E4841 /* AcuteSinusitis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcuteSinusitis.swift; sourceTree = "<group>"; };
 		CBF28F82251A70E5001E4841 /* ChronicSinusitis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChronicSinusitis.swift; sourceTree = "<group>"; };
 		CBF5BD1725A23B7E0057EE48 /* SyncopeReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncopeReference.swift; sourceTree = "<group>"; };
+		CBF5BD1A25A791FB0057EE48 /* SyncopeQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncopeQuestions.swift; sourceTree = "<group>"; };
+		CBF5BD1D25A793460057EE48 /* SyncopeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncopeData.swift; sourceTree = "<group>"; };
+		CBF5BD2025A798CE0057EE48 /* SyncopeManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncopeManagement.swift; sourceTree = "<group>"; };
+		CBF5BD2325A79A250057EE48 /* VVSSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VVSSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +279,7 @@
 				CB715ACA255D07BB00261FDD /* MechLBPTreatmentData.swift */,
 				CB35C562256337FF004150A5 /* CoughData.swift */,
 				CBC2EAD92594920500CC1E70 /* MHData.swift */,
+				CBF5BD1D25A793460057EE48 /* SyncopeData.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -345,6 +354,9 @@
 				CBC2EAE62594E33D00CC1E70 /* IntroSyncope.swift */,
 				CBC2EAEA2594F06600CC1E70 /* SyncopeHospitalizeReasons.swift */,
 				CBF5BD1725A23B7E0057EE48 /* SyncopeReference.swift */,
+				CBF5BD1A25A791FB0057EE48 /* SyncopeQuestions.swift */,
+				CBF5BD2025A798CE0057EE48 /* SyncopeManagement.swift */,
+				CBF5BD2325A79A250057EE48 /* VVSSheet.swift */,
 			);
 			path = Syncope;
 			sourceTree = "<group>";
@@ -441,6 +453,7 @@
 				CB050EAC24F56E8D001B992B /* NextButtonStyle.swift in Sources */,
 				CBB74B4725095375006D01CE /* Dix-HallpikeSheet.swift in Sources */,
 				CBF28F80251A70D9001E4841 /* AcuteSinusitis.swift in Sources */,
+				CBF5BD2425A79A250057EE48 /* VVSSheet.swift in Sources */,
 				CB2FDCCA24F8587100C433CE /* ProximalDistalDVT.swift in Sources */,
 				CBF28F83251A70E5001E4841 /* ChronicSinusitis.swift in Sources */,
 				CB6F02A6255E148D00FA9C94 /* LBPTxReference.swift in Sources */,
@@ -448,6 +461,7 @@
 				CBADCFE3251BFFDE0059CC6F /* SectionHeaderModifier.swift in Sources */,
 				CBADCFE6252530220059CC6F /* ViralVBacterialSinusitis.swift in Sources */,
 				CB2FDCC424F6F02A00C433CE /* TitleModifier.swift in Sources */,
+				CBF5BD2125A798CE0057EE48 /* SyncopeManagement.swift in Sources */,
 				CB050E8724F2EFB3001B992B /* AppDelegate.swift in Sources */,
 				CBC2EACC25945B8000CC1E70 /* NextButton1.swift in Sources */,
 				CBADCFE9252530580059CC6F /* SinusitisManagement.swift in Sources */,
@@ -483,6 +497,7 @@
 				CB050E9C24F2F78B001B992B /* SearchBar.swift in Sources */,
 				CBF28F6F25154EC9001E4841 /* YouTubeButton.swift in Sources */,
 				CB050E8924F2EFB3001B992B /* SceneDelegate.swift in Sources */,
+				CBF5BD1E25A793460057EE48 /* SyncopeData.swift in Sources */,
 				CB050E8B24F2EFB3001B992B /* ListView.swift in Sources */,
 				CB915A3B252E74AA00125E8B /* Reference.swift in Sources */,
 				CB915A44252FDADE00125E8B /* CAPReference.swift in Sources */,
@@ -499,6 +514,7 @@
 				CB715AC7255D06E500261FDD /* LBPTxFirst.swift in Sources */,
 				CB2FDCC024F6EB8D00C433CE /* VTEData.swift in Sources */,
 				CB6F02A3255E13CF00FA9C94 /* LBPTxManagement.swift in Sources */,
+				CBF5BD1B25A791FB0057EE48 /* SyncopeQuestions.swift in Sources */,
 				CB715ACB255D07BB00261FDD /* MechLBPTreatmentData.swift in Sources */,
 				CBA74D11252DBF6600231F13 /* NasalSteroidInstructions.swift in Sources */,
 			);

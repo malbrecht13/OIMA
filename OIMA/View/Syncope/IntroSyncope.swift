@@ -19,7 +19,7 @@ struct IntroSyncope: View {
     @State private var modalView: ModalView = .hospitalize
     @State private var isSheetShown = false
     @State private var nextView = false
-    @State private var eval = ["History", "Physical exam (include cardiac, vascular, neuro exams)", "ECG", "Orthostatic vitals (lying down, sitting, immediately upon standing, and 3 minutes after standing)"]
+    @State private var eval = ["History (including prodome, frequency, triggers, symptoms after syncope, med review, past medical hx, family history syncope/sudden cardiac death)", "Physical exam (include cardiac, vascular, and neuro exams)", "ECG", "Orthostatic vitals (lying down, sitting, immediately upon standing, and 3 minutes after standing)"]
 
     
     var body: some View {
@@ -37,7 +37,7 @@ struct IntroSyncope: View {
                             }.padding(1).font(.footnote)
                         }
                     }.padding()
-                    Text("2. Next decide if patient needs to be hospitalized.").fontWeight(.black).foregroundColor(.red).font(.subheadline)
+                    Text("2. Use clinical judgment to decide if patient needs to be hospitalized.").fontWeight(.black).foregroundColor(.red).font(.subheadline)
                         
                     Text("Click on this button to see conditions that may require hospitalization:").padding(1).font(.footnote)
                 }
@@ -46,7 +46,7 @@ struct IntroSyncope: View {
                     self.modalView = .hospitalize
                     self.isSheetShown.toggle()
                 }) {
-                    Text("Hospitalize?")
+                    Text("Hospitalizable conditions")
                 }.buttonStyle(NextButtonStyle(fillColor: .red, foregroundColor: .white))
                 
             }
@@ -56,7 +56,7 @@ struct IntroSyncope: View {
                 Spacer()
                 
                 NextButton1(nextView: $nextView, fillColor: red)
-                NavigationLink(destination: MHReference(), isActive: $nextView) { EmptyView() }
+                NavigationLink(destination: SyncopeQuestions(), isActive: $nextView) { EmptyView() }
             
             }
             .navigationBarTitle("Quick note", displayMode: .inline)
