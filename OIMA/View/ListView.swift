@@ -14,7 +14,7 @@ fileprivate let conditions: [Condition] = [
     Condition(name: "Dizziness evaluation", nextView: AnyView(DizzinessFirst())),
     Condition(name: "Sinusitis", nextView: AnyView(SinusitisDuration())),
     Condition(name: "Mechanical low back pain, treatment", nextView: AnyView(LBPTxFirst())),
-    Condition(name: "Cough evaluation", nextView: AnyView(CoughRedFlags())),
+    Condition(name: "Chronic cough evaluation", nextView: AnyView(CoughRedFlags())),
     Condition(name: "Hematuria evaluation", nextView: AnyView(IntroMH())),
     Condition(name: "Syncope", nextView: AnyView(IntroSyncope())),
 ]

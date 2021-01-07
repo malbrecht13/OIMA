@@ -17,7 +17,7 @@ struct TitleModifier: ViewModifier {
     
     func body(content: Content) -> some View {
         content
-            .frame(maxWidth: .infinity, minHeight: 15, maxHeight: 20)
+            .frame(maxWidth: .infinity, minHeight: 15)
             .font(.headline)
         .foregroundColor(foregroundColor)
         .padding(10)

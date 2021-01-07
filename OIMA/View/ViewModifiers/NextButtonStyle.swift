@@ -11,6 +11,7 @@ import SwiftUI
 
 struct NextButtonStyle: ButtonStyle {
     var fillColor: Color
+    var foregroundColor: Color = .white
     
        func makeBody(configuration: Self.Configuration) -> some View {
         VStack {
@@ -20,7 +21,7 @@ struct NextButtonStyle: ButtonStyle {
             .background(RoundedRectangle(cornerRadius: 10).fill(fillColor))
             .cornerRadius(10)
             .padding(.horizontal, 20)
-            .foregroundColor(.white)
+            .foregroundColor(foregroundColor)
             .font(.headline)
         }.padding(.bottom, 10)
            

@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-enum ModalView {
+fileprivate enum ModalView {
     case hospitalize
     case reference
 }
@@ -19,27 +19,41 @@ struct IntroSyncope: View {
     @State private var modalView: ModalView = .hospitalize
     @State private var isSheetShown = false
     @State private var nextView = false
+    @State private var eval = ["History", "Physical exam (include cardiac, vascular, neuro exams)", "ECG", "Orthostatic vitals (lying down, sitting, immediately upon standing, and 3 minutes after standing)"]
 
     
     var body: some View {
         ScrollView {
             VStack {
                 
-                Text("A quick note").fontWeight(.black).padding().foregroundColor(.red)
-
-                Text("The evaluation of syncope should start with a thorough history and physical exam.  The exam should include cardiac and neurologic examinations. \n\nIn addition, orthostatic vitals (blood pressure and heart rate) should be obtained with patient lying down, sitting, immediately upon standing, and after 3 minutes of standing.\n\nAn ECG should be performed as well.\n\nAfter this initial evaluation, it should be determined whether or not patient should be hospitalized.  Click on the 'Hospitalize?' button to see possible medical conditions that might warrant hospitalization for syncope.\n").padding()
+                Group {
+                    Text("1. First perform the following").fontWeight(.black).foregroundColor(.red).font(.subheadline)
+                    VStack(alignment: .leading) {
+                        ForEach(eval, id: \.self) {
+                            eval in
+                            HStack {
+                                Text("•")
+                                Text("\(eval)")
+                            }.padding(1).font(.footnote)
+                        }
+                    }.padding()
+                    Text("2. Next decide if patient needs to be hospitalized.").fontWeight(.black).foregroundColor(.red).font(.subheadline)
+                        
+                    Text("Click on this button to see conditions that may require hospitalization:").padding(1).font(.footnote)
+                }
                 
                 Button(action: {
                     self.modalView = .hospitalize
                     self.isSheetShown.toggle()
                 }) {
                     Text("Hospitalize?")
-                }.buttonStyle(NextButtonStyle(fillColor: red))
+                }.buttonStyle(NextButtonStyle(fillColor: .red, foregroundColor: .white))
                 
-                Text("If the patient does not need hospitalization, proceed with this algorithm.").padding(.vertical).padding(.horizontal, 0)
+            }
+                
+            Text("3. Hospitalize patient if needed.  If hospitalization isn't needed, proceed with this algorithm by using the 'Next' button:").fontWeight(.black).foregroundColor(.red).font(.subheadline).padding()
                
                 Spacer()
-                    .frame(height: 50)
                 
                 NextButton1(nextView: $nextView, fillColor: red)
                 NavigationLink(destination: MHReference(), isActive: $nextView) { EmptyView() }
@@ -61,7 +75,7 @@ struct IntroSyncope: View {
             })
         }
         }
-    }
+    
 
 
 struct IntroSyncope_Previews: PreviewProvider {
