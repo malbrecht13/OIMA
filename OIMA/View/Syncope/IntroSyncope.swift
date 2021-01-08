@@ -15,6 +15,8 @@ fileprivate enum ModalView {
 
 struct IntroSyncope: View {
     
+    @ObservedObject var syncope: SyncopeData = SyncopeData()
+    
     
     @State private var modalView: ModalView = .hospitalize
     @State private var isSheetShown = false
@@ -55,8 +57,13 @@ struct IntroSyncope: View {
                
                 Spacer()
                 
-                NextButton1(nextView: $nextView, fillColor: red)
-                NavigationLink(destination: SyncopeQuestions(), isActive: $nextView) { EmptyView() }
+            Button(action: {
+                resetVariables()
+                self.nextView = true
+            }) {
+                Text("Next")
+            }.buttonStyle(NextButtonStyle(fillColor: red))
+            NavigationLink(destination: SyncopeQuestions(syncope: syncope), isActive: $nextView) { EmptyView() }
             
             }
             .navigationBarTitle("Quick note", displayMode: .inline)
@@ -74,15 +81,20 @@ struct IntroSyncope: View {
                 }
             })
         }
-        }
+    private func resetVariables() {
+        syncope.structuralHD = false
+        syncope.arrhythmia = false
+        syncope.exertional = false
+        syncope.orthostatic = false
+        syncope.vvs = false
+    }
+}
     
 
 
 struct IntroSyncope_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            IntroSyncope()
-            IntroSyncope()
             IntroSyncope()
         }
     }

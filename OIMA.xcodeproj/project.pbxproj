@@ -81,6 +81,7 @@
 		CBF5BD1E25A793460057EE48 /* SyncopeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF5BD1D25A793460057EE48 /* SyncopeData.swift */; };
 		CBF5BD2125A798CE0057EE48 /* SyncopeManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF5BD2025A798CE0057EE48 /* SyncopeManagement.swift */; };
 		CBF5BD2425A79A250057EE48 /* VVSSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF5BD2325A79A250057EE48 /* VVSSheet.swift */; };
+		CBF5BD2725A8C7FD0057EE48 /* CardiacMonitors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBF5BD2625A8C7FD0057EE48 /* CardiacMonitors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -160,6 +161,7 @@
 		CBF5BD1D25A793460057EE48 /* SyncopeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncopeData.swift; sourceTree = "<group>"; };
 		CBF5BD2025A798CE0057EE48 /* SyncopeManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncopeManagement.swift; sourceTree = "<group>"; };
 		CBF5BD2325A79A250057EE48 /* VVSSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VVSSheet.swift; sourceTree = "<group>"; };
+		CBF5BD2625A8C7FD0057EE48 /* CardiacMonitors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardiacMonitors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,10 +355,11 @@
 			children = (
 				CBC2EAE62594E33D00CC1E70 /* IntroSyncope.swift */,
 				CBC2EAEA2594F06600CC1E70 /* SyncopeHospitalizeReasons.swift */,
-				CBF5BD1725A23B7E0057EE48 /* SyncopeReference.swift */,
 				CBF5BD1A25A791FB0057EE48 /* SyncopeQuestions.swift */,
-				CBF5BD2025A798CE0057EE48 /* SyncopeManagement.swift */,
 				CBF5BD2325A79A250057EE48 /* VVSSheet.swift */,
+				CBF5BD1725A23B7E0057EE48 /* SyncopeReference.swift */,
+				CBF5BD2625A8C7FD0057EE48 /* CardiacMonitors.swift */,
+				CBF5BD2025A798CE0057EE48 /* SyncopeManagement.swift */,
 			);
 			path = Syncope;
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				CB35C5662563394C004150A5 /* CoughRedFlags.swift in Sources */,
 				CBC2EAC02594527C00CC1E70 /* IntroMH.swift in Sources */,
 				CBB74B41250952C9006D01CE /* EpisodicSpontaneous.swift in Sources */,
+				CBF5BD2725A8C7FD0057EE48 /* CardiacMonitors.swift in Sources */,
 				CB050EA424F56CF6001B992B /* ShowPicker.swift in Sources */,
 				CBAA0578257EF917000357FA /* CoughCommonCauses.swift in Sources */,
 				CBC2EADE259493D900CC1E70 /* MHManagement.swift in Sources */,

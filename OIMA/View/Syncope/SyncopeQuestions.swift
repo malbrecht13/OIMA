@@ -11,7 +11,7 @@ import SwiftUI
 
 struct SyncopeQuestions: View {
     
-    @ObservedObject var syncope: SyncopeData = SyncopeData()
+    @ObservedObject var syncope: SyncopeData
     
     @State private var nextView = false
     @State private var showSheet = false
@@ -49,13 +49,14 @@ struct SyncopeQuestions: View {
                 Text("Next")
             }.buttonStyle(NextButtonStyle(fillColor: red))
             
-            NavigationLink(destination: SyncopeManagement(), isActive: $nextView) { EmptyView() }
+            NavigationLink(destination: SyncopeManagement(syncope: syncope), isActive: $nextView) { EmptyView() }
         }
     }
+    
 }
 
 struct SyncopeQuestions_Previews: PreviewProvider {
     static var previews: some View {
-        SyncopeQuestions()
+        SyncopeQuestions(syncope: SyncopeData())
     }
 }
